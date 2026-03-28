@@ -1,0 +1,108 @@
+{
+  "fundName": "ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund) - Direct Plan - Growth",
+  "amcName": "ICICI Prudential Mutual Fund",
+  "pdfUrl": "https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Metals",
+      "percentage": "5.70%"
+    },
+    {
+      "sector": "Services",
+      "percentage": "1.14%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Aerospace & Defense",
+      "sector": "Other",
+      "percentage": "1.06%"
+    },
+    {
+      "company": "Bharat Electronics Ltd.",
+      "sector": "Other",
+      "percentage": "1.06%"
+    },
+    {
+      "company": "Agricultural, Commercial & Construction Vehicles",
+      "sector": "Other",
+      "percentage": "2.57%"
+    },
+    {
+      "company": "Tata Motors Ltd. - Futures",
+      "sector": "Other",
+      "percentage": "2.57%"
+    },
+    {
+      "company": "Mahindra & Mahindra Ltd.",
+      "sector": "Other",
+      "percentage": "1.96%"
+    },
+    {
+      "company": "Maruti Suzuki India Ltd.",
+      "sector": "Other",
+      "percentage": "1.47%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.95%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "0.98%"
+    },
+    {
+      "company": "United Spirits Ltd.",
+      "sector": "Other",
+      "percentage": "1.00%"
+    },
+    {
+      "company": "Capital Markets",
+      "sector": "Other",
+      "percentage": "5.07%"
+    }
+  ],
+  "expense_ratio": "0.85%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "50",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "100.00%",
+  "mid_cap": "0.00%",
+  "small_cap": "0.00%",
+  "risk_ratios": {
+    "standard_deviation": "10.98",
+    "beta": "0.90",
+    "sharpe_ratio": "1.15",
+    "alpha": "2.07",
+    "portfolio_turnover": "0.18"
+  },
+  "benchmark_performance": {
+    "name": "BSE 500 TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "100.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "0.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "0.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 1020481,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-25T13:30:43.821Z"
+}

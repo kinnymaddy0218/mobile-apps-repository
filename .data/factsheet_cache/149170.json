@@ -1,0 +1,128 @@
+{
+  "fundName": "Mirae Asset S&P 500 Top 50 ETF Fund of Fund Direct Growth",
+  "amcName": "Mirae Asset Index Solutions",
+  "pdfUrl": "mirae_passive-factsheet---march-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "sector allocation",
+      "percentage": "0.62%"
+    },
+    {
+      "sector": "Fund manager details",
+      "percentage": "22.68%"
+    },
+    {
+      "sector": "ultra-short term may result in high risk.",
+      "percentage": "46.79%"
+    },
+    {
+      "sector": "SOV",
+      "percentage": "27.88%"
+    },
+    {
+      "sector": "A1+",
+      "percentage": "22.68%"
+    },
+    {
+      "sector": "AA+",
+      "percentage": "46.79%"
+    },
+    {
+      "sector": "Certificate of Deposit",
+      "percentage": "28.50%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Other Equities",
+      "sector": "Other",
+      "percentage": "50.44%"
+    },
+    {
+      "company": "Year Tracking Error is",
+      "sector": "Other",
+      "percentage": "0.08%"
+    },
+    {
+      "company": "Expense Ratio:",
+      "sector": "Other",
+      "percentage": "0.19%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Other",
+      "percentage": "34.62%"
+    },
+    {
+      "company": "Bank of Baroda",
+      "sector": "Other",
+      "percentage": "13.86%"
+    },
+    {
+      "company": "Canara Bank",
+      "sector": "Other",
+      "percentage": "12.31%"
+    },
+    {
+      "company": "Punjab National Bank",
+      "sector": "Other",
+      "percentage": "10.35%"
+    },
+    {
+      "company": "Union Bank of India",
+      "sector": "Other",
+      "percentage": "9.07%"
+    },
+    {
+      "company": "Indian Bank",
+      "sector": "Other",
+      "percentage": "8.12%"
+    },
+    {
+      "company": "Bank of India",
+      "sector": "Other",
+      "percentage": "4.96%"
+    }
+  ],
+  "expense_ratio": "0.07%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "29,753",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "50.00%",
+  "mid_cap": "25.00%",
+  "small_cap": "25.00%",
+  "risk_ratios": {
+    "standard_deviation": ".",
+    "beta": "28.32",
+    "sharpe_ratio": "22.47",
+    "alpha": "",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "Nifty 100 TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "50.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "25.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "25.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 474550,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T22:55:26.794Z"
+}

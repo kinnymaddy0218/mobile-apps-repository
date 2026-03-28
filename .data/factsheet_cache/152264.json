@@ -1,0 +1,131 @@
+{
+  "fundName": "BANDHAN Nifty Smallcap 250 Index Fund - Direct Plan - Growth",
+  "amcName": "Bandhan Index Solutions",
+  "pdfUrl": "bandhan-passive-factsheet-feb-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Services",
+      "percentage": "11.25%"
+    },
+    {
+      "sector": "Capital Markets",
+      "percentage": "6.78%"
+    },
+    {
+      "sector": "Pharmaceuticals & Biotechnology",
+      "percentage": "4.55%"
+    },
+    {
+      "sector": "Banks",
+      "percentage": "4.53%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "1.94%"
+    },
+    {
+      "sector": "Transport",
+      "percentage": "1.92%"
+    },
+    {
+      "sector": "Consumer Durables",
+      "percentage": "1.78%"
+    },
+    {
+      "sector": "Chemicals & Petrochemicals",
+      "percentage": "1.20%"
+    },
+    {
+      "sector": "Beverages",
+      "percentage": "1.08%"
+    },
+    {
+      "sector": "Cement & Cement Products",
+      "percentage": "0.75%"
+    },
+    {
+      "sector": "Construction",
+      "percentage": "0.74%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Multi Commodity Exchange of India",
+      "sector": "Capital Markets",
+      "percentage": "3.26%"
+    },
+    {
+      "company": "Laurus Labs",
+      "sector": "Pharmaceuticals & Biotechnology",
+      "percentage": "2.19%"
+    },
+    {
+      "company": "Karur Vysya Bank",
+      "sector": "Banks",
+      "percentage": "1.61%"
+    },
+    {
+      "company": "Delhivery",
+      "sector": "Transport",
+      "percentage": "1.23%"
+    },
+    {
+      "company": "Navin Fluorine International",
+      "sector": "Chemicals & Petrochemicals",
+      "percentage": "1.20%"
+    },
+    {
+      "company": "Central Depository Services (India)",
+      "sector": "Capital Markets",
+      "percentage": "1.19%"
+    },
+    {
+      "company": "Radico Khaitan",
+      "sector": "Beverages",
+      "percentage": "1.08%"
+    },
+    {
+      "company": "City Union Bank",
+      "sector": "Banks",
+      "percentage": "1.07%"
+    },
+    {
+      "company": "RBL Bank",
+      "sector": "Banks",
+      "percentage": "1.01%"
+    },
+    {
+      "company": "Hindustan Copper Non - Ferrous",
+      "sector": "Metals",
+      "percentage": "0.97%"
+    }
+  ],
+  "expense_ratio": "0.21%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "59.97",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "3.26",
+    "beta": "",
+    "sharpe_ratio": "",
+    "alpha": "",
+    "portfolio_turnover": "0.63"
+  },
+  "benchmark_performance": {
+    "name": "Nifty Smallcap 250 Index TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 256232,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T22:53:49.555Z"
+}

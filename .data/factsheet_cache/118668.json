@@ -1,0 +1,88 @@
+{
+  "fundName": "Nippon India Growth Mid Cap Fund - Direct Plan Growth Plan - Growth Option",
+  "amcName": "Nippon India Mutual Fund",
+  "pdfUrl": "https://mf.nipponindiaim.com/InvestorServices/FactSheets/Nippon-FS-Feb-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [
+    {
+      "company": "Tata Consumer Products Ltd.",
+      "sector": "Other",
+      "percentage": "3.26%"
+    },
+    {
+      "company": "Marico Ltd.",
+      "sector": "Other",
+      "percentage": "2.74%"
+    },
+    {
+      "company": "TVS Motor Company Ltd.",
+      "sector": "Other",
+      "percentage": "3.31%"
+    },
+    {
+      "company": "The Federal Bank Ltd.",
+      "sector": "Other",
+      "percentage": "3.43%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.90%"
+    },
+    {
+      "company": "UltraTech Cement Ltd.",
+      "sector": "Other",
+      "percentage": "3.08%"
+    },
+    {
+      "company": "Grasim Industries Ltd.",
+      "sector": "Other",
+      "percentage": "2.70%"
+    },
+    {
+      "company": "Shree Cement Ltd.",
+      "sector": "Other",
+      "percentage": "2.57%"
+    },
+    {
+      "company": "Pidilite Industries Ltd.",
+      "sector": "Other",
+      "percentage": "3.16%"
+    },
+    {
+      "company": "Asian Paints Ltd.",
+      "sector": "Other",
+      "percentage": "3.25%"
+    }
+  ],
+  "expense_ratio": "0.08%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "18.00%",
+  "mid_cap": "72.00%",
+  "small_cap": "10.00%",
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "18.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "72.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "10.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 770585,
+  "foundAt": 292598,
+  "score": 100200,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-21T00:11:21.953Z"
+}

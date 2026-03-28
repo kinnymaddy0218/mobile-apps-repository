@@ -1,0 +1,100 @@
+{
+  "fundName": "SBI CONTRA FUND - DIRECT PLAN - GROWTH",
+  "amcName": "SBI Mutual Fund",
+  "pdfUrl": "https://www.sbimf.com/docs/default-source/scheme-factsheets/all-sbimf-schemes-factsheet-february-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Services",
+      "percentage": "36.95%"
+    },
+    {
+      "sector": "Auto Components",
+      "percentage": "12.29%"
+    },
+    {
+      "sector": "Technology",
+      "percentage": "5.35%"
+    },
+    {
+      "sector": "Mining",
+      "percentage": "2.01%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Mutual Fund/etf",
+      "sector": "Other",
+      "percentage": "97.87%"
+    },
+    {
+      "company": "Issuer Name",
+      "sector": "Other",
+      "percentage": "97.87%"
+    },
+    {
+      "company": "Financial",
+      "sector": "Services",
+      "percentage": "29.99%"
+    },
+    {
+      "company": "Automobile And",
+      "sector": "Auto Components",
+      "percentage": "12.29%"
+    },
+    {
+      "company": "Consumer",
+      "sector": "Services",
+      "percentage": "6.96%"
+    },
+    {
+      "company": "Information",
+      "sector": "Technology",
+      "percentage": "5.35%"
+    },
+    {
+      "company": "Healthcare",
+      "sector": "Other",
+      "percentage": "3.92%"
+    },
+    {
+      "company": "Metals &",
+      "sector": "Mining",
+      "percentage": "2.01%"
+    },
+    {
+      "company": "Fast Moving Consumer Goods",
+      "sector": "Other",
+      "percentage": "0.96%"
+    }
+  ],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "6.48",
+    "beta": "97.87",
+    "sharpe_ratio": "2.13",
+    "alpha": "",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "NIFTY 50 Hybrid Composite debt 50:50 Index",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 559885,
+  "foundAt": 264404,
+  "score": 59900,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-27T00:47:44.380Z"
+}

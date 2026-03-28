@@ -1,0 +1,174 @@
+{
+  "fundName": "HDFC Mid Cap Fund - IDCW Plan",
+  "amcName": "HDFC Mutual Fund",
+  "pdfUrl": "HDFC MF Factsheet - February 2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Banks",
+      "percentage": "17.62%"
+    },
+    {
+      "sector": "Services",
+      "percentage": "5.57%"
+    },
+    {
+      "sector": "Petroleum Products",
+      "percentage": "3.47%"
+    },
+    {
+      "sector": "Insurance",
+      "percentage": "2.81%"
+    },
+    {
+      "sector": "Construction",
+      "percentage": "2.78%"
+    },
+    {
+      "sector": "Power",
+      "percentage": "2.15%"
+    },
+    {
+      "sector": "Software",
+      "percentage": "2.11%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "1.45%"
+    },
+    {
+      "sector": "Industrial Products",
+      "percentage": "1.38%"
+    },
+    {
+      "sector": "Retailing",
+      "percentage": "1.27%"
+    },
+    {
+      "sector": "Transport",
+      "percentage": "1.27%"
+    },
+    {
+      "sector": "Oil",
+      "percentage": "1.15%"
+    },
+    {
+      "sector": "Food Products",
+      "percentage": "0.71%"
+    },
+    {
+      "sector": "Aerospace & Defense",
+      "percentage": "0.68%"
+    },
+    {
+      "sector": "Auto Components",
+      "percentage": "0.62%"
+    },
+    {
+      "sector": "Personal Products",
+      "percentage": "0.62%"
+    },
+    {
+      "sector": "Textiles & Apparels",
+      "percentage": "0.59%"
+    },
+    {
+      "sector": "Gas",
+      "percentage": "0.58%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "5.91%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "5.05%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "3.85%"
+    },
+    {
+      "company": "Larsen and Toubro Ltd.",
+      "sector": "Construction",
+      "percentage": "2.78%"
+    },
+    {
+      "company": "Bharti Airtel Ltd. Telecom",
+      "sector": "Services",
+      "percentage": "2.51%"
+    },
+    {
+      "company": "Reliance Industries Ltd.",
+      "sector": "Petroleum Products",
+      "percentage": "2.38%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Banks",
+      "percentage": "2.26%"
+    },
+    {
+      "company": "NTPC Ltd.",
+      "sector": "Power",
+      "percentage": "2.15%"
+    },
+    {
+      "company": "Company Ltd.",
+      "sector": "Insurance",
+      "percentage": "2.09%"
+    },
+    {
+      "company": "Biotechnology",
+      "sector": "Other",
+      "percentage": "1.87%"
+    }
+  ],
+  "expense_ratio": "0.73%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "18.00%",
+  "mid_cap": "72.00%",
+  "small_cap": "10.00%",
+  "risk_ratios": {
+    "standard_deviation": "15.682",
+    "beta": "22.50",
+    "sharpe_ratio": "18.00",
+    "alpha": "",
+    "portfolio_turnover": "7.80"
+  },
+  "benchmark_performance": {
+    "name": "BSE 250 Smallcap Index (TRI)",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "18.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "72.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "10.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 748609,
+  "foundAt": 81448,
+  "score": 50400,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-25T21:03:45.962Z"
+}

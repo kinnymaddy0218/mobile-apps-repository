@@ -1,0 +1,86 @@
+{
+  "fundName": "Mirae Asset Large & Midcap Fund - Direct Plan - Growth",
+  "amcName": "Mirae Asset Mutual Fund",
+  "pdfUrl": "mirae_active-factsheet---march-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Other",
+      "percentage": "20.85%"
+    },
+    {
+      "sector": "Others",
+      "percentage": "20.20%"
+    },
+    {
+      "sector": "Shares Total",
+      "percentage": "0.01%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "R Squared",
+      "sector": "Other",
+      "percentage": "0.96%"
+    },
+    {
+      "company": "Information Ratio",
+      "sector": "Other",
+      "percentage": "0.51%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Other",
+      "percentage": "4.89%"
+    },
+    {
+      "company": "Non-convertible Redeemable Preference",
+      "sector": "Shares Total",
+      "percentage": "0.01%"
+    },
+    {
+      "company": "CRISIL AAA",
+      "sector": "Other",
+      "percentage": "1.93%"
+    },
+    {
+      "company": "[ICRA]AAA",
+      "sector": "Other",
+      "percentage": "1.16%"
+    },
+    {
+      "company": "ICICI Securities Ltd.CRISIL AAA",
+      "sector": "Other",
+      "percentage": "1.04%"
+    },
+    {
+      "company": "Jio Credit Ltd.CRISIL AAA",
+      "sector": "Other",
+      "percentage": "0.78%"
+    },
+    {
+      "company": "Mindspace Business Parks Reit[ICRA]AAA",
+      "sector": "Other",
+      "percentage": "0.55%"
+    },
+    {
+      "company": "Piramal Finance Ltd.[ICRA]AA",
+      "sector": "Other",
+      "percentage": "0.53%"
+    }
+  ],
+  "expense_ratio": "0.55%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "40,184.41",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 323955,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-19T03:27:18.489Z"
+}

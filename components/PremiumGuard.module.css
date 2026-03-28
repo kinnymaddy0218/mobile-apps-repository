@@ -1,0 +1,51 @@
+.premiumOverlay {
+    position: relative;
+    border: 2px solid var(--accent-primary);
+    border-radius: var(--radius-lg);
+    background: rgba(124, 58, 237, 0.03);
+    overflow: hidden;
+}
+
+.premiumContent {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 15, 30, 0.7);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    padding: var(--space-xl);
+    color: white;
+}
+
+.premiumBadge {
+    background: var(--gradient-primary);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-md);
+}
+
+.premiumContent h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.premiumContent p {
+    color: var(--text-secondary);
+    max-width: 300px;
+    margin-bottom: var(--space-lg);
+    font-size: 0.95rem;
+}
+
+.blurredChildren {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.5;
+}

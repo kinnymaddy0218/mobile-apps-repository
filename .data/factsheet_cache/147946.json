@@ -1,0 +1,116 @@
+{
+  "fundName": "BANDHAN SMALL CAP FUND - DIRECT PLAN GROWTH",
+  "amcName": "Bandhan Mutual Fund",
+  "pdfUrl": "bandhan-factsheet-feb-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "SECTOR ALLOCATION",
+      "percentage": "1.51%"
+    },
+    {
+      "sector": "MARKET CAP",
+      "percentage": "7.01%"
+    },
+    {
+      "sector": "Sector",
+      "percentage": "7.15%"
+    },
+    {
+      "sector": "Weight in",
+      "percentage": "84.33%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Petroleum Products",
+      "sector": "Other",
+      "percentage": "3.68%"
+    },
+    {
+      "company": "Transport",
+      "sector": "Services",
+      "percentage": "1.51%"
+    },
+    {
+      "company": "Minerals &",
+      "sector": "Mining",
+      "percentage": "1.39%"
+    },
+    {
+      "company": "Ferrous",
+      "sector": "Metals",
+      "percentage": "1.35%"
+    },
+    {
+      "company": "Telecom",
+      "sector": "Services",
+      "percentage": "1.17%"
+    },
+    {
+      "company": "Personal Products",
+      "sector": "Other",
+      "percentage": "0.95%"
+    },
+    {
+      "company": "Healthcare",
+      "sector": "Services",
+      "percentage": "0.85%"
+    },
+    {
+      "company": "Electrical Equipment",
+      "sector": "Other",
+      "percentage": "0.75%"
+    },
+    {
+      "company": "Leisure",
+      "sector": "Services",
+      "percentage": "0.71%"
+    },
+    {
+      "company": "Telecom - Equipment & Accessories",
+      "sector": "Other",
+      "percentage": "0.70%"
+    }
+  ],
+  "expense_ratio": "0.86%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "2,040.62",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "6.00%",
+  "mid_cap": "12.00%",
+  "small_cap": "82.00%",
+  "risk_ratios": {
+    "standard_deviation": "12.57",
+    "beta": "1.04",
+    "sharpe_ratio": "1.03",
+    "alpha": "",
+    "portfolio_turnover": "0.77"
+  },
+  "benchmark_performance": {
+    "name": "BSE 100 TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "6.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "12.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "82.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 732955,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T18:48:39.060Z"
+}

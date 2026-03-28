@@ -1,0 +1,130 @@
+{
+  "fundName": "Axis ELSS Tax Saver Fund - Direct Plan - Growth Option",
+  "amcName": "Axis Mutual Fund",
+  "pdfUrl": "Axis Fund Factsheet February 2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Banks",
+      "percentage": "25.66%"
+    },
+    {
+      "sector": "Other",
+      "percentage": "16.96%"
+    },
+    {
+      "sector": "Automobiles",
+      "percentage": "5.33%"
+    },
+    {
+      "sector": "Construction",
+      "percentage": "5.24%"
+    },
+    {
+      "sector": "Diversified Consumer Services",
+      "percentage": "5.20%"
+    },
+    {
+      "sector": "Biotechnology",
+      "percentage": "3.74%"
+    },
+    {
+      "sector": "Products",
+      "percentage": "2.73%"
+    },
+    {
+      "sector": "Retailing",
+      "percentage": "1.96%"
+    },
+    {
+      "sector": "Consumer Durables",
+      "percentage": "1.94%"
+    },
+    {
+      "sector": "Defense",
+      "percentage": "1.64%"
+    },
+    {
+      "sector": "Petrochemicals",
+      "percentage": "1.56%"
+    },
+    {
+      "sector": "Vehicles",
+      "percentage": "1.40%"
+    },
+    {
+      "sector": "Power",
+      "percentage": "1.19%"
+    },
+    {
+      "sector": "other Products",
+      "percentage": "0.82%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "8.73%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "8.30%"
+    },
+    {
+      "company": "Larsen & Toubro Ltd.",
+      "sector": "Construction",
+      "percentage": "5.24%"
+    },
+    {
+      "company": "Bharti Airtel Limited Telecom -Services",
+      "sector": "Other",
+      "percentage": "4.41%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Banks",
+      "percentage": "4.22%"
+    },
+    {
+      "company": "Infosys LimitedIT -Software",
+      "sector": "Other",
+      "percentage": "4.04%"
+    },
+    {
+      "company": "Bajaj Finance Ltd.",
+      "sector": "Other",
+      "percentage": "3.91%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "3.61%"
+    },
+    {
+      "company": "Mahindra & Mahindra Ltd.",
+      "sector": "Automobiles",
+      "percentage": "3.57%"
+    },
+    {
+      "company": "Cement & Cement",
+      "sector": "Products",
+      "percentage": "2.73%"
+    }
+  ],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 705656,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-19T03:27:00.717Z"
+}

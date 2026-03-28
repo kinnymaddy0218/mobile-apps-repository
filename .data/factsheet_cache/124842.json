@@ -1,0 +1,110 @@
+{
+  "fundName": "ICICI Prudential Value Fund - Series 1 - Direct Dividend",
+  "amcName": "ICICI Prudential Mutual Fund",
+  "pdfUrl": "https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Services",
+      "percentage": "1.65%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "0.95%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Construction Vehicles",
+      "sector": "Other",
+      "percentage": "1.45%"
+    },
+    {
+      "company": "Tata Motors Ltd. - Futures",
+      "sector": "Other",
+      "percentage": "1.45%"
+    },
+    {
+      "company": "Maruti Suzuki India Ltd.",
+      "sector": "Other",
+      "percentage": "2.15%"
+    },
+    {
+      "company": "Tata Motors Passenger Vehicles Ltd.",
+      "sector": "Other",
+      "percentage": "1.68%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Other",
+      "percentage": "8.71%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "8.05%"
+    },
+    {
+      "company": "State Bank Of India",
+      "sector": "Other",
+      "percentage": "2.37%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.53%"
+    },
+    {
+      "company": "Larsen & Toubro Ltd.",
+      "sector": "Other",
+      "percentage": "1.92%"
+    },
+    {
+      "company": "LG Electronics Inc",
+      "sector": "Other",
+      "percentage": "0.82%"
+    }
+  ],
+  "expense_ratio": "0.95%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "5.17%",
+  "mid_cap": "5.17%",
+  "small_cap": "5.17%",
+  "risk_ratios": {
+    "standard_deviation": "10.97",
+    "beta": "0.81",
+    "sharpe_ratio": "1.33",
+    "alpha": "",
+    "portfolio_turnover": "0.52"
+  },
+  "benchmark_performance": {
+    "name": "This product labelling is applicable only to the scheme",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "5.17%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "5.17%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "5.17%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 1020481,
+  "foundAt": 91829,
+  "score": 80200,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-25T21:07:06.355Z"
+}

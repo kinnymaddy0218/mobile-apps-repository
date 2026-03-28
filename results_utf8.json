@@ -1,0 +1,877 @@
+﻿[PROCESS] Verifying: SBI Bluechip Fund - Direct Plan - Growth
+[Extractor] Searching for detail page of: "SBI Large Cap Fund"
+[Extractor] Occurrence at 5009 score: 0
+[Extractor] Occurrence at 26843 score: 2
+[Extractor] Occurrence at 43962 score: 4
+[Extractor] Occurrence at 397640 score: 2
+[Extractor] Occurrence at 398791 score: 2
+[Extractor] Occurrence at 399376 score: 2
+[Extractor] Occurrence at 403122 score: 2
+[Extractor] Occurrence at 452253 score: 2
+[Extractor] Occurrence at 455244 score: 1
+[Extractor] Occurrence at 488735 score: 2
+[Extractor] Occurrence at 539287 score: 0
+[Extractor] Selecting occurrence at 43962 (score: 4)
+[OK] Extracted 10 holdings for SBI Bluechip Fund - Direct Plan - Growth
+[PROCESS] Verifying: HDFC Flexi Cap Fund - Direct Plan - Growth
+[Discoverer] Trying HDFC S3 Fallback: https://files.hdfcfund.com/s3fs-public/2026-02/HDFC%20MF%20Factsheet%20-%20January%202026_0.pdf
+Warning: TT: undefined function: 32
+Warning: TT: undefined function: 32
+Warning: TT: undefined function: 32
+Warning: TT: undefined function: 32
+[Extractor] Searching for detail page of: "HDFC Flexi Cap Fund"
+[Extractor] Occurrence at 34615 score: -5
+[Extractor] Occurrence at 40380 score: 4
+[Extractor] Occurrence at 46081 score: -4
+[Extractor] Occurrence at 316710 score: -2
+[Extractor] Occurrence at 320267 score: -1
+[Extractor] Occurrence at 549733 score: 0
+[Extractor] Occurrence at 565432 score: -5
+[Extractor] Occurrence at 566227 score: 0
+[Extractor] Occurrence at 620070 score: 1
+[Extractor] Occurrence at 673453 score: 0
+[Extractor] Occurrence at 688663 score: 2
+[Extractor] Selecting occurrence at 40380 (score: 4)
+[Extractor] Detected fund at column index: 0 in header row: "HDFC Flexi Cap Fund "
+[OK] Extracted 10 holdings for HDFC Flexi Cap Fund - Direct Plan - Growth
+[PROCESS] Verifying: ICICI Prudential Bluechip Fund - Direct Plan - Growth
+[Discoverer] Using direct URL for ICICI Prudential Mutual Fund: https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf
+[Extractor] Searching for detail page of: "ICICI Prudential Bluechip Fund"
+[Extractor] Occurrence at 48589 score: 0
+[Extractor] Selecting occurrence at 48589 (score: 0)
+[Extractor] Detected fund at column index: 0 in header row: "ICICI Prudential Bluechip Fund)"
+[OK] Extracted 10 holdings for ICICI Prudential Bluechip Fund - Direct Plan - Growth
+[PROCESS] Verifying: Nippon India Small Cap Fund - Direct Plan - Growth
+Discovering factsheet for Nippon India Mutual Fund at https://mf.nipponindiaim.com/InvestorServices/Pages/Factsheets.aspx...
+Warning: TT: undefined function: 21
+[Extractor] Searching for detail page of: "Nippon India Small Cap Fund"
+[Extractor] Occurrence at 3302 score: 0
+[Extractor] Occurrence at 60484 score: 5
+[Extractor] Occurrence at 64616 score: 3
+[Extractor] Occurrence at 65064 score: 3
+[Extractor] Occurrence at 482692 score: -2
+[Extractor] Occurrence at 522953 score: 0
+[Extractor] Occurrence at 535005 score: 1
+[Extractor] Occurrence at 548597 score: 2
+[Extractor] Occurrence at 548833 score: 2
+[Extractor] Occurrence at 548904 score: 2
+[Extractor] Occurrence at 549148 score: 2
+[Extractor] Selecting occurrence at 60484 (score: 5)
+[Extractor] Detected fund at column index: 0 in header row: "Nippon India Small Cap Fund"
+[OK] Extracted 10 holdings for Nippon India Small Cap Fund - Direct Plan - Growth
+[PROCESS] Verifying: Kotak Flexi Cap Fund - Direct Plan - Growth
+Discovering factsheet for Kotak Mutual Fund at https://www.kotakmf.com/investor-services/factsheets...
+No direct PDF links found for Kotak Mutual Fund. Checking secondary selectors...
+[PROCESS] Verifying: Aditya Birla Sun Life Frontline Equity Fund - Direct Plan - Growth
+Discovering factsheet for Aditya Birla Sun Life Mutual Fund at https://mutualfund.adityabirlacapital.com/investor-services/factsheets...
+[PROCESS] Verifying: Axis Bluechip Fund - Direct Plan - Growth
+[Discoverer] Using direct URL for Axis Mutual Fund: https://www.axismf.com/docs/default-source/monthly-factsheet/monthly-factsheet---february-2026.pdf
+Warning: Ignoring invalid character "33" in hex string
+Warning: Ignoring invalid character "79" in hex string
+Warning: Ignoring invalid character "84" in hex string
+Warning: Ignoring invalid character "89" in hex string
+Warning: Ignoring invalid character "80" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "61" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "33" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "71" in hex string
+Warning: Ignoring invalid character "111" in hex string
+Warning: Ignoring invalid character "111" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "84" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "77" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "114" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "115" in hex string
+Warning: Ignoring invalid character "114" in hex string
+Warning: Ignoring invalid character "105" in hex string
+Warning: Ignoring invalid character "112" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "105" in hex string
+Warning: Ignoring invalid character "61" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "105" in hex string
+Warning: Ignoring invalid character "114" in hex string
+Warning: Ignoring invalid character "115" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "83" in hex string
+Warning: Ignoring invalid character "114" in hex string
+Warning: Ignoring invalid character "105" in hex string
+Warning: Ignoring invalid character "112" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "115" in hex string
+Warning: Ignoring invalid character "121" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "61" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "33" in hex string
+Warning: Ignoring invalid character "79" in hex string
+Warning: Ignoring invalid character "84" in hex string
+Warning: Ignoring invalid character "89" in hex string
+Warning: Ignoring invalid character "80" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "61" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Indexing all PDF objects
+[PROCESS] Verifying: UTI Flexi Cap Fund - Direct Plan - Growth
+Discovering factsheet for UTI Mutual Fund at https://www.utimf.com/downloads/factsheets/...
+No direct PDF links found for UTI Mutual Fund. Checking secondary selectors...
+[PROCESS] Verifying: Mirae Asset Large Cap Fund - Direct Plan - Growth
+Discovering factsheet for Mirae Asset Mutual Fund at https://www.miraeassetmf.co.in/downloads/factsheets...
+[Extractor] Searching for detail page of: "Mirae Asset Large Cap Fund"
+[OK] Extracted 0 holdings for Mirae Asset Large Cap Fund - Direct Plan - Growth
+[PROCESS] Verifying: DSP Top 100 Equity Fund - Direct Plan - Growth
+[PROCESS] Verifying: Tata Large Cap Fund - Direct Plan - Growth
+Discovering factsheet for Tata Mutual Fund at https://www.tatamutualfund.com/downloads/factsheets...
+[PROCESS] Verifying: Quant Small Cap Fund - Direct Plan - Growth
+Discovering factsheet for Quant Mutual Fund at https://quantmutual.com/downloads/factsheets...
+[Extractor] Searching for detail page of: "Quant Small Cap Fund"
+[OK] Extracted 0 holdings for Quant Small Cap Fund - Direct Plan - Growth
+[PROCESS] Verifying: Parag Parikh Flexi Cap Fund - Direct Plan - Growth
+Discovering factsheet for PPFAS Mutual Fund at https://amc.ppfas.com/downloads/factsheet/...
+Warning: TT: undefined function: 21
+[Extractor] Searching for detail page of: "Parag Parikh Flexi Cap Fund"
+[Extractor] Occurrence at 84 score: -4
+[Extractor] Occurrence at 378 score: -3
+[Extractor] Occurrence at 430 score: -3
+[Extractor] Occurrence at 1992 score: 4
+[Extractor] Occurrence at 3594 score: 2
+[Extractor] Occurrence at 7288 score: 0
+[Extractor] Occurrence at 14470 score: 1
+[Extractor] Occurrence at 15511 score: 1
+[Extractor] Occurrence at 15744 score: 1
+[Extractor] Occurrence at 15903 score: 1
+[Extractor] Occurrence at 16035 score: 1
+[Extractor] Selecting occurrence at 1992 (score: 4)
+[Extractor] Detected fund at column index: 0 in header row: "Parag Parikh Flexi Cap Fund (PPFCF)"
+[OK] Extracted 0 holdings for Parag Parikh Flexi Cap Fund - Direct Plan - Growth
+[PROCESS] Verifying: Canara Robeco Bluechip Equity Fund - Direct Plan - Growth
+[PROCESS] Verifying: Bandhan Large Cap Fund - Direct Plan - Growth
+[Discoverer] Using direct URL for Bandhan Mutual Fund: https://bandhanmutual.com/download/factsheet/February_2026.pdf
+Warning: Ignoring invalid character "33" in hex string
+Warning: Ignoring invalid character "111" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "121" in hex string
+Warning: Ignoring invalid character "112" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "61" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "33" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "71" in hex string
+Warning: Ignoring invalid character "111" in hex string
+Warning: Ignoring invalid character "111" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "84" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "77" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "114" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "45" in hex string
+Warning: Ignoring invalid character "115" in hex string
+Warning: Ignoring invalid character "114" in hex string
+Warning: Ignoring invalid character "105" in hex string
+Warning: Ignoring invalid character "112" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "33" in hex string
+Warning: Ignoring invalid character "111" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "121" in hex string
+Warning: Ignoring invalid character "112" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Ignoring invalid character "116" in hex string
+Warning: Ignoring invalid character "109" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "108" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "103" in hex string
+Warning: Ignoring invalid character "61" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "110" in hex string
+Warning: Ignoring invalid character "34" in hex string
+Warning: Ignoring invalid character "104" in hex string
+Warning: Indexing all PDF objects
+
+--- FINAL_RESULTS_START ---
+[
+  {
+    "fundCode": "103038",
+    "fundName": "SBI Bluechip Fund - Direct Plan - Growth",
+    "amc": "SBI Mutual Fund",
+    "status": "SUCCESS",
+    "data": {
+      "asset_allocation": [
+        {
+          "category": "Standard Deviation:",
+          "percentage": "10.98%"
+        },
+        {
+          "category": "Beta:",
+          "percentage": "0.91%"
+        },
+        {
+          "category": "Sharpe Ratio:",
+          "percentage": "0.88%"
+        },
+        {
+          "category": "Equity Turnover :",
+          "percentage": "0.34%"
+        },
+        {
+          "category": "Total Turnover :",
+          "percentage": "0.61%"
+        }
+      ],
+      "sector_allocation": [
+        {
+          "sector": "Financial",
+          "percentage": "34.90%"
+        },
+        {
+          "sector": "Gas",
+          "percentage": "8.15%"
+        },
+        {
+          "sector": "Auto Components",
+          "percentage": "6.54%"
+        },
+        {
+          "sector": "Fast Moving Consumer Goods",
+          "percentage": "5.97%"
+        },
+        {
+          "sector": "Construction",
+          "percentage": "5.73%"
+        },
+        {
+          "sector": "Capital Goods",
+          "percentage": "5.49%"
+        },
+        {
+          "sector": "Metals",
+          "percentage": "5.02%"
+        },
+        {
+          "sector": "Technology",
+          "percentage": "4.76%"
+        },
+        {
+          "sector": "Services",
+          "percentage": "4.24%"
+        },
+        {
+          "sector": "Healthcare",
+          "percentage": "4.20%"
+        }
+      ],
+      "top_holdings": [
+        {
+          "company": "DLF Ltd-30-Mar-",
+          "percentage": "60.36%",
+          "sector": "Other"
+        },
+        {
+          "company": "Financial Services",
+          "percentage": "34.90%",
+          "sector": "Other"
+        },
+        {
+          "company": "ICICI Bank Ltd",
+          "percentage": "8.20%",
+          "sector": "Other"
+        },
+        {
+          "company": "Oil, Gas & Consumable Fuels",
+          "percentage": "8.15%",
+          "sector": "Other"
+        },
+        {
+          "company": "Automobile And Auto Components",
+          "percentage": "6.54%",
+          "sector": "Other"
+        },
+        {
+          "company": "HDFC Bank Ltd",
+          "percentage": "6.54%",
+          "sector": "Other"
+        },
+        {
+          "company": "Reliance Industries Ltd",
+          "percentage": "6.18%",
+          "sector": "Other"
+        },
+        {
+          "company": "Fast Moving Consumer Goods",
+          "percentage": "5.97%",
+          "sector": "Other"
+        },
+        {
+          "company": "Construction",
+          "percentage": "5.73%",
+          "sector": "Other"
+        },
+        {
+          "company": "Larsen & Toubro Ltd",
+          "percentage": "5.73%",
+          "sector": "Other"
+        }
+      ],
+      "expense_ratio": "",
+      "turnover_ratio": "0.34",
+      "exit_load": "For exit after 30 days and within 90 days from the",
+      "aum": "55,502.48",
+      "inception_date": "",
+      "return_since_inception": "",
+      "min_investment": "",
+      "lock_in": "",
+      "large_cap": "",
+      "mid_cap": "",
+      "small_cap": ""
+    }
+  },
+  {
+    "fundCode": "118955",
+    "fundName": "HDFC Flexi Cap Fund - Direct Plan - Growth",
+    "amc": "HDFC Mutual Fund",
+    "status": "SUCCESS",
+    "data": {
+      "asset_allocation": [],
+      "sector_allocation": [
+        {
+          "sector": "Mar et Value as on January 0, Γé╣. in Lacs 2,243.29",
+          "percentage": "202%"
+        },
+        {
+          "sector": "Returns (%)",
+          "percentage": "20.73%"
+        },
+        {
+          "sector": "year",
+          "percentage": "15%"
+        },
+        {
+          "sector": "Benchmark Returns (%)#",
+          "percentage": "14.82%"
+        },
+        {
+          "sector": "Additional Benchmark Returns (%)# #",
+          "percentage": "13.65%"
+        }
+      ],
+      "top_holdings": [
+        {
+          "company": "Cash,Cash Equivalents and Net Current Assets",
+          "percentage": "15.03%",
+          "sector": "Other"
+        },
+        {
+          "company": "ICICI Bank Ltd. Banks",
+          "percentage": "8.90%",
+          "sector": "Other"
+        },
+        {
+          "company": "HDFC Bank Ltd.┬ú Banks",
+          "percentage": "7.82%",
+          "sector": "Other"
+        },
+        {
+          "company": "Axis Bank Ltd. Banks",
+          "percentage": "7.59%",
+          "sector": "Other"
+        },
+        {
+          "company": "State Bank of India Banks",
+          "percentage": "4.86%",
+          "sector": "Other"
+        },
+        {
+          "company": "Company Ltd. Insurance",
+          "percentage": "4.10%",
+          "sector": "Other"
+        },
+        {
+          "company": "Limited Banks",
+          "percentage": "3.81%",
+          "sector": "Other"
+        },
+        {
+          "company": "HCL Technologies Ltd. IT - Software",
+          "percentage": "3.13%",
+          "sector": "Other"
+        },
+        {
+          "company": "Limited Automobiles",
+          "percentage": "3.00%",
+          "sector": "Other"
+        },
+        {
+          "company": "Biotechnology",
+          "percentage": "2.85%",
+          "sector": "Other"
+        }
+      ],
+      "expense_ratio": "",
+      "turnover_ratio": "",
+      "exit_load": "in of",
+      "aum": "",
+      "inception_date": "",
+      "return_since_inception": "",
+      "min_investment": "",
+      "lock_in": "",
+      "large_cap": "",
+      "mid_cap": "",
+      "small_cap": ""
+    }
+  },
+  {
+    "fundCode": "100378",
+    "fundName": "ICICI Prudential Bluechip Fund - Direct Plan - Growth",
+    "amc": "ICICI Prudential Mutual Fund",
+    "status": "SUCCESS",
+    "data": {
+      "asset_allocation": [],
+      "sector_allocation": [
+        {
+          "sector": "Nifty TRI",
+          "percentage": "500%"
+        },
+        {
+          "sector": "(Nifty TRI)",
+          "percentage": "500%"
+        },
+        {
+          "sector": "For Investment Objective : Refer page no. from to 160, For Direct returns: Refer page no. from",
+          "percentage": "158%"
+        },
+        {
+          "sector": "For IDCW History : Refer page no. from to 157, For SIP Returns : Refer page no. from to 151,",
+          "percentage": "152%"
+        },
+        {
+          "sector": "to",
+          "percentage": "143.%"
+        },
+        {
+          "sector": "Refer page no to for details on option, entry load, SWP, STP/Flex STP & minimum",
+          "percentage": "104%"
+        },
+        {
+          "sector": "Equity Shares -0.51%",
+          "percentage": "92.48%"
+        },
+        {
+          "sector": "NAV (As on 27-Feb-26): Growth Option : Rs. IDCW Option : Direct Plan Growth Option : Rs. Direct Plan IDCW Option :",
+          "percentage": "37.15%"
+        },
+        {
+          "sector": "Financial",
+          "percentage": "29.85%"
+        },
+        {
+          "sector": "Banks",
+          "percentage": "18.37%"
+        }
+      ],
+      "top_holdings": [
+        {
+          "company": "Financial Services",
+          "percentage": "30.27%",
+          "sector": "Other"
+        },
+        {
+          "company": "Banks",
+          "percentage": "23.19%",
+          "sector": "Other"
+        },
+        {
+          "company": "Automobile And Auto Components",
+          "percentage": "10.25%",
+          "sector": "Other"
+        },
+        {
+          "company": "Equity less than 1% of corpus",
+          "percentage": "9.88%",
+          "sector": "Other"
+        },
+        {
+          "company": "ICICI Bank Ltd.",
+          "percentage": "9.42%",
+          "sector": "Other"
+        },
+        {
+          "company": "Automobiles",
+          "percentage": "9.20%",
+          "sector": "Other"
+        },
+        {
+          "company": "HDFC Bank Ltd.",
+          "percentage": "9.16%",
+          "sector": "Other"
+        },
+        {
+          "company": "Oil, Gas & Consumable Fuels",
+          "percentage": "8.17%",
+          "sector": "Other"
+        },
+        {
+          "company": "Petroleum Products",
+          "percentage": "6.64%",
+          "sector": "Other"
+        },
+        {
+          "company": "Construction",
+          "percentage": "6.34%",
+          "sector": "Other"
+        }
+      ],
+      "expense_ratio": "1.88%",
+      "turnover_ratio": "",
+      "exit_load": "If the amountsought to be redeemed",
+      "aum": "20,391.63",
+      "inception_date": "",
+      "return_since_inception": "",
+      "min_investment": "",
+      "lock_in": "",
+      "large_cap": "",
+      "mid_cap": "2026%",
+      "small_cap": ""
+    }
+  },
+  {
+    "fundCode": "118778",
+    "fundName": "Nippon India Small Cap Fund - Direct Plan - Growth",
+    "amc": "Nippon India Mutual Fund",
+    "status": "SUCCESS",
+    "data": {
+      "asset_allocation": [],
+      "sector_allocation": [
+        {
+          "sector": "Details as on February 28,",
+          "percentage": "2026%"
+        },
+        {
+          "sector": "NAV as on February 27,",
+          "percentage": "2026%"
+        },
+        {
+          "sector": "June 08,",
+          "percentage": "2005%"
+        },
+        {
+          "sector": "Nifty TRI",
+          "percentage": "500%"
+        },
+        {
+          "sector": "Direct - Growth PlanΓé╣",
+          "percentage": "250.5989%"
+        },
+        {
+          "sector": "Growth PlanΓé╣",
+          "percentage": "227.8566%"
+        },
+        {
+          "sector": "Direct - IDCW PlanΓé╣",
+          "percentage": "66.1793%"
+        },
+        {
+          "sector": "IDCW PlanΓé╣",
+          "percentage": "42.3021%"
+        },
+        {
+          "sector": "returns for months period with risk free return (FBIL",
+          "percentage": "36%"
+        },
+        {
+          "sector": "AMFI Tier Benchmark",
+          "percentage": "1%"
+        }
+      ],
+      "top_holdings": [
+        {
+          "company": "Equity Less Than 1% of Corpus",
+          "percentage": "78.67%",
+          "sector": "Other"
+        },
+        {
+          "company": "AB: BSE Sensex TRI Return (%)12.7112.8612.",
+          "percentage": "37.41%",
+          "sector": "Other"
+        },
+        {
+          "company": "Standard Deviation",
+          "percentage": "13.25%",
+          "sector": "Other"
+        },
+        {
+          "company": "B: Nifty Smallcap 250 TRI Return (%)15.6215.9216.3413.707.63-",
+          "percentage": "4.63%",
+          "sector": "Other"
+        },
+        {
+          "company": "Multi Commodity Exchange of India Limited*",
+          "percentage": "2.89%",
+          "sector": "Other"
+        },
+        {
+          "company": "Cash and Other Receivables",
+          "percentage": "2.63%",
+          "sector": "Other"
+        },
+        {
+          "company": "HDFC Bank Limited*",
+          "percentage": "2.01%",
+          "sector": "Other"
+        },
+        {
+          "company": "Regular/Other than Direct",
+          "percentage": "1.82%",
+          "sector": "Other"
+        },
+        {
+          "company": "Karur Vysya Bank Limited*",
+          "percentage": "1.54%",
+          "sector": "Other"
+        },
+        {
+          "company": "Apar Industries Limited*",
+          "percentage": "1.45%",
+          "sector": "Other"
+        }
+      ],
+      "expense_ratio": "",
+      "turnover_ratio": "0.24",
+      "exit_load": "1% if redeemed or switched out on or before completion of 1 year from the date of allotment of units",
+      "aum": "67,641.50",
+      "inception_date": "",
+      "return_since_inception": "",
+      "min_investment": "",
+      "lock_in": "",
+      "large_cap": "",
+      "mid_cap": "",
+      "small_cap": "250%"
+    }
+  },
+  {
+    "fundCode": "119280",
+    "fundName": "Kotak Flexi Cap Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Could not discover URL for Kotak Mutual Fund"
+  },
+  {
+    "fundCode": "102920",
+    "fundName": "Aditya Birla Sun Life Frontline Equity Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Could not discover URL for Aditya Birla Sun Life Mutual Fund"
+  },
+  {
+    "fundCode": "120503",
+    "fundName": "Axis Bluechip Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Invalid PDF structure"
+  },
+  {
+    "fundCode": "103130",
+    "fundName": "UTI Flexi Cap Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Could not discover URL for UTI Mutual Fund"
+  },
+  {
+    "fundCode": "118834",
+    "fundName": "Mirae Asset Large Cap Fund - Direct Plan - Growth",
+    "amc": "Mirae Asset Mutual Fund",
+    "status": "SUCCESS",
+    "data": {
+      "asset_allocation": [],
+      "sector_allocation": [
+        {
+          "sector": "Portfolio Top holdings% AllocationAllocation - Top Sectors",
+          "percentage": "10%"
+        }
+      ],
+      "top_holdings": [],
+      "expense_ratio": "1%",
+      "turnover_ratio": "30",
+      "exit_load": "c",
+      "aum": "",
+      "inception_date": "",
+      "return_since_inception": "",
+      "min_investment": "",
+      "lock_in": "",
+      "large_cap": "",
+      "mid_cap": "",
+      "small_cap": ""
+    }
+  },
+  {
+    "fundCode": "118544",
+    "fundName": "DSP Top 100 Equity Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Could not discover URL for DSP Mutual Fund"
+  },
+  {
+    "fundCode": "119107",
+    "fundName": "Tata Large Cap Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Could not discover URL for Tata Mutual Fund"
+  },
+  {
+    "fundCode": "120847",
+    "fundName": "Quant Small Cap Fund - Direct Plan - Growth",
+    "amc": "Quant Mutual Fund",
+    "status": "SUCCESS",
+    "data": {
+      "asset_allocation": [],
+      "sector_allocation": [],
+      "top_holdings": [],
+      "expense_ratio": "",
+      "turnover_ratio": "",
+      "exit_load": "",
+      "aum": "100",
+      "inception_date": "",
+      "return_since_inception": "",
+      "min_investment": "",
+      "lock_in": "",
+      "large_cap": "",
+      "mid_cap": "",
+      "small_cap": ""
+    }
+  },
+  {
+    "fundCode": "122639",
+    "fundName": "Parag Parikh Flexi Cap Fund - Direct Plan - Growth",
+    "amc": "PPFAS Mutual Fund",
+    "status": "SUCCESS",
+    "data": {
+      "asset_allocation": [
+        {
+          "category": "Date of Allotment February 27,",
+          "percentage": "2024%"
+        },
+        {
+          "category": "Nifty TRI",
+          "percentage": "50%"
+        },
+        {
+          "category": "Feb 27,",
+          "percentage": "2026%"
+        }
+      ],
+      "sector_allocation": [
+        {
+          "sector": "FACT SHEET - FEBRUARY",
+          "percentage": "2026%"
+        },
+        {
+          "sector": "Fund Manager- Debt () Since September 1,",
+          "percentage": "2025%"
+        },
+        {
+          "sector": "Feb 28, to Feb 27,",
+          "percentage": "2025%"
+        },
+        {
+          "sector": "AMFI Tier I Benchmark Returns (Nifty (TRI))",
+          "percentage": "500%"
+        },
+        {
+          "sector": "Value of Rs invested in Scheme/Benchmark indices",
+          "percentage": "100%"
+        },
+        {
+          "sector": "Direct Plan - Monthly IDCW:",
+          "percentage": "91.9544%"
+        },
+        {
+          "sector": "Regular Plan - Monthly IDCW:",
+          "percentage": "84.0451%"
+        },
+        {
+          "sector": "Additional Benchmark - Nifty (TRI) Returns",
+          "percentage": "50%"
+        }
+      ],
+      "top_holdings": [],
+      "expense_ratio": "0.63%",
+      "turnover_ratio": "",
+      "exit_load": "Above figures are annualised",
+      "aum": "1,34,906.82",
+      "inception_date": "",
+      "return_since_inception": "",
+      "min_investment": "",
+      "lock_in": "",
+      "large_cap": "",
+      "mid_cap": "",
+      "small_cap": ""
+    }
+  },
+  {
+    "fundCode": "118671",
+    "fundName": "Canara Robeco Bluechip Equity Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Could not discover URL for Canara Robeco Mutual Fund"
+  },
+  {
+    "fundCode": "124115",
+    "fundName": "Bandhan Large Cap Fund - Direct Plan - Growth",
+    "status": "FAIL",
+    "error": "Invalid PDF structure"
+  }
+]
+--- FINAL_RESULTS_END ---

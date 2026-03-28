@@ -1,0 +1,159 @@
+{
+  "fundName": "HDFC NIFTY Smallcap 250 Index Fund - Growth Option - Direct Plan",
+  "amcName": "HDFC Index Solutions",
+  "pdfUrl": "HDFC MF Index Solutions Factsheet - February 2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Banks",
+      "percentage": "14.64%"
+    },
+    {
+      "sector": "Construction",
+      "percentage": "6.96%"
+    },
+    {
+      "sector": "Software",
+      "percentage": "6.81%"
+    },
+    {
+      "sector": "Services",
+      "percentage": "6.79%"
+    },
+    {
+      "sector": "Diversified Fmcg",
+      "percentage": "4.99%"
+    },
+    {
+      "sector": "Petroleum Products",
+      "percentage": "4.65%"
+    },
+    {
+      "sector": "Consumer Durables",
+      "percentage": "3.81%"
+    },
+    {
+      "sector": "Retailing",
+      "percentage": "3.69%"
+    },
+    {
+      "sector": "Entertainment",
+      "percentage": "3.15%"
+    },
+    {
+      "sector": "Power",
+      "percentage": "3.10%"
+    },
+    {
+      "sector": "Automobiles",
+      "percentage": "2.97%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "2.92%"
+    },
+    {
+      "sector": "Transport",
+      "percentage": "2.07%"
+    },
+    {
+      "sector": "Textiles & Apparels",
+      "percentage": "1.89%"
+    },
+    {
+      "sector": "Realty",
+      "percentage": "1.86%"
+    },
+    {
+      "sector": "Aerospace & Defense",
+      "percentage": "1.55%"
+    },
+    {
+      "sector": "Oil",
+      "percentage": "1.20%"
+    },
+    {
+      "sector": "Food Products",
+      "percentage": "1.10%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "5.18%"
+    },
+    {
+      "company": "Larsen and Toubro Ltd.",
+      "sector": "Construction",
+      "percentage": "4.89%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Banks",
+      "percentage": "4.87%"
+    },
+    {
+      "company": "Bharti Airtel Ltd. Telecom",
+      "sector": "Services",
+      "percentage": "4.66%"
+    },
+    {
+      "company": "Reliance Industries Ltd.",
+      "sector": "Petroleum Products",
+      "percentage": "4.65%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "4.59%"
+    },
+    {
+      "company": "Infosys Limited IT",
+      "sector": "Software",
+      "percentage": "4.20%"
+    },
+    {
+      "company": "Mahindra & Mahindra Ltd.",
+      "sector": "Automobiles",
+      "percentage": "2.97%"
+    },
+    {
+      "company": "ITC LIMITED",
+      "sector": "Diversified Fmcg",
+      "percentage": "2.95%"
+    },
+    {
+      "company": "Ltd. IT",
+      "sector": "Software",
+      "percentage": "2.61%"
+    }
+  ],
+  "expense_ratio": "0.20%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": ".",
+    "beta": "28.40",
+    "sharpe_ratio": "18.00",
+    "alpha": "",
+    "portfolio_turnover": "9.31"
+  },
+  "benchmark_performance": {
+    "name": "Nifty 50 Index (TRI)",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 413125,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-24T03:09:11.155Z"
+}

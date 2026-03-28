@@ -1,0 +1,37 @@
+{
+  "fundName": "ICICI Prudential Gilt Fund - Direct Plan - Growth",
+  "amcName": "ICICI Prudential Mutual Fund",
+  "pdfUrl": "https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "",
+    "beta": "",
+    "sharpe_ratio": "",
+    "alpha": "",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 1020481,
+  "foundAt": 997765,
+  "score": 75050,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-25T04:48:58.724Z"
+}

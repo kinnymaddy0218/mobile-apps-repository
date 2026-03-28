@@ -1,0 +1,95 @@
+{
+  "fundName": "SBI LARGE & MIDCAP FUND -DIRECT PLAN -Growth",
+  "amcName": "SBI Mutual Fund",
+  "pdfUrl": "https://www.sbimf.com/docs/default-source/scheme-factsheets/all-sbimf-schemes-factsheet-february-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "days -",
+      "percentage": "0.10%"
+    },
+    {
+      "sector": "days -",
+      "percentage": "0.10%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Gail (India) Ltd.",
+      "sector": "Other",
+      "percentage": "2.42%"
+    },
+    {
+      "company": "Bandhan Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.28%"
+    },
+    {
+      "company": "Oil & Natural Gas Corporation Ltd.",
+      "sector": "Other",
+      "percentage": "1.97%"
+    },
+    {
+      "company": "Punjab National Bank",
+      "sector": "Other",
+      "percentage": "1.66%"
+    },
+    {
+      "company": "The Federal Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.65%"
+    },
+    {
+      "company": "Reliance Industries Ltd.",
+      "sector": "Other",
+      "percentage": "1.46%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.44%"
+    },
+    {
+      "company": "Biocon Ltd.",
+      "sector": "Other",
+      "percentage": "1.44%"
+    },
+    {
+      "company": "Indus Towers Ltd.",
+      "sector": "Other",
+      "percentage": "1.39%"
+    },
+    {
+      "company": "UPL Ltd.",
+      "sector": "Other",
+      "percentage": "1.27%"
+    }
+  ],
+  "expense_ratio": "0.79%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "01",
+    "beta": "10.13",
+    "sharpe_ratio": "10.13",
+    "alpha": "",
+    "portfolio_turnover": "0.61"
+  },
+  "benchmark_performance": {
+    "name": "BSE 100 (TRI)",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 559885,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-26T09:33:37.329Z"
+}

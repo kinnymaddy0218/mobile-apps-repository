@@ -1,0 +1,104 @@
+{
+  "fundName": "Aditya Birla Sun Life Banking & PSU Debt Fund  - DIRECT - IDCW",
+  "amcName": "Aditya Birla Sun Life Mutual Fund",
+  "pdfUrl": "https://mutualfund.adityabirlacapital.com/-/media/bsl/files/resources/factsheets/2026/abslmf-empower_feb26.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Services",
+      "percentage": "2.42%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Exchange Traded Fund",
+      "sector": "Other",
+      "percentage": "17.76%"
+    },
+    {
+      "company": "Aditya Birla Sun Life Gold ETF",
+      "sector": "Other",
+      "percentage": "12.11%"
+    },
+    {
+      "company": "ADITYA BIRLA SUN LIFE SILVER ETF",
+      "sector": "Other",
+      "percentage": "5.65%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Other",
+      "percentage": "4.08%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.63%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.40%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.90%"
+    },
+    {
+      "company": "Bank of Maharashtra",
+      "sector": "Other",
+      "percentage": "1.46%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Other",
+      "percentage": "1.36%"
+    },
+    {
+      "company": "City Union Bank Ltd.",
+      "sector": "Other",
+      "percentage": "0.20%"
+    }
+  ],
+  "expense_ratio": "0.97%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "30,872.07",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "13.00%",
+  "mid_cap": "16.00%",
+  "small_cap": "32.00%",
+  "risk_ratios": {
+    "standard_deviation": "11.63",
+    "beta": "0.95",
+    "sharpe_ratio": "0.87",
+    "alpha": "4.51",
+    "portfolio_turnover": "0.54"
+  },
+  "benchmark_performance": {
+    "name": "index, Nifty 100 TRI. The",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "13.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "16.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "32.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 979182,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-27T00:26:46.464Z"
+}

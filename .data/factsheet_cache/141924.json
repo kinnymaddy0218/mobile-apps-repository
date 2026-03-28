@@ -1,0 +1,168 @@
+{
+  "fundName": "HDFC Housing Opportunities Fund  - Growth Option - Direct Plan",
+  "amcName": "HDFC Mutual Fund",
+  "pdfUrl": "HDFC MF Factsheet - February 2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Banks",
+      "percentage": "22.97%"
+    },
+    {
+      "sector": "Software",
+      "percentage": "6.74%"
+    },
+    {
+      "sector": "Auto Components",
+      "percentage": "3.78%"
+    },
+    {
+      "sector": "Services",
+      "percentage": "2.70%"
+    },
+    {
+      "sector": "Automobiles",
+      "percentage": "2.62%"
+    },
+    {
+      "sector": "Construction",
+      "percentage": "2.53%"
+    },
+    {
+      "sector": "Insurance",
+      "percentage": "2.34%"
+    },
+    {
+      "sector": "Diversified Fmcg",
+      "percentage": "1.29%"
+    },
+    {
+      "sector": "Industrial Products",
+      "percentage": "1.29%"
+    },
+    {
+      "sector": "Transport",
+      "percentage": "1.18%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "0.87%"
+    },
+    {
+      "sector": "Power",
+      "percentage": "0.78%"
+    },
+    {
+      "sector": "Beverages",
+      "percentage": "0.73%"
+    },
+    {
+      "sector": "Personal Products",
+      "percentage": "0.57%"
+    },
+    {
+      "sector": "Gas",
+      "percentage": "0.54%"
+    },
+    {
+      "sector": "Entertainment",
+      "percentage": "0.54%"
+    },
+    {
+      "sector": "Capital Markets",
+      "percentage": "0.46%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "6.25%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "5.66%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Banks",
+      "percentage": "3.53%"
+    },
+    {
+      "company": "Products",
+      "sector": "Other",
+      "percentage": "3.27%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "3.25%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "2.68%"
+    },
+    {
+      "company": "Maruti Suzuki India Ltd.",
+      "sector": "Automobiles",
+      "percentage": "2.62%"
+    },
+    {
+      "company": "Tata Consultancy Services Ltd. IT",
+      "sector": "Software",
+      "percentage": "2.32%"
+    },
+    {
+      "company": "Infosys Limited IT",
+      "sector": "Software",
+      "percentage": "2.29%"
+    },
+    {
+      "company": "Bharti Airtel Ltd. Telecom",
+      "sector": "Services",
+      "percentage": "2.21%"
+    }
+  ],
+  "expense_ratio": "0.70%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "53.43%",
+  "mid_cap": "53.43%",
+  "small_cap": "53.43%",
+  "risk_ratios": {
+    "standard_deviation": ".",
+    "beta": "5.53",
+    "sharpe_ratio": "5.17",
+    "alpha": "",
+    "portfolio_turnover": "9.45"
+  },
+  "benchmark_performance": {
+    "name": "NIFTY 500 Index (TRI)",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "53.43%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "53.43%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "53.43%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 748609,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T18:44:17.423Z"
+}

@@ -1,0 +1,102 @@
+{
+  "sbi": [
+    {
+      "name": "SBI Gold Fund- Dir Plan Growth",
+      "val": 664752.18
+    },
+    {
+      "name": "SBI Contra Fund - Direct Growth",
+      "val": 627599.26
+    },
+    {
+      "name": "SBI Healthcare Opport Fund Dir Gr",
+      "val": 422032.12
+    },
+    {
+      "name": "SBI Large & Midcap Fund Direct Gr",
+      "val": 186234.95
+    },
+    {
+      "name": "SBI PSU Fund Dir Plan Growth",
+      "val": 152523.44
+    },
+    {
+      "name": "SBI Nifty Midcap 150 Index Fund Dir Gr",
+      "val": 94483.17
+    },
+    {
+      "name": "SBI Nifty Index Fund-Dir Growth",
+      "val": 94059.8
+    }
+  ],
+  "mfc": [
+    {
+      "name": "Parag Parikh Flexi Cap Fund - Direct Plan Growth",
+      "val": 177710.61
+    },
+    {
+      "name": "Bandhan Small Cap Fund-Direct Plan-Growth",
+      "val": 146308.25
+    },
+    {
+      "name": "NIPPON INDIA GROWTH MID CAP FUND - DIRECT",
+      "val": 143332.42
+    },
+    {
+      "name": "ICICI Prudential Multi-Asset Fund - Direct Plan - Growth",
+      "val": 82148.48
+    },
+    {
+      "name": "HDFC Mid Cap Fund - Direct Plan - Growth Option",
+      "val": 77929.97
+    },
+    {
+      "name": "HDFC Flexi Cap Fund - Direct Plan - Growth Option",
+      "val": 66992.81
+    },
+    {
+      "name": "ICICI Prudential Value Fund",
+      "val": 47707.72
+    },
+    {
+      "name": "NIPPON INDIA MULTI CAP FUND - DIRECT GROWTH PLAN",
+      "val": 44668.73
+    },
+    {
+      "name": "Motilal Oswal Midcap Fund - Direct Plan Growth",
+      "val": 34024.8
+    },
+    {
+      "name": "UTI Nifty 50 Index Fund - Direct Plan",
+      "val": 31703.23
+    },
+    {
+      "name": "NIPPON INDIA MULTI ASSET FUND - DIRECT",
+      "val": 28424.22
+    },
+    {
+      "name": "HDFC Small Cap Fund - Direct Growth Plan",
+      "val": 26086.28
+    },
+    {
+      "name": "ICICI Prudential Pharma Healthcare and Diagnostics",
+      "val": 24434.55
+    },
+    {
+      "name": "Motilal Oswal BSE Enhanced Value Index Fund - Direct Growth",
+      "val": 22170.34
+    },
+    {
+      "name": "NIPPON INDIA NIFTY ALPHA LOW 30 INDEX",
+      "val": 14549.77
+    },
+    {
+      "name": "FUND - DIRECT GROWTH PLAN DSP Natural Resources and New Energy Fund - Direct Plan",
+      "val": 10060.78
+    },
+    {
+      "name": "Kotak Large & Midcap Fund - Direct Plan - Growth",
+      "val": 8874.78
+    }
+  ]
+}

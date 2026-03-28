@@ -1,0 +1,88 @@
+{
+  "fundName": "Kotak Large & Midcap Fund - Direct- Growth",
+  "amcName": "Kotak Mutual Fund",
+  "pdfUrl": "https://www.kotakmf.com/factsheet/feb_2026/Kotak%20MF%20Factsheet%20February%202026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [
+    {
+      "company": "HDFC Bank Ltd.:",
+      "sector": "Other",
+      "percentage": "14.5%"
+    },
+    {
+      "company": "ICICI Bank Ltd.:",
+      "sector": "Other",
+      "percentage": "11.8%"
+    },
+    {
+      "company": "State Bank Of India:",
+      "sector": "Other",
+      "percentage": "10.7%"
+    },
+    {
+      "company": "Axis Bank Ltd.:",
+      "sector": "Other",
+      "percentage": "8.1%"
+    },
+    {
+      "company": "Bajaj Finance Ltd.:",
+      "sector": "Other",
+      "percentage": "6.3%"
+    },
+    {
+      "company": "Bharti Airtel Ltd.:",
+      "sector": "Other",
+      "percentage": "4.2%"
+    },
+    {
+      "company": "State Bank Of India:",
+      "sector": "Other",
+      "percentage": "4.2%"
+    },
+    {
+      "company": "Dr Reddys Laboratories Ltd.:",
+      "sector": "Other",
+      "percentage": "3.7%"
+    },
+    {
+      "company": "Marico Ltd.:",
+      "sector": "Other",
+      "percentage": "3.5%"
+    },
+    {
+      "company": "Titan Company Ltd.:",
+      "sector": "Other",
+      "percentage": "3.4%"
+    }
+  ],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "6.83",
+    "beta": "0.96",
+    "sharpe_ratio": "0.91",
+    "alpha": "",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 1241472,
+  "foundAt": 458514,
+  "score": 75200,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-25T04:03:13.361Z"
+}

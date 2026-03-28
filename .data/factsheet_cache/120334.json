@@ -1,0 +1,88 @@
+{
+  "fundName": "ICICI Prudential Multi-Asset Fund - Direct Plan - Growth",
+  "amcName": "ICICI Prudential Mutual Fund",
+  "pdfUrl": "https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [
+    {
+      "company": "Agricultural Food & Other Products",
+      "sector": "Other",
+      "percentage": "0.38%"
+    },
+    {
+      "company": "Adani Wilmar Ltd.",
+      "sector": "Other",
+      "percentage": "0.38%"
+    },
+    {
+      "company": "Construction Vehicles",
+      "sector": "Other",
+      "percentage": "0.98%"
+    },
+    {
+      "company": "Tata Motors Ltd. - Futures",
+      "sector": "Other",
+      "percentage": "0.98%"
+    },
+    {
+      "company": "Sona Blw Precision Forgings Ltd.",
+      "sector": "Other",
+      "percentage": "0.55%"
+    },
+    {
+      "company": "CIE Automotive India Ltd.",
+      "sector": "Other",
+      "percentage": "0.38%"
+    },
+    {
+      "company": "Tata Motors Passenger Vehicles Ltd.",
+      "sector": "Other",
+      "percentage": "0.94%"
+    },
+    {
+      "company": "State Bank Of India",
+      "sector": "Other",
+      "percentage": "0.53%"
+    },
+    {
+      "company": "United Breweries Ltd.",
+      "sector": "Other",
+      "percentage": "0.70%"
+    },
+    {
+      "company": "Shree Cements Ltd.",
+      "sector": "Other",
+      "percentage": "0.64%"
+    }
+  ],
+  "expense_ratio": "0.64%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "",
+    "beta": "0.75",
+    "sharpe_ratio": "2.08",
+    "alpha": "",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "performance, values of Nifty 50 TRI have been used since inception till 27th May, 2018 and w.e.f. 28th May, 2018 values of Nifty 200",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 1020481,
+  "foundAt": 374654,
+  "score": 200,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T18:48:03.243Z"
+}

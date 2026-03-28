@@ -1,0 +1,1738 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><meta name="robots" content="index, follow" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta id="ctl00_keywords" name="keywords" /><meta name="viewport" content="width = device-width, initial-scale = 1.0, maximum-scale = 1.0 user-scalable = no" /><title>
+	Motilal Oswal
+</title><link href="/images/Mosl_Browser_icon.ico" rel="SHORTCUT ICON" type="image/ico" /><link rel="stylesheet" type="text/css" href="/css/mystyle.css" /><link rel="stylesheet" type="text/css" href="/css/media_query.css" /><link href="/css/bootstrap.min.css" rel="stylesheet" /><link href="/css/mystyle.css" rel="stylesheet" /><link href="/css/My-Style.css?1" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="/css/reset.css" /><link rel="Stylesheet" type="text/css" href="/css/font-awesome.css" /><link rel="Stylesheet" type="text/css" href="/css/inner_page.css" /><link rel="Stylesheet" type="text/css" href="/css/chosen1.css" /><link href="../../css/inner_page.css" rel="stylesheet" type="text/css" /><link href="/css/new_accordian.css" rel="stylesheet" type="text/css" /><link href="../../roboto/stylesheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/homeJS.js"></script>
+
+    <script type="text/javascript" src="/js/css3-mediaqueries.js"></script>
+
+    <script src="/js/jquery-3.4.1.min.js" type="text/javascript"> </script>
+
+    <link rel="stylesheet" href="/css/jquery-ui.css" />
+
+    <script src="/js/jquery-ui.js" type="text/javascript"></script>
+
+    <script type="text/javascript" language="javascript" src="/js/jquery.bxslider.js"></script>
+
+    <link href="/css/jquery.bxslider.css" rel="stylesheet" /><link rel="stylesheet" href="/css/camera.css" type="text/css" media="all" />
+
+    <script type='text/javascript' src='/js/camera.js'></script>
+
+    <script type='text/javascript' src='/js/jquery.easing.1.3.js'></script>
+
+    <script type="text/javascript" src="/js/ddaccordion.js"></script>
+
+    <script type="text/javascript" src="/js/accordian.js"></script>
+    <script src="/js/marquee.js" type="text/javascript"></script>
+
+    <script type="text/javascript" language="javascript">
+
+        $(document).ready(function () {
+
+
+
+
+            if ($(window).width() <= 480) {
+                $('#camera_wrap_1').camera({
+                    thumbnails: false,
+                    pagination: true,
+                    height: '380px',
+                    alignment: 'topLeft'
+
+                });
+            }
+            else {
+
+                $('#camera_wrap_1').camera({
+                    thumbnails: false,
+                    pagination: true,
+                    height: '390px',
+                    alignment: 'topRight'
+
+                });
+
+            }
+
+
+
+
+        });
+    </script>
+
+    <!---->
+
+
+    <link rel="stylesheet" type="text/css" href="/css/sagscroller.css" /><link type="text/css" rel="stylesheet" href="/css/easy-responsive-tabs.css" />
+
+    <script src="/js/easyResponsiveTabs.js" type="text/javascript"></script>
+
+    <!-- tab jquery -->
+
+    <script type="text/javascript" language="javascript">
+        // Wait until the DOM has loaded before querying the document
+        $(document).ready(function () {
+            $('ul.tab').each(function () {
+                // For each set of tabs, we want to keep track of
+                // which tab is active and it's associated content
+                var $active, $content, $links = $(this).find('a');
+
+                // If the location.hash matches one of the links, use that as the active tab.
+                // If no match is found, use the first link as the initial active tab.
+                $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
+                $active.addClass('active');
+
+                $content = $($active[0].hash);
+
+                // Hide the remaining content
+                $links.not($active).each(function () {
+                    $(this.hash).hide();
+                });
+
+                // Bind the click event handler
+                $(this).on('click', 'a', function (e) {
+                    // Make the old tab inactive.
+                    $active.removeClass('active');
+                    $content.hide();
+
+                    // Update the variables with the new link and content
+                    $active = $(this);
+                    $content = $(this.hash);
+
+                    // Make the tab active.
+                    $active.addClass('active');
+                    $content.show();
+
+                    // Prevent the anchor's default click action
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+
+    <!-- fix header -->
+    
+
+
+
+    <script type="text/javascript" src="/amchart/amcharts.js"></script>
+
+    <script type="text/javascript" src="/amchart/serial.js"></script>
+
+    <script type="text/javascript" src="/amchart/pie.js"></script>
+
+    <script type="text/javascript" src="/amchart/none.js"></script>
+
+
+
+
+<script type="application/ld+json" id="schemaMarkup">
+		{
+		  "@context": "http://schema.org",
+		  "@type": "Organization",
+		  "name": "Motilal Oswal Mutual Funds",
+		  "url": "https://www.motilaloswalmf.com/",
+		  "description": "Mutual Fund Investment - Motilal Oswal offers various mutual funds, mutual fund calculators, guide to mutual funds, tax saving mutual funds etc. Start investing in mutual funds now!",
+		  "logo": " https://www.motilaloswalmf.com/images/Logo.png",
+		 "contactPoint": [{
+		 "@type": "ContactPoint",
+		 "telephone": "+91-8108622222",
+		 "contactType": "customer service",
+		 "contactOption": "TollFree",
+		 "areaServed": "IN"
+		  }],
+		  "sameAs": [
+		 "https://www.facebook.com/motilaloswalamc",
+		 "https://twitter.com/MotilalOswalAMC",
+		 "https://www.youtube.com/motilaloswalamc"
+		  ]
+		}
+		</script>
+<!-- Google Tag Manager -->
+<script>    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start':
+
+new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+
+'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+
+    })(window, document, 'script', 'dataLayer', 'GTM-NPBHR7');</script>
+    <!-- End Google Tag Manager -->
+
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPBHR7"
+
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- End Google Tag Manager (noscript) -->
+
+<form name="aspnetForm" method="post" action="./Motilal-Oswal-Mutual-Fund-Factsheet-Feb_2026.pdf?type=1&amp;404%3bhttp%3a%2f%2fwww.motilaloswalmf.com%3a80%2fPdf%2fFactsheet%2fMotilal-Oswal-Mutual-Fund-Factsheet-Feb_2026.pdf" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_ToolkitScriptManager1_HiddenField" id="ctl00_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="0LdwWuWRxAOhzbKpE9yx75FdHxmSNmkMgDiIny5g5Y0j670qZK2TxzPJTanz6NqpPHy4tB0VvXIctijaH5ScCPTfPudgdf340Qep8/KNSIA=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=rIiy-1-o8vgNQ5rNjYci-Q4gAmhtlGtQsUW4kTb36wZkfevD3tRh_SS95QR7EBVMy1xhRtPLN5FFONZC69c5yQUoMS-6lENC9_ODffAQYPE1&amp;t=638628422640000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=KeP7iJNxX_n9FmzW1TFGF30WKbZmtrWl8-Fb83uNPGRDU__htCFqZxIE8vMDED6o-sTGjqJMirJb-Kbc-77nkr3DDAYNukkY-wwcIl8AjjLfcTqzx1jJqjnSfou8IvRWEKbi8SiziWLAo2saFndr2RNjt5WM8zpN3QzI_dsFJsQ1&amp;t=2a9d95e3" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=yCorZ5NkdQgB4F2uNB7xEKplCgkvgg-GDKXemdBEZWdA88t3IGsj3xCJ1yEihspDmn73n4EEzte-OXpXyp5CbXzacfayE-rLgOnOs-LE7AbhQb3P7K5oHl3Xv0MIevhFzfAqYqCPhc-dwZtJQw4Uy_7lfCFL4XuiLbzJfZSTWUTcO439Ynlb8LIbKvqfhGR30&amp;t=2a9d95e3" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5ED29197" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="bD9/ilYv7ekgDdJ3NZJcNZ9zOYzbsq3lBJSTPqvxGK40p0OiyC4rtfyhBP06X8SF7VsYZ9SS6eOZk9MsADybueOsjbiHSKjc8NPKEr81G/+A7FhpvyG8U69fpXn+PWt7eXvR2lGc/GrOtcFdObr8t+ci5OZw/p8D8w2lNWWYSpzydVp7UM118VJzggxX8NaYLsqja3KK0UFCYa2dUX7oUw==" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        
+        <div class="dispNone">
+        Motilal Oswal Asset Management Company Ltd. (MOAMC) is a public limited company
+        incorporated under the Companies Act, 1956 on November 14, 2008, having its Registered
+        Office at 10th Floor, Motilal Oswal Tower, Rahimtullah Sayani Road, Opposite Parel
+        ST Depot, Prabhadevi, Mumbai - 400025.<br /> Motilal Oswal Asset Management Company Ltd.
+        has been appointed as the Investment Manager to Motilal Oswal Mutual Fund by the
+        Trustee vide Investment Management Agreement (IMA) dated May 21, 2009, executed
+        between Motilal Oswal Trustee Company Ltd. and Motilal Oswal Asset Management Company
+        Ltd.</div>
+    
+    <div class="marg10imp">
+        
+<style type="text/css">
+    .TopDesktopSubMenu ul li span
+    {
+        width: 100%;
+        background: #d2d2d2;
+        padding: 5px 5px 5px 20px;
+        margin: 0px;
+        float: left;
+        border-bottom: 1px #FCAF17 solid;
+    }
+    .InnerMobileMenuTopMargin
+    {
+        margin-top: 8px !important;
+    }
+    .sub-menu
+    {
+        min-width: 185px;
+    }
+    .sub-menu-new
+    {
+    	min-width: 283px;
+    }
+    .sub-menu-new img{padding-left: 10px;}
+    .sub-menu a
+    {
+        padding: 7px 15px;
+        border-bottom: 1px solid #c5c3c3;
+        text-transform: uppercase;
+    }
+	.InvestOnlineDiv .sub-menu{width: 155px;min-width: 155px;}
+	.InvestOnlineDiv .sub-menu a {
+    padding: 7px 15px;
+    border-bottom: 1px solid #c5c3c3;
+    text-transform: uppercase;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: left;
+}
+	.InvestOnlineDiv .sub-menu a:hover {
+    background: #f0f0f0;
+    text-decoration: none;}
+    
+    .sub-menu a sup{padding: 0 0 0 5px;color: red;}
+    
+    .sub-menu2
+    {
+        display: none;
+        top: 0;
+        left: 225px;
+        position: absolute;
+        min-width: 185px;
+        background: #cfcfcf;
+        text-transform: uppercase;
+        height: auto;
+    }
+    .sub-menu2-media
+    {
+    	height: 450px !important;
+        overflow-y: scroll;
+    	}
+    .sub-menu-parent2:hover .sub-menu2
+    {
+        display: block;
+        text-transform: uppercase;
+        min-width: 200px;
+    }
+    .sub-menu3
+    {
+        display: none;
+        top: 0;
+        left: 200px;
+        position: absolute;
+        min-width: 185px;
+        background: #b4b4b4;
+        text-transform: uppercase;
+    }
+    .sub-menu-parent3:hover .sub-menu3
+    {
+        display: block;
+        text-transform: uppercase;
+    }
+    .ThurdLevalMenu
+    {
+        background: #f5d139 !important;
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .ThurdLevalMenu ul
+    {
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .ThurdLevalMenu ul li
+    {
+        float: left;
+        margin: 0;
+        padding: 5px 0px 5px 10px;
+        width: 100%;
+        background: #f5d139;
+        position: relative;
+    }
+    .ThurdLevalMenu ul li img
+    {
+        right: 13px;
+        position: absolute;
+        top: 10px;
+    }
+    
+    .FourLevalMenu
+    {
+        background: #4b4b4b !important;
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .FourLevalMenu ul
+    {
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .FourLevalMenu ul li
+    {
+        float: left;
+        margin: 0;
+        padding: 5px 0px 5px 40px;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        border-bottom: 1px solid rgb(104, 94, 22);
+        background: #4b4b4b !important;
+    }
+    .FourLevalMenu ul li img
+    {
+        left: 10px;
+    }
+    .showLoginDiv
+    {
+    }
+    .NewLoginAdd
+    {
+        display: block !important;
+    }
+    .login_con_wrp2
+    {
+        display: none;
+    }
+    .showdownDiv
+    {
+    }
+    .NewLDownAdd
+    {
+        display: block !important;
+    }
+    .login_con_wrp
+    {
+        display: none;
+    }
+    .showNavDiv
+    {
+    }
+    .NewNavAdd
+    {
+        display: block !important;
+    }
+    .login_con_wrp1
+    {
+        display: none;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $("#idloginheading_1").click(function () {
+            $("#idloginSlider").toggle();
+        });
+    });
+    $(document).ready(function () {
+        $("#iddownloadheading_1").click(function () {
+            $("#iddownslideDown").toggle();
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".slideDown_1 loginSlider").hide();
+    });
+
+    $(".downloadSlide_1").click(function () {
+        $(".slideDown_1 loginSlider").slideToggle();
+    });
+
+
+    $(document).ready(function () {
+        $(window).keydown(function (event) {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                return false;
+            }
+        });
+    });
+
+    //<![CDATA[
+    function redirectPerformance() {
+        window.location = "http://cmotsweb:316/products/Performance#Open-Ended-Equity-Schemes";
+        return true;
+    }
+
+    function val123Search() {
+        var searchText = document.getElementById("txtSearch");
+        if (searchText.value.trim() == "" || searchText.value.trim() == "Search") {
+            alert("Please Enter Text To Search");
+            searchText.focus();
+            return false;
+        }
+        else {
+
+            window.location = "/SiteSearch/" + searchText.value;
+            return false;
+        }
+        return true;
+
+    }
+    function val123Mob() {
+        var searchText = document.getElementById("txtSearchMob");
+        if (searchText.value.trim() == "" || searchText.value.trim() == "Search") {
+            alert("Please Enter Text To Search");
+            searchText.focus();
+            return false;
+        }
+        else {
+
+            window.location = "/SiteSearch/" + searchText.value;
+            return false;
+        }
+        return true;
+
+    }
+    function isAlphaChecktop(evt) {
+        if (document.getElementById("txtSearch").value.length > 0) {
+
+            var k = (evt.which) ? evt.which : evt.keyCode;
+
+            return ((k > 32 && k < 46) || (k > 46 && k < 65) || (k > 90 && k < 97) || (k == 46) || (k == 123 || (k == 125)) || (k == 126)) ? false : true;
+
+        }
+        else {
+            var k = (evt.which) ? evt.which : evt.keyCode;
+
+            return ((k > 32 && k < 46) || (k > 46 && k < 65) || (k > 90 && k < 97) || (k == 32) || (k == 46) || (k == 123 || (k == 125)) || (k == 126)) ? false : true;
+
+        }
+    }
+    function vanish() {
+        var k = (evt.which) ? evt.which : evt.keyCode;
+        alert(k);
+
+    }
+
+    //]]>
+	$(function () {
+        $(".dropdown").hover(
+            function () {
+                $('.dropdown-menu', this).stop(true, true).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");
+            },
+            function () {
+                $('.dropdown-menu', this).stop(true, true).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");
+            });
+    });
+</script>
+
+
+<div class="loginDiv d-none">
+    <div id="OnedivShow" class="logindivSlider">
+        <span id="Onediv" class=" loginSlider">&nbsp;</span>
+        <div class="login_con_wrp2 login_con_wrp2ht showLoginDiv">
+            <div class="content  contentht contentshow">
+                <ul class="content_style">
+                    <li><a href="https://www.motilaloswalmf.com/investonline/loginpage.aspx?Login=MF" target="_blank" target="_blank">Transact Online</a></li>
+                    <li><a href="https://www.motilaloswalmf.com/investonline/loginpage.aspx?Login=PMS" target="_blank">PMS
+                        Investors </a></li>
+                    <li><a href="https://www.motilaloswalmf.com/investonline/loginpage.aspx?Login=Distributor" target="_blank">
+                        Distributor </a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="TwodivShow" class="navdivslier d-none">
+    <span id="Twodiv" class="navslider_new">&nbsp;</span>
+    <div class="login_con_wrp1 showNavDiv">
+        <div class="list">
+            <div class="marqueeText">
+                <div class="marquee">
+                    abcd
+                    <marquee behavior="scroll" direction="left" scrollamount="5">
+                        <ul>
+                            <li><a href='#' style='cursor:default'>Motilal Oswal  Nifty MidSmall India Consumption Index Fund - Regular (G) - 8.9011</a></li><li><a href='#' style='cursor:default'>Motilal Oswal 5 Year G-Sec Fund of Fund (G) - 12.9198</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund - Direct (G) - 11.304</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund - Regular (G) - 11.2926</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Direct IDCW Payout - 11.3037</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Direct IDCW Reinvestment - 11.3037</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Regular IDCW Payout - 11.293</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Regular IDCW Reinvestment - 11.293</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Direct (G) - 10.9326</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Direct IDCW Payout - 10.9326</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Direct IDCW Reinvestment - 10.9326</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Regular (G) - 10.8122</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Regular IDCW Payout - 10.8122</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Regular IDCW Reinvestment - 10.8122</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Aggressive (G) - 18.671</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Aggressive-Dir (G) - 19.1635</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Conservative (G) - 16.8881</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Conservative-Dir(G) - 17.3318</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund (Div-A) - 12.4842</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund (Div-Q) - 10.4163</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund (G) - 17.4112</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund-Dir (Div-A) - 13.2875</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund-Dir (Div-Q) - 11.2288</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund-Dir (G) - 19.5245</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE 1000 Index Fund - Direct (G) - 9.3903</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE 1000 Index Fund - Regular (G) - 9.3394</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE Enhanced Value Index Fund (G) - 26.9542</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE Enhanced Value Index Fund-Dir (G) - 27.617</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE Financials ex Bank 30 Index Fund (G) - 16.5667</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE Financials ex Bank 30 Index Fund-Dir (G) - 16.9854</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE Low Volatility Index Fund (G) - 15.5633</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE Quality Index Fund - Dir (G) - 16.4083</a></li><li><a href='#' style='cursor:default'>Motilal Oswal BSE Quality Index Fund (G) - 16.0101</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Direct (G) - 10.7513</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Direct (IDCW) - 10.7507</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Regular (G) - 10.5174</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Regular (IDCW) - 10.5175</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Direct (G) - 8.5853</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Direct IDCW Payout - 8.5853</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Direct IDCW Reinvestment - 8.5853</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Regular (G) - 8.5313</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Regular IDCW Payout - 8.5313</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Regular IDCW Reinvestment - 8.5313</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Direct (G) - 8.2006</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Direct IDCW Payout - 8.2004</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Direct IDCW Reinvestment - 8.2004</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Regular (G) - 8.037</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Regular IDCW Payout - 8.037</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Regular IDCW Reinvestment - 8.037</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Direct (G) - 9.6322</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular (G) - 9.6242</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular IDCW Payout - 9.6322</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular IDCW Reinvestment - 9.6322</a></li><li><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund (D) - 28.8226</a></li><li><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund (G) - 48.5875</a></li><li><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund -Dir (D) - 37.2784</a></li><li><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund -Dir (G) - 56.0984</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Direct (G) - 9.6023</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Direct (IDCW) - 9.6023</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Regular (G) - 9.5907</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Regular (IDCW) - 9.5907</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund(D) - 30.4705</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund(G) - 53.9685</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund-Dir(D) - 31.982</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund-Dir(G) - 60.1499</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Focused Fund - Direct (D) - 21.5239</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Focused Fund - Direct (G) - 48.7362</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Focused Fund (D) - 18.3543</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Focused Fund (G) - 41.3799</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Gold and Silver Passive Fund of Funds-Dir (G) - 32.2047</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Gold and Silver Passive Fund of Funds-Reg (G) - 31.8103</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Direct (G) - 11.971</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Direct IDCW Payout - 11.971</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Direct IDCW Reinvestment - 11.971</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Regular (G) - 11.9202</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Regular IDCW Payout - 11.9202</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Regular IDCW Reinvestment - 11.9202</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund - Direct (G) - 11.4912</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund - Regular (G) - 11.3194</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Direct IDCW Payout - 11.4904</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Direct IDCW Reinvestment - 11.4904</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Regular IDCW Payout - 11.3195</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Regular IDCW Reinvestment - 11.3195</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund - Dir (D) - 26.483</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund - Dir (G) - 34.8528</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund (D) - 24.2317</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund (G) - 31.7413</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Direct (G) - 13.308</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Direct (IDCW) - 12.5675</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Regular (G) - 12.952</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Regular (IDCW) - 12.0883</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-D) RI - 10.0077</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-F) RI - 10.0125</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-M) - 10.0572</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-Q) - 10.0998</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-W) RI - 10.014</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (G) - 14.5006</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-D) RI - 10.0055</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-F) RI - 10.0121</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-M) - 10.0562</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-Q) - 10.096</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-W) RI - 10.0209</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (G) - 14.3395</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Direct (G) - 10.6623</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Direct (IDCW)Payout - 10.6617</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Direct (IDCW)Reinvestment - 10.6617</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Regular (G) - 10.4194</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Regular (IDCW)Payout - 10.4192</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Regular (IDCW)Reinvestment - 10.4192</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund (D) - 41.9206</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund (G) - 86.3428</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund-Dir (D) - 43.571</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund-Dir (G) - 99.4352</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Direct (G) - 11.7362</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Direct (IDCW) - 11.7362</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Regular (G) - 11.4684</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Regular (IDCW) - 11.4684</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Multi Factor Passive Fund of Funds - Direct (G) - 9.9157</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Multi Factor Passive Fund of Funds - Regular (G) - 9.9146</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nasdaq 100 FOF - Direct (G) - 47.5544</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nasdaq 100 FOF - Regular (G) - 46.2194</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty 200 Momentum 30 Index Fund - Direct (G) - 14.6586</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty 50 Index Fund - Direct (G) - 20.611</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty 50 Index Fund (G) - 20.0935</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Fund - Direct (G) - 25.48</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Fund (G) - 24.3853</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Momentum 50 Index Fund - Direct (G) - 7.6682</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Momentum 50 Index Fund - Regular (G) - 7.5896</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Bank Index Fund - Direct (G) - 20.4931</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Bank Index Fund (G) - 19.5646</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Capital Market Index Fund - Direct (G) - 11.0517</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Capital Market Index Fund - Regular (G) - 10.9603</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty India Defence Index Fund - Direct Plan - 10.621</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty India Defence Index Fund - Regular Plan - 10.4927</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Microcap 250 Index Fund - Direct (G) - 14.8721</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Microcap 250 Index Fund - Regular (G) - 14.6153</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Midcap 150 Index Fund (G) - 35.8362</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Midcap 150 Index Fund-Dir (G) - 37.5811</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Financial Services Index Fund - Direct (G) - 12.9567</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Financial Services Index Fund - Regular (G) - 12.8723</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Healthcare Index Fund - Direct (G) - 10.2895</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Healthcare Index Fund - Regular (G) - 10.224</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall India Consumption Index Fund - Direct (G) - 8.959</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall IT and Telecom Index Fund - Direct (G) - 7.8537</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall IT and Telecom Index Fund - Regular (G) - 7.802</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Next 50 Index Fund - Dir (G) - 23.5236</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Next 50 Index Fund (G) - 22.5417</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Smallcap 250 Index Fund (G) - 32.4294</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Nifty Smallcap 250 Index Fund-Dir(G) - 33.9302</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Direct (G) - 9.7672</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Direct (IDCW)Payout - 9.185</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Regular (G) - 9.2221</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Regular (IDCW)Payout - 8.5025</a></li><li><a href='#' style='cursor:default'>Motilal Oswal S&P 500 Index Fund - Direct (G) - 28.3495</a></li><li><a href='#' style='cursor:default'>Motilal Oswal S&P 500 Index Fund (G) - 27.4004</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Direct (G) - 9.796</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Direct IDCW Payout - 9.796</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Direct IDCW Reinvestment - 9.796</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Regular (G) - 9.7546</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Regular IDCW Payout - 9.7546</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Regular IDCW Reinvestment - 9.7546</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Direct (G) - 13.2032</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Direct (IDCW) - 13.2032</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Regular (G) - 12.8109</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Regular (IDCW) - 12.8112</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Direct (G) - 10.0468</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Direct IDCW Payout - 10.0468</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Direct IDCW Reinvestment - 10.0468</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Regular (G) - 10.0408</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Regular IDCW Payout - 10.0408</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Regular IDCW Reinvestment - 10.0408</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-D) - 11.7326</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-F) - 11.8014</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-M) - 11.7673</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-Q) - 12.0951</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-W) - 11.7346</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (G) - 18.1485</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-D) - 11.4495</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-F) - 11.5054</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-M) - 11.4909</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-Q) - 11.7507</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-W) - 11.4702</a></li><li><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (G) - 17.0438</a></li>
+                        </ul>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ThreedivShow" class="downloaddivSlider d-none">
+    <span id="Threediv" class="downloadSlidernew">&nbsp;</span>
+    <div class="login_con_wrp showdownDiv">
+        <div class="content">
+            <ul class='content_style'><li><a href='/downloads/mutual-fund'>Mutual Fund </a></li><li><a href='/downloads/pms'>PMS </a></li><li><a href='https://online.motilaloswalmf.com/general/accountstatementmailback.aspx'>Account-Statement </a></li></ul>
+            
+        </div>
+    </div>
+</div>
+<!--  Mobile Menu --->
+<div class="HideScrollMenuButton bodyClickMenuHide DesktopBody">
+</div>
+<div class="TopDesktopMenuBody showScrollMenu">
+    <div class="HideScrollMenuButton bodyClickMenuHideShow TopNewMenuClose">
+        Close <i class="fa fa-close AwsomeFont"></i>
+    </div>
+    <ul id="accordion" class="accordion">
+        <li>
+        <div class="link">
+            <a href="/">Home</a></div>
+            </li>
+        <li>
+            <div class="link">
+                About Us <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+                    <li><a href="/about-us/overview">Overview</a> </li>
+                    <li><a href="/about-us/investment-philosophy">Investment Philosophy</a></li>
+                    
+                    <li><a href="/about-us/people">People</a></li>
+                    <li><a href="/about-us/videos-archives">Videos</a> </li>
+                    <li><a>Media </a></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li>News
+                                <img src="/images/DownArrowMobileMenu.png">
+                            </li>
+                            <div class="FourLevalMenu">
+                                <ul>
+                                    <li>
+                                        <img src="/images/RightArrowMobileMenu.png"><a href="/about-us/media-center/news/print">Print</a></li>
+                                    <li>
+                                        <img src="/images/RightArrowMobileMenu.png"><a href="/about-us/media-center/news/online">Online</a></li>
+                                    <li>
+                                        <img src="/images/RightArrowMobileMenu.png"><a href="/about-us/media-center/news/tv/all">Television</a></li>
+                                </ul>
+                            </div>
+                            <li>Interview
+                                <img src="/images/DownArrowMobileMenu.png">
+                            </li>
+                            <div class="FourLevalMenu">
+                                <ul>
+                                    <li>
+                                        <img src="/images/RightArrowMobileMenu.png"><a href="/about-us/media-center/interviews/print">Print</a></li>
+                                    <li>
+                                        <img src="/images/RightArrowMobileMenu.png"><a href="/about-us/media-center/interviews/online">Online</a></li>
+                                    <li>
+                                        <img src="/images/RightArrowMobileMenu.png"><a href="/about-us/media-center/interviews/tv/all">Television</a></li>
+                                </ul>
+                            </div>
+                            <li><a href="/about-us/media-center/press-release">Press Release</a></li>
+                        </ul>
+                    </div>
+                    <li><a href="/about-us/events">Events</a> </li>
+                </ul>
+            </div>
+        </li>
+
+        <!--<li>
+            <div class="link">
+                <a href="/about-us/international-business">International Business</a> 
+            </div>
+            </li>-->
+
+        <li style="display: none;">
+            <div class="link">
+                Mutual Funds <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul> 
+				<li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">Fund of Fund</a></li>
+				
+				<!--<li><a class="txttransnew" href="/Products/Motilal-Oswal-Asset-Allocation-Passive-FOF–Conservative"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Conservative</a></li>
+             <li><a class="txttransnew" href="/Products/Motilal-Oswal-Asset-Allocation-Passive-FOF–Aggressive"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Aggressive</a></li>-->
+			 <li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/gsec-fof-snapshot.html"  target="_blank">Motilal Oswal 5 Year G-Sec Fund of Fund</a></li>
+			<li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/fof-aggressive-n-conservative.html"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Conservative</a></li>
+             <li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/fof-aggressive-n-conservative.html"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Aggressive</a></li>
+			 
+				<li><a class="txttransnew" href="/products/motilal-oswal-nasdaq-100-fund-of-fund"  target="_blank">Motilal Oswal nasdaq 100 FOF</a></li>
+				
+				<li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">Mutual Funds</a></li>
+           <li><a class="txttransnew" href="/products/motilal-oswal-liquid-fund">Motilal Oswal Liquid Fund</a></li>
+          <li><a class="txttransnew" href="/products/motilal-oswal-nasdaq-100-fund-of-fund">Motilal Oswal nasdaq 100 FOF</a></li>
+         <li><a class="txttransnew" href="/products/most-focused-25-fund">Motilal Oswal Focused 25 Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-focused-midcap-30-fund">Motilal Oswal Midcap 30 Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-focused-flexicap-fund">Motilal Oswal Flexi cap Fund </a></li>
+        
+         <li><a class="txttransnew" href="/products/most-focused-long-term-fund">Motilal Oswal Long Term Equity Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-focused-dynamic-equity">Motilal Oswal Dynamic Fund</a></li>
+         <li><a class="txttransnew" href="/products/motilal-oswal-equity-hybrid-fund">Motilal Oswal Equity Hybrid Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-ultra-short-term-bond-fund">Motilal Oswal Ultra Short Term Fund</a></li>         
+		 <li><a href="/plans/movi">MOVI</a></li>
+         <li><a href="/plans/systematic-investment-plan">SYSTEMATIC INVESTMENT PLAN</a></li>
+         <li><a href="/plans/motilal-oswal-focused-cashflow-plan">MOTILAL OSWAL CASHFLOW PLAN</a></li>
+         <li><a href="/large-cap-alpha-index">Large Cap Alpha Index</a></li>					
+		 <li><a href="/products/Performance/1">Performance</a></li>
+		 <li><a href="/products/product-comparison">Product Comparison</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="link">
+                PMS <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+                    <li><a href="/products/value-strategy.aspx">Value Strategy</a></li>
+         <li><a href="/products/next-trillion-dollar-opportunity">Next Trillion Dollar Opportunity</a></li>
+         <li><a href="/products/india-opportunity-portfolio-strategy">India Opportunity Portfolio Strategy</a></li>
+         <li><a href="/products/india-opportunity-portfolio-strategy-v2">India Opportunity Portfolio Strategy V2</a></li>
+         <li><a href="/products/business-opportunity-portfolio">Business Opportunity Portfolio</a></li>
+		 <li><a href="/pms" target="_blank">PMS services - Direct Mode</a></li>
+                </ul>
+            </div>
+        </li>
+		<li>
+            <div class="link">
+               INDEX | ETF FUND <i class="fa fa-chevron-down"></i>
+            </div>
+			<div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+			 <li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">INDEX FUND</a></li>
+			  <li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/msci-eafe-top100-snapshot.html" target="_blank">Motilal Oswal MSCI EAFE Top 100 Select Index Fund</a></li>
+                    <li><a class="txttransnew" href="https://www.motilaloswalmf.com/products/motilal-oswal-sp-500-index-fund.aspx" target="_blank">Motilal Oswal S&P 500 Index Fund</a></li>
+			 <li><a class="txttransnew" href="/products/motilal-oswal-nifty-50-index-fund" target="_blank">Motilal Oswal Nifty Next 50 Index Fund</a></li> 
+        <li><a class="txttransnew" href="/products/motilal-oswal-nifty-next50-index-fund" target="_blank">Motilal Oswal Nifty  50 Index Fund</a></li>
+			 
+         <li><a class="txttransnew" href="/products/motilal-oswal-nifty-500-fund" target="_blank">Motilal Oswal Nifty 500 Fund</a></li>
+          <li><a class="txttransnew" href="/Motilal Oswal Nifty Bank Index Fund" target="_blank">Motilal Oswal Nifty Bank Index Fund</a></li>
+         <li><a class="txttransnew" href="/products/motilal-oswal-nifty-midcap-150-index-fund" target="_blank">Motilal Oswal Nifty Midcap150 Index Fund</a></li>
+         <li><a class="txttransnew" href="/products/motilal-oswal-nifty-smallcap-250-index-fund" target="_blank">Motilal Oswal Nifty Smallcap 250 Index Fund</a></li>  
+
+             <li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">ETF FUND</a></li>
+			 <li><a style="text-transform:none" href="https://www.motilaloswalmf.com/mf/ETF/">Motilal Oswal Nasdaq Q 50 ETF</a></li>
+			 <li><a style="text-transform:none" target="_blank" href="https://www.mostshares.com/products/motilal-oswal-Gsec" target="_blank">Motilal 5 Year G-Sec ETF</a></li>
+			 
+         <li><a style="text-transform:none" target="_blank" href="http://www.mostshares.com/products/motilal-oswal-m50">Motilal Oswal M50 ETF </a></li>
+         <li><a style="text-transform:none" target="_blank" href="http://www.mostshares.com/products/motilal-oswal-midcap-100">Motilal Oswal Midcap 100 ETF</a></li>
+         <li><a style="text-transform:none" target="_blank" href="http://www.mostshares.com/products/motilal-oswal-nasdaq-100">Motilal Oswal Nasdaq 100 ETF </a></li>
+		</ul>
+            </div>
+            </li>
+		<li><div class="link"> <a href="/AIF/Home/">AIF</a></div>
+<!--
+			 <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+       <ul class="">
+       <li><a href="../pdf/aif/EOPIIFullCAForm.pdf" target="_blank">Application Form</a></li> 
+           <li><a  style=" background-color:#d3d0d6;font-weight: bold;">Editable Forms</a></li>
+         <li><a href="../pdf/aif/EOPIINIShortForm.pdf" target="_blank">Non Individual Application Form</a></li>
+         <li><a href="../pdf/aif/EOPIINRIShortForm.pdf" target="_blank">NRI Application Form</a></li>
+         <li><a href="../pdf/aif/EOPIIRIShortForm.pdf" target="_blank">Residentiakl Application Form</a></li>
+       </ul>
+			</div>
+-->
+     </li>
+		<li>
+            <div class="link">
+                <a href="/distributor-zone/">Distributor zone</a> 
+            </div>
+            </li>
+        
+        <li>
+            <div class="link">
+                Downloads <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+                    <li><a href="/downloads/mutual-fund">Mutual Fund</a>
+                        <img src="/images/DownArrowMobileMenu.png" style="float: right;"></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/downloads/mutual-fund/totalexpenseratio">Total Expense Ratio</a></li>
+                            <li><a href="/downloads/mutual-fund/Key-Information-Memorandum">KEY INFORMATION MEMORANDUM</a></li>
+                            <li><a href="/downloads/mutual-fund/Status-of-Redressal">Status of Redressal</a></li>
+                            <li><a href="/downloads/mutual-fund/SID">SID</a></li>
+                            <li><a href="/downloads/mutual-fund/SAI">SAI</a></li>
+                            <li><a href="/downloads/mutual-fund/Regulatory-Updates">Regulatory Updates</a></li>
+                            <li><a href="/downloads/mutual-fund/Forms">Forms</a></li>
+                            <li><a href="/downloads/mutual-fund/Financials">Financials</a></li>
+                            <li><a href="/downloads/mutual-fund/Factsheet">Factsheets</a></li>
+                            <li><a href="/downloads/mutual-fund/Addendums">Addendums</a></li>
+                            <li><a href="/downloads/mutual-fund/Month-End-Portfolio">Month End Portfolio</a></li>
+                            
+                            <li><a href="/downloads/mutual-fund/Leaflet-Brochure">Leaflet/Brochure</a></li>
+                            <li><a href="/downloads/mutual-fund/Presentations">Presentations</a></li>
+                            <li><a href="/downloads/mutual-fund/Unclaimed-Dividend-Redemption">Unclaimed Dividend/Redemption</a></li>
+                            <li><a target="_blank" href="https://www.motilaloswalmf.com/investonline/Remuneration.aspx">
+                                Remuneration</a></li>
+                                <li><a href="/downloads/mutual-fund/Valuation-Policy">Valuation Policy</a></li>
+                        </ul>
+                    </div>
+                    <li><a href="/downloads/pms">Portfolio Management Services</a>
+                        <img src="/images/DownArrowMobileMenu.png" style="float: right;"></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/downloads/pms/Presentations">Presentations</a></li>
+                            <li><a href="/downloads/pms/Monthly-Communique">Monthly Communique</a></li>
+                            <li><a href="/downloads/pms/Document">Document</a></li>
+                            <li><a href="/downloads/pms/Forms">Forms</a></li>
+                            <li><a href="/downloads/pms/Leaflet-Brochure">Leaflet/Brochure</a></li>
+                        </ul>
+                    </div>
+                    <li><a target="_blank" href="https://online.motilaloswalmf.com/general/accountstatementmailback.aspx">
+                        Account Statement</a></li>
+					<li><a target="_blank" href="/downloads/aif">
+                        AIF</a>
+						<img src="/images/DownArrowMobileMenu.png" style="float: right;">
+						</li>
+						<div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/downloads/aif">Regulatory Updates</a></li>
+                        </ul>
+                    </div>
+					</ul>
+            </div>
+        </li>
+        <li>
+            <div class="link">
+                NAV <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+                    <li><a href="/nav/latest-nav">Latest NAV</a></li>
+                    <li><a href="/nav/history-nav">Historical NAV</a></li>
+                    <li><a href="/nav/history-dividend">Historical Dividend</a></li>
+                </ul>
+            </div>
+        </li>
+		<li>
+            <div class="link">
+                Investor Education <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+                 <li><a href="/knowledge-centre/wealth-creation-wisdom">Wealth Creation Thoughts</a></li>
+                    <li><a href="/knowledge-centre/5-keys-of-investing">The 5 Keys of Investing</a></li>
+                    <li><a href="/knowledge-centre/two-kinds-of-investors">Two Kinds of Investors</a></li>
+                    <li><a href="#">Investment FAQs</a>
+                        <img src="/images/DownArrowMobileMenu.png" style="float: right;"></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/knowledge-centre/investment-faqs/mutual-fund">Mutual Fund</a></li>
+                            <li><a href="/knowledge-centre/investment-faqs/portfolio-management-services">Portfolio
+                                Management Services</a></li>
+                            <li><a href="/knowledge-centre/investment-faqs/systematic-investment-plan">Systematic
+                                Investment Plan</a></li>
+                        </ul>
+                    </div>
+                    
+                    <li><a href="#">Transact Online FAQ'<span style="text-transform: none;">s</span></a>
+                        <img src="/images/DownArrowMobileMenu.png" style="float: right;"></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/investonline/LoginPage.aspx?FAQ=TransOnline">Transact Online- Lumpsum</a></li>
+                            <li><a href="/investonline/LoginPage.aspx?FAQ=ISIP" style="text-transform: none;">iSIP</a></li>
+                            <li><a href="/investonline/LoginPage.aspx?FAQ=KYC">CKYC</a></li>
+                            <li><a href="/investonline/LoginPage.aspx?FAQ=OTM">OTM</a></li>
+                        </ul>
+                    </div>
+                    <li><a href="/knowledge-centre/buy-right-sit-tight">Buy Right Sit Tight</a></li>
+                    <li><a href="#">Investor Education Initiative</a>
+                        <img src="/images/DownArrowMobileMenu.png" style="float: right;"></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/knowledge-centre/investor-education/mevsmarket">Me V/s Market</a></li>
+                            <li><a href="http://www.equitysahihai.com" target="_blank">Equity Sahi Hai</a></li>
+                        </ul>
+                    </div>
+                    <li><a href="/knowledge-centre/investing-in-portfolio-management-services">Investing
+                        In Portfolio Management Services</a></li>
+                    <li><a href="/knowledge-centre/why-do-you-redeem">Why Do You Redeem?</a></li>
+                   <li><a href="/plans/movi">MOVI</a></li>
+					 <li><a href="/plans/systematic-investment-plan">SYSTEMATIC INVESTMENT PLAN</a></li>
+					 <li><a href="/plans/motilal-oswal-focused-cashflow-plan">MOTILAL OSWAL CASHFLOW PLAN</a></li>
+					 <li><a href="/large-cap-alpha-index">Large Cap Alpha Index</a></li>
+					<li><a href="/Ip/KYC-and-Redressal-of-Complaints/9" target="_blank">KYC & Redressal of Complaints</a></li>
+					<li><a href="/Ip/Guidelines-for-Transmission-Of-Units-Procedure-AMFI-Circular-No-85/18">Transmission of Mutual Fund Units Process</a></li>
+					<li><a href="/Ip/Investor-Awareness-Program/21">AMFI Standard Investor Awareness Presentation</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="link">
+                Tools <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+                    <li><a href="/tools/compare-portfolio">Compare Your Portfolio</a></li>
+                    <li><a href="/tools/sip-return-calculator">SIP Returns Calculator</a></li>
+                    <li><a href="/tools/compounding-magic">Compounding Magic - SIP</a></li>
+                    <li><a href="/tools/goal-investment-calculator">Goal calculator</a></li>
+                    <li><a href="/tools/risk-meter">Risk Meter</a></li>
+                    <li><a href="/tools/compounding-magic-lumpsum">Compounding Magic – Lumpsum</a></li>
+                </ul>
+            </div>
+        </li>
+        <!--<li>
+            <div class="link">
+                Blogs <i class="fa fa-chevron-down"></i>fhttps://www.motilaloswalmf.com/mf/login
+            </div>
+            <div class="TopDesktopSubMenu submenu SubMenuDispalyNone">
+                <ul>
+                    <li><a href="/blogs/chairman-speak">Chairman's Speak</a></li>
+                    <li><a href="/blogs/ceo-speak">CEO Speak</a></li>
+                    <li><a href="#">Fund Managers-Speak</a>
+                        <img src="/images/DownArrowMobileMenu.png" style="float: right;" /></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/blogs/fund-managers-speak/Mr.-Gautam-Sinha-Roy">Gautam Sinha Roy</a></li>
+                            <li><a href="/blogs/fund-managers-speak/Mr.-Siddharth-Bothra">Siddharth Bothra</a></li>
+                            <li><a href="/blogs/fund-managers-speak/Mr.-Manish-Sonthalia">Manish Sonthalia</a></li>
+                        </ul>
+                    </div>
+                    <li><a href="#">Analyst Speak</a>
+                        <img src="/images/DownArrowMobileMenu.png" style="float: right;" /></li>
+                    <div class="ThurdLevalMenu">
+                        <ul>
+                            <li><a href="/blogs/analyst-speak/Atul-Mehra">Atul Mehra</a></li>
+                        </ul>
+                    </div>
+
+                    <li><a href="/blogs/sales-manager-speak">Sales Manager Speak</a></li>
+                </ul>
+            </div>
+        </li>-->
+        <li>
+            <div class="link">
+                <a href="/blog">Blog</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<!-- End Mobile Menu -->
+
+<!--<div class="alert-box mob-alert-box col-xs-12 d-block d-sm-none">
+	<div class="alert NoMar alert-labeled text-left">		
+		<div class="alert-labeled-row">
+			<p class="alert-body alert-body-right alert-labelled-cell">
+				<a href="https://www.motilaloswalmf.com/New_Page/Remediation-of-PAN-and-KYC/8">Attention  Investors whose PAN & KYC is not updated with us – <span class="blink-btn">click here</span> for more details</a>
+			</p>
+		</div>
+	</div>
+</div>-->
+	
+<div class="marquee_wrp marquee_wrp_new_1">	
+    <div class="marquee_nav">
+        NAV
+    </div>
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left" scrollamount="1">
+            <a href='#' style='cursor:default'>Motilal Oswal  Nifty MidSmall India Consumption Index Fund - Regular (G) - 8.9011</a><a href='#' style='cursor:default'>Motilal Oswal 5 Year G-Sec Fund of Fund (G) - 12.9198</a><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund - Direct (G) - 11.304</a><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund - Regular (G) - 11.2926</a><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Direct IDCW Payout - 11.3037</a><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Direct IDCW Reinvestment - 11.3037</a><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Regular IDCW Payout - 11.293</a><a href='#' style='cursor:default'>Motilal Oswal Active Momentum Fund Regular IDCW Reinvestment - 11.293</a><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Direct (G) - 10.9326</a><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Direct IDCW Payout - 10.9326</a><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Direct IDCW Reinvestment - 10.9326</a><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Regular (G) - 10.8122</a><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Regular IDCW Payout - 10.8122</a><a href='#' style='cursor:default'>Motilal Oswal Arbitrage Fund - Regular IDCW Reinvestment - 10.8122</a><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Aggressive (G) - 18.671</a><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Aggressive-Dir (G) - 19.1635</a><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Conservative (G) - 16.8881</a><a href='#' style='cursor:default'>Motilal Oswal Asset Allocation Passive Fund of Fund – Conservative-Dir(G) - 17.3318</a><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund (Div-A) - 12.4842</a><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund (Div-Q) - 10.4163</a><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund (G) - 17.4112</a><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund-Dir (Div-A) - 13.2875</a><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund-Dir (Div-Q) - 11.2288</a><a href='#' style='cursor:default'>Motilal Oswal Balance Advantage Fund-Dir (G) - 19.5245</a><a href='#' style='cursor:default'>Motilal Oswal BSE 1000 Index Fund - Direct (G) - 9.3903</a><a href='#' style='cursor:default'>Motilal Oswal BSE 1000 Index Fund - Regular (G) - 9.3394</a><a href='#' style='cursor:default'>Motilal Oswal BSE Enhanced Value Index Fund (G) - 26.9542</a><a href='#' style='cursor:default'>Motilal Oswal BSE Enhanced Value Index Fund-Dir (G) - 27.617</a><a href='#' style='cursor:default'>Motilal Oswal BSE Financials ex Bank 30 Index Fund (G) - 16.5667</a><a href='#' style='cursor:default'>Motilal Oswal BSE Financials ex Bank 30 Index Fund-Dir (G) - 16.9854</a><a href='#' style='cursor:default'>Motilal Oswal BSE Low Volatility Index Fund (G) - 15.5633</a><a href='#' style='cursor:default'>Motilal Oswal BSE Quality Index Fund - Dir (G) - 16.4083</a><a href='#' style='cursor:default'>Motilal Oswal BSE Quality Index Fund (G) - 16.0101</a><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Direct (G) - 10.7513</a><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Direct (IDCW) - 10.7507</a><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Regular (G) - 10.5174</a><a href='#' style='cursor:default'>Motilal Oswal Business Cycle Fund - Regular (IDCW) - 10.5175</a><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Direct (G) - 8.5853</a><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Direct IDCW Payout - 8.5853</a><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Direct IDCW Reinvestment - 8.5853</a><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Regular (G) - 8.5313</a><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Regular IDCW Payout - 8.5313</a><a href='#' style='cursor:default'>Motilal Oswal Consumption Fund - Regular IDCW Reinvestment - 8.5313</a><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Direct (G) - 8.2006</a><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Direct IDCW Payout - 8.2004</a><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Direct IDCW Reinvestment - 8.2004</a><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Regular (G) - 8.037</a><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Regular IDCW Payout - 8.037</a><a href='#' style='cursor:default'>Motilal Oswal Digital India Fund - Regular IDCW Reinvestment - 8.037</a><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Direct (G) - 9.6322</a><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular (G) - 9.6242</a><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular IDCW Payout - 9.6322</a><a href='#' style='cursor:default'>Motilal Oswal Diversified Equity Flexicap Passive Fund of Funds - Regular IDCW Reinvestment - 9.6322</a><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund (D) - 28.8226</a><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund (G) - 48.5875</a><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund -Dir (D) - 37.2784</a><a href='#' style='cursor:default'>Motilal Oswal ELSS Tax Saver Fund -Dir (G) - 56.0984</a><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Direct (G) - 9.6023</a><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Direct (IDCW) - 9.6023</a><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Regular (G) - 9.5907</a><a href='#' style='cursor:default'>Motilal Oswal Financial Services Fund - Regular (IDCW) - 9.5907</a><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund(D) - 30.4705</a><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund(G) - 53.9685</a><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund-Dir(D) - 31.982</a><a href='#' style='cursor:default'>Motilal Oswal Flexi Cap Fund-Dir(G) - 60.1499</a><a href='#' style='cursor:default'>Motilal Oswal Focused Fund - Direct (D) - 21.5239</a><a href='#' style='cursor:default'>Motilal Oswal Focused Fund - Direct (G) - 48.7362</a><a href='#' style='cursor:default'>Motilal Oswal Focused Fund (D) - 18.3543</a><a href='#' style='cursor:default'>Motilal Oswal Focused Fund (G) - 41.3799</a><a href='#' style='cursor:default'>Motilal Oswal Gold and Silver Passive Fund of Funds-Dir (G) - 32.2047</a><a href='#' style='cursor:default'>Motilal Oswal Gold and Silver Passive Fund of Funds-Reg (G) - 31.8103</a><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Direct (G) - 11.971</a><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Direct IDCW Payout - 11.971</a><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Direct IDCW Reinvestment - 11.971</a><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Regular (G) - 11.9202</a><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Regular IDCW Payout - 11.9202</a><a href='#' style='cursor:default'>Motilal Oswal Infrastructure Fund - Regular IDCW Reinvestment - 11.9202</a><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund - Direct (G) - 11.4912</a><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund - Regular (G) - 11.3194</a><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Direct IDCW Payout - 11.4904</a><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Direct IDCW Reinvestment - 11.4904</a><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Regular IDCW Payout - 11.3195</a><a href='#' style='cursor:default'>Motilal Oswal Innovation Opportunities Fund Regular IDCW Reinvestment - 11.3195</a><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund - Dir (D) - 26.483</a><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund - Dir (G) - 34.8528</a><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund (D) - 24.2317</a><a href='#' style='cursor:default'>Motilal Oswal Large and Midcap Fund (G) - 31.7413</a><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Direct (G) - 13.308</a><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Direct (IDCW) - 12.5675</a><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Regular (G) - 12.952</a><a href='#' style='cursor:default'>Motilal Oswal Large Cap Fund - Regular (IDCW) - 12.0883</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-D) RI - 10.0077</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-F) RI - 10.0125</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-M) - 10.0572</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-Q) - 10.0998</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (Div-W) RI - 10.014</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Direct (G) - 14.5006</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-D) RI - 10.0055</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-F) RI - 10.0121</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-M) - 10.0562</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-Q) - 10.096</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (Div-W) RI - 10.0209</a><a href='#' style='cursor:default'>Motilal Oswal Liquid Fund - Regular (G) - 14.3395</a><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Direct (G) - 10.6623</a><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Direct (IDCW)Payout - 10.6617</a><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Direct (IDCW)Reinvestment - 10.6617</a><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Regular (G) - 10.4194</a><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Regular (IDCW)Payout - 10.4192</a><a href='#' style='cursor:default'>Motilal Oswal Manufacturing Fund - Regular (IDCW)Reinvestment - 10.4192</a><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund (D) - 41.9206</a><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund (G) - 86.3428</a><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund-Dir (D) - 43.571</a><a href='#' style='cursor:default'>Motilal Oswal Midcap Fund-Dir (G) - 99.4352</a><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Direct (G) - 11.7362</a><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Direct (IDCW) - 11.7362</a><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Regular (G) - 11.4684</a><a href='#' style='cursor:default'>Motilal Oswal Multi Cap Fund - Regular (IDCW) - 11.4684</a><a href='#' style='cursor:default'>Motilal Oswal Multi Factor Passive Fund of Funds - Direct (G) - 9.9157</a><a href='#' style='cursor:default'>Motilal Oswal Multi Factor Passive Fund of Funds - Regular (G) - 9.9146</a><a href='#' style='cursor:default'>Motilal Oswal Nasdaq 100 FOF - Direct (G) - 47.5544</a><a href='#' style='cursor:default'>Motilal Oswal Nasdaq 100 FOF - Regular (G) - 46.2194</a><a href='#' style='cursor:default'>Motilal Oswal Nifty 200 Momentum 30 Index Fund - Direct (G) - 14.6586</a><a href='#' style='cursor:default'>Motilal Oswal Nifty 50 Index Fund - Direct (G) - 20.611</a><a href='#' style='cursor:default'>Motilal Oswal Nifty 50 Index Fund (G) - 20.0935</a><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Fund - Direct (G) - 25.48</a><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Fund (G) - 24.3853</a><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Momentum 50 Index Fund - Direct (G) - 7.6682</a><a href='#' style='cursor:default'>Motilal Oswal Nifty 500 Momentum 50 Index Fund - Regular (G) - 7.5896</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Bank Index Fund - Direct (G) - 20.4931</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Bank Index Fund (G) - 19.5646</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Capital Market Index Fund - Direct (G) - 11.0517</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Capital Market Index Fund - Regular (G) - 10.9603</a><a href='#' style='cursor:default'>Motilal Oswal Nifty India Defence Index Fund - Direct Plan - 10.621</a><a href='#' style='cursor:default'>Motilal Oswal Nifty India Defence Index Fund - Regular Plan - 10.4927</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Microcap 250 Index Fund - Direct (G) - 14.8721</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Microcap 250 Index Fund - Regular (G) - 14.6153</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Midcap 150 Index Fund (G) - 35.8362</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Midcap 150 Index Fund-Dir (G) - 37.5811</a><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Financial Services Index Fund - Direct (G) - 12.9567</a><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Financial Services Index Fund - Regular (G) - 12.8723</a><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Healthcare Index Fund - Direct (G) - 10.2895</a><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall Healthcare Index Fund - Regular (G) - 10.224</a><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall India Consumption Index Fund - Direct (G) - 8.959</a><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall IT and Telecom Index Fund - Direct (G) - 7.8537</a><a href='#' style='cursor:default'>Motilal Oswal Nifty MidSmall IT and Telecom Index Fund - Regular (G) - 7.802</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Next 50 Index Fund - Dir (G) - 23.5236</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Next 50 Index Fund (G) - 22.5417</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Smallcap 250 Index Fund (G) - 32.4294</a><a href='#' style='cursor:default'>Motilal Oswal Nifty Smallcap 250 Index Fund-Dir(G) - 33.9302</a><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Direct (G) - 9.7672</a><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Direct (IDCW)Payout - 9.185</a><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Regular (G) - 9.2221</a><a href='#' style='cursor:default'>Motilal Oswal Quant Fund - Regular (IDCW)Payout - 8.5025</a><a href='#' style='cursor:default'>Motilal Oswal S&P 500 Index Fund - Direct (G) - 28.3495</a><a href='#' style='cursor:default'>Motilal Oswal S&P 500 Index Fund (G) - 27.4004</a><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Direct (G) - 9.796</a><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Direct IDCW Payout - 9.796</a><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Direct IDCW Reinvestment - 9.796</a><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Regular (G) - 9.7546</a><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Regular IDCW Payout - 9.7546</a><a href='#' style='cursor:default'>Motilal Oswal Services Fund - Regular IDCW Reinvestment - 9.7546</a><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Direct (G) - 13.2032</a><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Direct (IDCW) - 13.2032</a><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Regular (G) - 12.8109</a><a href='#' style='cursor:default'>Motilal Oswal Small Cap Fund - Regular (IDCW) - 12.8112</a><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Direct (G) - 10.0468</a><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Direct IDCW Payout - 10.0468</a><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Direct IDCW Reinvestment - 10.0468</a><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Regular (G) - 10.0408</a><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Regular IDCW Payout - 10.0408</a><a href='#' style='cursor:default'>Motilal Oswal Special Opportunities Fund - Regular IDCW Reinvestment - 10.0408</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-D) - 11.7326</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-F) - 11.8014</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-M) - 11.7673</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-Q) - 12.0951</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (Div-W) - 11.7346</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund - Dir (G) - 18.1485</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-D) - 11.4495</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-F) - 11.5054</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-M) - 11.4909</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-Q) - 11.7507</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (Div-W) - 11.4702</a><a href='#' style='cursor:default'>Motilal Oswal Ultra Short Term Fund (G) - 17.0438</a>
+        </marquee>
+    </div>
+</div>
+	<div class="clear">
+</div>
+
+<div class="container-fluid bgcolordarkgrey HideSm" style="display: none;">
+    <div class="container">
+        <div class="row">
+			
+			<div class="  col-lg-10 col-md-10 col-sm-10 col-xs-12 NoPadd"> 
+				 
+
+				   
+				 <div class="tollFree float-left ShowSm"><a href="tel:+91 8108622222">+91 8108622222</a></div>     
+					<div class="GroupCompany col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
+						<div>Motilal Oswal Group Site <img src="/images/group_arrow.png" class="float-right"></div>
+						<div>
+							<ul>
+								<li><a href="http://www.motilaloswalgroup.com/" target="_blank">Financial Services</a></li>
+								<li><a href="http://www.motilaloswal.com/" target="_blank">Broking & Distribution</a></li>
+								<li><a href="http://www.motilaloswalgroup.com/Our-Businesses/Private-Wealth-Management"
+									target="_blank">Private Wealth Management </a></li>
+								<li><a href="http://www.ahfcl.com/" target="_blank">Home Finance </a></li>
+								<li><a href="http://www.motilaloswalgroup.com/Our-Businesses/Institutional-Equities"
+									target="_blank">Institutional Equities </a></li>
+								<li><a href="http://www.motilaloswalpe.com/" target="_blank">Private Equity
+								</a></li>
+								<li><a href="http://www.motilaloswalgroup.com/Our-Businesses/Investment-Banking"
+									target="_blank">Investment Banking </a></li>
+								<li><a href="http://www.motilaloswal.com/markets/commodity-market-live.aspx" target="_blank">
+									Commodities </a></li>
+									<li><a href="http://www.motilaloswalre.com/" target="_blank">
+									Real Estate </a></li>
+							</ul>
+						</div>
+					</div>
+				<!--<div class="col mr-auto tollFree float-left HideSm"><img src="/images/phone.png" /> &nbsp; +91 8108622222</div>-->
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 tollFree float-left HideSm"><a href="/mf/contactus"><img src="/images/phone.png" /> &nbsp; Contact Us</a></div>
+				<div class="alert-box col-lg-8 col-md-8 col-sm-8 col-xs-12 float-right HideSm">
+					<div class="alert NoMar alert-labeled">
+					<div class="alert-labeled-row">
+						<p class="alert-body alert-body-right alert-labelled-cell">
+							<a href="https://www.motilaloswalmf.com/New_Page/Remediation-of-PAN-and-KYC/8">Attention  Investors whose PAN & KYC is not updated with us – <span class="blink-btn">click here</span> for more details</a>
+						</p>
+					</div>
+				</div>
+				</div>
+
+				</div>
+			
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 NoPadd">
+				<div class="SocialIconSection uctopmarlft">                        
+                        <div class="SearchTextBox">
+                            <input id="txtSearch" name="" type="text" class="search_input" placeholder="Search"
+                                value="Search" onfocus="this.value=(this.value=='Search')?'':this.value;" onblur="this.value=!this.value?'Search':this.value;"
+                                onkeypress="return isAlphaChecktop(event);e.preventDefault();" />
+                            <span class="searchbximg">
+                                <img src="/images/Search-Icon-w.png" class="float-right" onclick="return val123Search();" />
+                            </span>
+                        </div>
+                        <div class="HideSm">
+                            
+                        </div>
+                    </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-fluid topLogoBg uclineheight ">
+    <div class="container">
+        <div class="row">
+            <div class="float-right col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadd">
+                <div class="float-right col-lg-6 col-md-6 col-sm-6 col-xs-12 NoPadd">   
+                 
+                    
+                </div>
+                <div class="float-left col-lg-4 col-md-4 col-sm-12 col-xs-12 NoPadd LogoPadd">
+                    <span>
+                        <img src="/images/MobileMenu-Icon.png" class="showScrollMenuButton bodyClickMenuShow">
+                    </span><a href="/">
+                        <img src="/images/logo-mo-amc.png" class="img-fluid d-none d-sm-block">
+					<img src="/images/logo-mo-asset.png" class="img-fluid d-inline-block d-sm-none"></a>
+					<div class="loginDivs loginpanelsec float-right"  style="display: none;">
+						<div class="btn-group dropdown">
+						  <a class="btn btn-secondary btn-sm btn-red" target="_blank" href="https://www.motilaloswalmf.com/mf/login?chn_option=quickbuy&utm_source=quickinvest">
+							Quick Invest
+						  </a>
+						 <!-- <div class="dropdown-menu" aria-labelledby="quickbuybtn">
+							<a class="dropdown-item" href="https://www.motilaloswalmf.com/mf/indexfunds?utm_campaign=index-fund&utm_source=website&utm_medium=hp&utm_creative=3in1&utm_device=web" target="_blank">Index Funds</a>
+							<a class="dropdown-item" href="https://www.motilaloswalmf.com/mf/login?utm_campaign=elss&utm_source=website&utm_medium=mfhp&utm_creative=brst_qglp&utm_device=web" target="_blank">Mutual Funds</a>
+						  </div>-->
+						</div>
+						<div class="btn-group dropdown">
+						  <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="idloginbtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img src="/images/login-icon.svg" />
+						  </button>
+						  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="idloginbtn">
+							<a class="dropdown-item" href="http://www.motilaloswalmf.com/InvestOnline/" target="_blank">Mutual Fund</a>
+							<a class="dropdown-item" href="http://www.motilaloswalmf.com/InvestOnline/loginpage.aspx?Login=PMS" target="_blank">PMS</a> 
+							<a class="dropdown-item" href="https://www.motilaloswalmf.com/AIF/Home/">AIF</a>
+							<a class="dropdown-item" href="http://www.motilaloswalmf.com/InvestOnline/loginpage.aspx?Login=Distributor" target="_blank">Partners </a>							  
+							
+						  </div>
+						</div>
+					</div>
+                </div>
+				
+				<div class="float-right col-lg-6 col-md-6 col-sm-6 col-xs-12 NoPadd LogoPadd HideSm loginsecdiv"  style="display: none;">
+					<div class="newlogin-sec">
+						Login :&nbsp;&nbsp; 
+						<a href="http://www.motilaloswalmf.com/InvestOnline" target="_blank">Mutual Fund</a>
+						<a href="http://www.motilaloswalmf.com/InvestOnline/loginpage.aspx?Login=PMS" target="_blank">PMS</a> 
+						<a href="https://www.motilaloswalmf.com/AIF/Home/">AIF</a>
+						<a href="http://www.motilaloswalmf.com/InvestOnline/loginpage.aspx?Login=Distributor" target="_blank">Partners</a> 
+
+						
+					</div>
+				</div>
+				
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid MenuMainDiv uclineheight"  style="display: none;">
+    <div class="container NoPadd">
+        <div class="row">
+            
+            <div class="col-auto mr-auto NoPadd">
+                <nav>
+   <ul>
+   
+     <li><a href="/"> <img src="/images/home_icon.png" class="align-content-center"> </a></li>
+     <li class="sub-menu-parent">
+       <a href="/about-us/overview">About Us </a>
+       <ul class="sub-menu">
+        <li><a href="/about-us/overview">OVERVIEW</a></li>
+        <li> <a href="/about-us/investment-philosophy">INVESTMENT PHILOSOPHY</a></li> 
+        
+        <li> <a href="/about-us/people">PEOPLE</a></li>
+        <li> <a href="/about-us/videos-archives">VIDEOS</a> </li>
+         <li class="sub-menu-parent2 posrelate">
+		 <a href="#">MEDIA</a>
+		 <ul class="sub-menu2">
+           <li class="sub-menu-parent3 posrelate">
+		  <a href="#">News</a>
+				<ul class="sub-menu3">
+                 <li><a href="/about-us/media-center/news/print">PRINT</a></li>
+                 <li><a href="/about-us/media-center/news/online">ONLINE</a></li>
+                 <li><a href="/about-us/media-center/news/tv/all">TELEVISION</a></li>
+				</ul>
+		   </li>
+           <li class="sub-menu-parent3 posrelate">
+           <a href="#">INTERVIEWS</a>
+                <ul class="sub-menu3">
+                     <li><a href="/about-us/media-center/interviews/print">PRINT</a></li>
+                     <li><a href="/about-us/media-center/interviews/online">ONLINE</a></li>
+                     <li><a href="/about-us/media-center/interviews/tv/all">TELEVISION</a></li>
+				</ul>
+           </li>
+           <li> <a href="/about-us/media-center/press-release">PRESS RELEASE</a></li>
+         </ul>
+		 </li>
+         <li><a href="/about-us/events">EVENTS</a></li>
+       </ul>
+     </li>
+     <!--<li class="sub-menu-parent"> <a href="/about-us/international-business">INTERNATIONAL BUSINESS</a></li> -->
+
+     <li class="sub-menu-parent"><a href="#">Mutual Funds</a>
+       <ul class="sub-menu sub-menu-new">
+           <li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">Fund of Fund</a></li>
+		   <!--<li><a class="txttransnew" href="/Products/Motilal-Oswal-Asset-Allocation-Passive-FOF–Conservative"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Conservative<sup>NEW</sup> </a></li>
+             <li><a class="txttransnew" href="/Products/Motilal-Oswal-Asset-Allocation-Passive-FOF–Aggressive"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Aggressive<sup>NEW</sup> </a></li>-->
+			 <li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/gsec-fof-snapshot.html"  target="_blank">Motilal Oswal 5 Year G-Sec Fund of Fund</a></li>
+			 <li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/fof-aggressive-n-conservative.html"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Conservative</a></li>
+             <li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/fof-aggressive-n-conservative.html"  target="_blank">Motilal Oswal Asset Allocation Passive FOF – Aggressive</a></li>
+			 
+			 
+			 
+				<li><a class="txttransnew" href="/products/motilal-oswal-nasdaq-100-fund-of-fund"  target="_blank">Motilal Oswal nasdaq 100 FOF</a></li>
+				
+				<li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">Mutual Funds</a></li>
+      <li><a class="txttransnew" href="https://www.motilaloswalmf.com/Products/motilal_oswal_multi_asset_fund" target="_blank">Motilal Oswal Multi Asset Fund</a></li>
+    <li><a class="txttransnew" href="/products/motilal-oswal-large-and-midcap-fund">Motilal Oswal Large And Midcap Fund</a></li>            
+           <li><a class="txttransnew" href="/products/motilal-oswal-liquid-fund">Motilal Oswal Liquid Fund</a></li>
+          <li><a class="txttransnew" href="/products/most-focused-25-fund">Motilal Oswal Focused 25 Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-focused-midcap-30-fund">Motilal Oswal Midcap 30 Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-focused-flexicap-fund">Motilal Oswal Flexi cap Fund </a></li>
+        
+         <li><a class="txttransnew" href="/products/most-focused-long-term-fund">Motilal Oswal Long Term Equity Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-focused-dynamic-equity">Motilal Oswal Dynamic Fund</a></li>
+         <li><a class="txttransnew" href="/products/motilal-oswal-equity-hybrid-fund">Motilal Oswal Equity Hybrid Fund</a></li>
+         <li><a class="txttransnew" href="/products/most-ultra-short-term-bond-fund">Motilal Oswal Ultra Short Term Fund</a></li>
+			   
+		 <li><a href="/products/Performance/1">Performance</a></li>
+		 <li><a href="/products/product-comparison">Product Comparison</a></li>
+       </ul>
+     </li>
+	   <li class="sub-menu-parent"><a href="#">PMS</a>
+       <ul class="sub-menu sub-menu-new">
+         <li><a href="products/value-strategy.aspx">Value Strategy</a></li>
+           <li><a href="/products/business-opportunity-portfolio">Business Opportunity Portfolio</a></li>
+         <li><a href="/products/next-trillion-dollar-opportunity">Next Trillion Dollar Opportunity</a></li>
+         <li><a href="/products/india-opportunity-portfolio-strategy">India Opportunity Portfolio Strategy</a></li>
+         <li><a href="/products/india-opportunity-portfolio-strategy-v2">India Opportunity Portfolio Strategy V2</a></li>
+		   <li><a href="/pms" target="_blank">PMS services - Direct Mode</a></li>
+       </ul>
+     </li>
+
+     <li class="sub-menu-parent"><a href="#">INDEX | ETF FUND</a>
+       <ul class="sub-menu sub-menu-new">
+        <li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">INDEX FUND</a></li>
+		<li><a class="txttransnew" href="https://www.motilaloswalmf.com/mf/msci-eafe-top100-snapshot.html" target="_blank">Motilal Oswal MSCI EAFE Top 100 Select Index Fund</a></li>
+           <li><a class="txttransnew" href="https://www.motilaloswalmf.com/products/motilal-oswal-sp-500-index-fund.aspx" target="_blank">Motilal Oswal S&P 500 Index Fund</a></li>
+		<li><a class="txttransnew" href="/products/motilal-oswal-nifty-next50-index-fund">Motilal Oswal Nifty Next 50 Index Fund</a></li> 
+        <li><a class="txttransnew" href="/products/motilal-oswal-nifty-50-index-fund">Motilal Oswal Nifty  50 Index Fund</a></li> 
+
+         <li><a class="txttransnew" href="/products/motilal-oswal-nifty-500-fund" target="_blank">Motilal Oswal Nifty 500 Fund</a></li>
+          <li><a class="txttransnew" href="/products/motilal-oswal-nifty-bank-index-fund" target="_blank">Motilal Oswal Nifty Bank Index Fund</a></li>
+         <li><a class="txttransnew" href="/products/motilal-oswal-nifty-midcap-150-index-fund" target="_blank">Motilal Oswal Nifty Midcap150 Index Fund</a></li>
+         <li><a class="txttransnew" href="/products/motilal-oswal-nifty-smallcap-250-index-fund" target="_blank">Motilal Oswal Nifty Smallcap 250 Index Fund</a></li>  
+             <li><a style=" background-color:#d3d0d6;font-weight: bold;" ;="">ETF FUND</a></li>
+			 <li><a style="text-transform:none" href="https://www.motilaloswalmf.com/mf/ETF/">Motilal Oswal Nasdaq Q 50 ETF</a></li>
+			 <li><a style="text-transform:none" target="_blank" href="https://www.mostshares.com/products/motilal-oswal-Gsec" target="_blank">Motilal 5 Year G-Sec ETF</a></li>
+			 
+         <li><a style="text-transform:none" target="_blank" href="http://www.mostshares.com/products/motilal-oswal-m50">Motilal Oswal M50 ETF </a></li>
+         <li><a style="text-transform:none" target="_blank" href="http://www.mostshares.com/products/motilal-oswal-midcap-100">Motilal Oswal Midcap 100 ETF</a></li>
+         <li><a style="text-transform:none" target="_blank" href="http://www.mostshares.com/products/motilal-oswal-nasdaq-100">Motilal Oswal Nasdaq 100 ETF </a></li>
+	
+    
+       </ul>
+     </li>
+	   <li class="sub-menu-parent"><a href="/AIF/Home/">AIF</a>
+<!--
+       <ul class="sub-menu sub-menu-new">
+       <li><a href="../pdf/aif/EOPIIFullCAForm.pdf" target="_blank">Application Form</a></li> 
+           <li><a  style=" background-color:#d3d0d6;font-weight: bold;">Editable Forms</a></li>
+         <li><a href="../pdf/aif/EOPIINIShortForm.pdf" target="_blank">Non Individual Application Form</a></li>
+         <li><a href="../pdf/aif/EOPIINRIShortForm.pdf" target="_blank">NRI Application Form</a></li>
+         <li><a href="../pdf/aif/EOPIIRIShortForm.pdf" target="_blank">Residentiakl Application Form</a></li>
+       </ul>
+-->
+     </li>
+
+
+
+	 
+
+	   <li class="sub-menu-parent"><a href="/distributor-zone">Distributor zone</a></li>
+
+	   <!--<li class="sub-menu-parent"><a href="#">Plans</a>
+       <ul class="sub-menu">
+        
+       </ul></li>-->
+       
+      
+       
+       <li class="sub-menu-parent"><a href="#">DOWNLOADS</a>
+       <ul class="sub-menu">
+         <li class="sub-menu-parent2 posrelate"><a href="/downloads/mutual-fund">MUTUAL FUND</a>
+                <ul class="sub-menu2 sub-menu2-media">
+                <li><a href="/downloads/mutual-fund/totalexpenseratio">Total Expense Ratio</a></li>
+                <li><a href="/downloads/mutual-fund/Key-Information-Memorandum">KEY INFORMATION MEMORANDUM</a></li>
+                    <li><a href="/downloads/mutual-fund/Status-of-Redressal">Status of Redressal</a></li>
+                     <li><a href="/downloads/mutual-fund/SID">SID</a></li>
+                     <li><a href="/downloads/mutual-fund/SAI">SAI</a></li>
+                     <li><a href="/downloads/mutual-fund/Regulatory-Updates">Regulatory Updates</a></li>
+                     <li><a href="/downloads/mutual-fund/Forms">Forms</a></li>
+                     <li><a href="/downloads/mutual-fund/Financials">Financials</a></li>
+                     <li><a href="/downloads/mutual-fund/Factsheet">Factsheets</a></li>
+                     <li><a href="/downloads/mutual-fund/Addendums">Addendums</a></li>
+                     <li><a href="/downloads/mutual-fund/Month-End-Portfolio">Month End Portfolio</a></li>
+                     
+                     <li><a href="/downloads/mutual-fund/Leaflet-Brochure">Leaflet/Brochure</a></li>
+                     <li><a href="/downloads/mutual-fund/Presentations">Presentations</a></li>
+                      <li><a href="/downloads/mutual-fund/Unclaimed-Dividend-Redemption">Unclaimed Dividend/Redemption</a></li>
+                      <li><a target="_blank" href="https://www.motilaloswalmf.com/investonline/Remuneration.aspx">Remuneration</a></li>
+                      <li><a href="/downloads/mutual-fund/Valuation-Policy">Valuation Policy</a></li>
+                        <li><a href="/downloads/mutual-fund/Debt-and-Money-Market-Securities-Transactions">Debt and Money Market Securities Transactions</a></li>
+                        <li><a href="/downloads/mutual-fund/Change-in-fundamental-attribute"> Fundamental Attribute</a></li>
+                    
+
+                 </ul>
+         </li>
+         <li class="sub-menu-parent2 posrelate"><a href="/downloads/pms">PORTFOLIO MANAGEMENT SERVICES</a>
+            <ul class="sub-menu2">
+                <li><a href="/downloads/pms/Presentations">Presentations</a></li>
+                 <li><a href="/downloads/pms/Monthly-Communique">Monthly Communique</a></li>
+                 <li><a href="/downloads/pms/Document">Document</a></li>
+                  <li><a href="/downloads/pms/Forms">Forms</a></li>
+                   <li><a href="/downloads/pms/Leaflet-Brochure">Leaflet/Brochure</a></li>
+            </ul>
+         </li>
+         <li><a href="https://online.motilaloswalmf.com/general/accountstatementmailback.aspx">ACCOUNT STATEMENT</a></li>
+		 <li class="sub-menu-parent2 posrelate"><a href="/downloads/aif">AIF</a>
+            <ul class="sub-menu2">
+                <li><a href="/downloads/aif">Regulatory Updates</a></li>
+                 
+            </ul>
+         </li>
+       </ul></li>
+       <li class="sub-menu-parent"><a href="/nav/latest-nav">NAV</a>
+       <ul class="sub-menu">
+        <li><a href="/nav/latest-nav">Latest NAV</a></li>
+                  <li><a href="/nav/history-nav">Historical NAV</a></li>
+                  <li><a href="/nav/history-dividend">Historical Dividend</a></li>
+       </ul></li>
+       
+       <li class="sub-menu-parent"><a href="#">Investor Education</a>
+       <ul class="sub-menu">
+       <li><a href="/knowledge-centre/wealth-creation-wisdom">WEALTH CREATION THOUGHTS</a></li>
+         <li><a href="/knowledge-centre/5-keys-of-investing">THE 5 KEYS OF INVESTING</a></li> 
+        <li><a href="/knowledge-centre/two-kinds-of-investors">TWO KINDS OF INVESTORS</a></li> 
+        <li class="sub-menu-parent2 posrelate"><a href="#">INVESTMENT FAQS</a>
+         <ul class="sub-menu2">
+         <li class="sub-menu-parent2 posrelate"><a href="/knowledge-centre/investment-faqs/mutual-fund">Mutual Fund</a></li>
+         <li class="sub-menu-parent2 posrelate"><a href="/knowledge-centre/investment-faqs/portfolio-management-services">Portfolio Management Services</a></li>
+         <li class="sub-menu-parent2 posrelate"><a href="/knowledge-centre/investment-faqs/systematic-investment-plan">Systematic Investment Plan</a></li>
+         </ul></li>
+          
+          <li class="sub-menu-parent2 posrelate"><a href="#">Transact Online FAQ'<span style="text-transform:none;">s</span></a>
+         <ul class="sub-menu2">
+         <li class="sub-menu-parent2 posrelate"><a href="/investonline/LoginPage.aspx?FAQ=TransOnline">Transact Online- Lumpsum</a></li>
+         <li class="sub-menu-parent2 posrelate"><a href="/investonline/LoginPage.aspx?FAQ=ISIP" style="text-transform:none;">iSIP</a></li>
+         <li class="sub-menu-parent2 posrelate"><a href="/investonline/LoginPage.aspx?FAQ=KYC">CKYC</a></li>
+         <li class="sub-menu-parent2 posrelate"><a href="/investonline/LoginPage.aspx?FAQ=OTM">OTM</a></li>
+         </ul></li>
+
+           <li><a href="/knowledge-centre/buy-right-sit-tight">Buy Right Sit Tight</a></li>  
+              <li class="sub-menu-parent2 posrelate"><a href="#">INVESTOR EDUCATION INITIATIVE</a>
+                 <ul class="sub-menu2">
+                 <li><a href="/knowledge-centre/investor-education/mevsmarket">ME V/s MARKET</a></li>
+                 <li><a href="http://www.equitysahihai.com" target="_blank">Equity Sahi Hai</a></li>
+                 </ul>
+              </li>
+          <li><a href="/knowledge-centre/investing-in-portfolio-management-services">INVESTING IN PORTFOLIO MANAGEMENT SERVICES</a></li>
+         <li><a href="/knowledge-centre/why-do-you-redeem">WHY DO YOU REDEEM?</a></li>
+          <li><a href="/plans/movi">MOVI</a></li>
+         <li><a href="/plans/systematic-investment-plan">SYSTEMATIC INVESTMENT PLAN</a></li>
+         <li><a href="/plans/motilal-oswal-focused-cashflow-plan">MOTILAL OSWAL CASHFLOW PLAN</a></li>
+         <li><a href="/large-cap-alpha-index">Large Cap Alpha Index</a></li>
+		   <li><a href="/Ip/KYC-and-Redressal-of-Complaints/9" target="_blank">KYC & Redressal of Complaints</a></li>
+		 <li><a href="/Ip/Guidelines-for-Transmission-Of-Units-Procedure-AMFI-Circular-No-85/18">Transmission of Mutual Fund Units Process</a></li>
+		 <li><a href="/Ip/Investor-Awareness-Program/21">AMFI Standard Investor Awareness Presentation</a></li>
+
+         
+       </ul></li>
+	   <li class="sub-menu-parent"><a href="#">Tools</a>
+       <ul class="sub-menu">
+         <li><a href="/tools/compare-portfolio">COMPARE YOUR PORTFOLIO</a></li>
+         <li><a href="/tools/compounding-magic">COMPOUNDING MAGIC - SIP</a></li>
+        <li><a href="/tools/sip-return-calculator">SIP RETURNS CALCULATOR</a></li>
+		<li><a href="/tools/goal-investment-calculator">GOAL CALCULATOR</a></li>
+		<li><a href="/tools/risk-meter">RISK METER</a></li>
+        <li><a href="/tools/compounding-magic-lumpsum">COMPOUNDING MAGIC - LUMPSUM</a></li>
+       </ul></li>
+       
+       <li class="sub-menu-parent"><a href="/blog">Blog  </a> </li>
+       <!--<li class="sub-menu-parent"><a href="/contact-us">Contact Us</a></li>-->
+      
+   </ul>
+ </nav>
+            </div>
+<div class="col-auto align-self-end NoPadd">
+             <div class="InvestOnlineDiv sub-menu-parent">
+                <a id="A1" target="_blank" href="https://www.motilaloswalmf.com/mf/login?chn_option=quickbuy&utm_source=quickinvest">Quick Invest</a>
+				<!-- <ul class="sub-menu">
+         <li><a href="https://www.motilaloswalmf.com/mf/indexfunds?utm_campaign=index-fund&amp;utm_source=website&amp;utm_medium=hp&amp;utm_creative=3in1&amp;utm_device=web" target="_blank">Index Funds</a></li>
+         <li><a href="https://www.motilaloswalmf.com/mf/login?utm_campaign=elss&utm_source=website&utm_medium=mfhp&utm_creative=brst_qglp&utm_device=web" target="_blank">Mutual Funds</a></li>
+       </ul>-->
+            </div>
+	</div>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid SearchTextBoxMobileMainDiv HideSm">
+    <div class="SearchTextBoxMobile">
+        <input id="txtSearchMob" name="" type="text" class="search_input" placeholder="Search"
+            value="Search" onfocus="this.value=(this.value=='Search')?'':this.value;" onblur="this.value=!this.value?'Search':this.value;"
+            onkeypress="return isAlphaChecktop(event)" />
+        <span>
+            <img src="/images/Search-Icon-w.png" class="float-right" onclick="return val123Mob();" />
+        </span>
+    </div>
+</div>
+
+
+<style>
+    .mynewclass
+    {
+        top: 173px;
+        right: 0px;
+    }
+    .login_con_wrp2 .content
+    {
+        height: 146px;
+        right: 0px;
+    }
+    .handle
+    {
+        height: 195px !important;
+    }
+</style>
+<script language="javascript" type="text/javascript">
+
+    $(".handleOne").click(function () {
+        $(".showLoginDiv").addClass("NewLoginAdd");
+    });
+
+    $(".handletwo").click(function () {
+        $(".showNavDiv").addClass("NewNavAdd");
+    });
+    $(".handlethree").click(function () {
+        $(".showdownDiv").addClass("NewLDownAdd");
+    });
+
+    $('.showScrollMenuButton').click(function () {
+        $('.showScrollMenu').animate({ left: '0px' });
+        $(".DesktopNoscroll").addClass("HideScroll");
+
+
+    });
+    $('.HideScrollMenuButton').click(function () {
+        $('.showScrollMenu').animate({ left: '-310px' });
+        $(".DesktopNoscroll").removeClass("HideScroll");
+    });
+
+    $('.bodyClickMenuHide').click(function (e) {
+        $(this).hide()
+    });
+    $('.bodyClickMenuShow').click(function (e) {
+        $('.DesktopBody').fadeIn('slow')
+    });
+
+    $('.bodyClickMenuHideShow').click(function (e) {
+        $('.DesktopBody').fadeOut('slow')
+    });
+    $('.MobAppDownloadHideButton').click(function (e) {
+        $('.MobAppDownloadHideBody').slideUp();
+    });
+
+    $(function () {
+        var Accordion = function (el, multiple) {
+            this.el = el || {};
+            this.multiple = multiple || false;
+
+            // Variables privadas
+            var links = this.el.find('.link');
+            // Evento
+            links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown)
+        }
+
+        Accordion.prototype.dropdown = function (e) {
+            var $el = e.data.el;
+            $this = $(this),
+			$next = $this.next();
+
+            $next.slideToggle();
+            $this.parent().toggleClass('open');
+
+            if (!e.data.multiple) {
+                $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+            };
+        }
+
+        var accordion = new Accordion($('#accordion'), false);
+    });
+
+    $('.topNewMenu').on('click', function () {
+        $('.topNewMenu.Top_DeskTo_Menu_Active').toggleClass('Top_DeskTo_Menu_Active', '1000').addClass('Top_DeskTo_Menu_UnActive', '1000');
+        $(this).siblings().toggleClass('Top_DeskTo_Menu_UnActive').addClass('Top_DeskTo_Menu_Active');
+        /*	$(this).toggleClass('Top_DeskTo_Menu_Active').siblings().removeClass('Top_DeskTo_Menu_Active');*/
+        $parent_box = $(this).closest('.topNewSubMenu');
+        $parent_box.siblings().find('.topNewSubMenuHide').slideUp();
+        $parent_box.find('.topNewSubMenuHide').slideToggle(1000, 'swing');
+    });	
+</script>
+
+
+<script type="text/javascript" src="/js/ddaccordion.js"></script>
+<script type="text/javascript" src="/js/accordian.js"></script>
+<script src="/js/common.js" type="text/javascript"></script>
+
+    </div>
+    <div>
+        
+
+    <script language="javascript">
+ function goback() {
+     window.history.go(-1);
+ }
+    </script>
+
+    <div class="clear">
+    </div>
+    <div id="innerContainer">
+        <h1>
+            Error Page</h1>
+        <div class="breadcum">
+            <span>Error Page</span>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="pageContainer">
+            <div class="topImage">
+                <img src="/images/topImage.jpg" alt="" /></div>
+            <div class="leftShadow">
+                <img src="/images/leftImage.jpg" alt="" /></div>
+            <div class="middleContainer">
+                <div class="leftContainer">
+                    <div class="contact">
+                        <div id="ctl00_ContentPlaceHolder1_servrERR">
+                            <p class="address">
+                                You ' ve stumbled upon a temporary problem we ' re having with Motilal Oswal site.
+                                Usually this problem gets resolved quickly, without you doing a thing. In fact it
+                                may be taken care of now.</p>
+                            <p>
+                                Try pressing the Reload or Refresh button on your browser. Hopefully that will take
+                                care of things</p>
+                            <p>
+                                If that doesn't fix the problem, please be patient while we sort it out and try
+                                again shortly. The fact that you're reading this page means we've been automatically
+                                notified of the issue, and chances are we're working on it now.</p>
+                            <p>
+                                Thanks,<br>
+                                The Motilal Oswal Team.</p>
+                        </div>
+                        <div class="disclimer_wrp">
+                            <div class="disclimer">
+                                <p>
+                                    <a href="javascript:goback()">Back</a> || Return to <a href="../Default.aspx"><b>Home
+                                        Page</b></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="rightShadow">
+                <img src="/images/rightImg.jpg" alt="" /></div>
+        </div>
+    </div>
+
+    </div>
+    <div>
+        
+<script type="text/javascript">
+
+
+
+    function validateFooter() {
+
+        var filter1 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        if (!filter1.test(document.getElementById('ctl00_Ucfooter1_nwsletter').value)) {
+            alert('Invalid E-mail Address! Please re-enter.');
+            document.getElementById("ctl00_Ucfooter1_nwsletter").focus();
+            return false;
+        }
+    }
+
+  
+</script>
+
+<div class="container-fuild bg_blck d-none">
+<div class="container">
+<div class="row mutualfundrisk">
+<div class="col-auto col-xs-12 p-0">
+<span class="float-left f-nwslttr">Newsletter</span>
+ <div class="subscribe_wrp float-left" style="border: 1px solid #646464">
+                    <div class="subscribe float-left">
+                       
+                        <input name="ctl00$Ucfooter1$nwsletter" type="text" id="ctl00_Ucfooter1_nwsletter" value="Email Address" onfocus="this.value=(this.value==&#39;Email Address&#39;)?&#39;&#39;:this.value;" onblur="this.value=!this.value?&#39;Email Address&#39;:this.value;" class="subscribe_input_bg2" />
+                        <!--<input name="ctl00$Ucfooter1$nwsletter" id="ctl00_Ucfooter1_nwsletter" value="Email Address" onfocus="this.value=(this.value=='Email Address')?'':this.value;" onblur="this.value=!this.value?'Email Address':this.value;" class="subscribe_input_bg" type="text">-->
+                        <input type="submit" name="ctl00$Ucfooter1$Button2" value="Go" onclick="return validateFooter();" id="ctl00_Ucfooter1_Button2" align="middle" class="go_button_3" />
+                        <!--<input name="ctl00$Ucfooter1$Button1" value="Go" onclick="return validate1212();" id="ctl00_Ucfooter1_Button1" class="go_button_1" align="middle" type="submit">-->
+                        <div class="clear">
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                <!--<div class="col-sm-2 col-md-2 col-xs-12 soc-mr-tp">
+                
+                </div>-->
+                <div class="col-sm-8 col-md-8 col-lg-8 f-icon f-mr-tp">
+				<span class="float-left f-nwslttr">Connect with us</span>
+                <i class="fa fa-phone fa-4" aria-hidden="true"></i>
+                <div class="f-cno" style="">+91-22 40548002 | 8108622222</div>
+					<!--<span>Tools </span>-->
+					<div class="SocialIconSection" style="">
+                    <div class="pad_tab0 f-soc-icon">
+                        <ul class="pad_tab">
+                            <li><a href="https://www.facebook.com/motilaloswalamc" target="_blank">
+                                <img src="/images/FB.jpg" /></a> </li>
+                            <li><a href="https://twitter.com/MotilalOswalAMC" target="_blank">
+                                <img src="/images/Twitter.jpg" /></a> </li>
+                            
+                            <li><a href="https://youtube.com/motilaloswalamc" target="_blank">
+                                <img src="/images/You-Tube.jpg" /></a> </li>
+                        </ul>
+                    </div>
+                    <div class="clear" style="">
+                    </div>
+                </div>
+					<ul class="app-sec">
+                                
+								<li><a href="https://play.google.com/store/apps/details?id=com.mosl.amc&hl=en_IN"><img src="/images/playstore.png" class="img-fluid" /></a></li>
+								<li><a href="https://itunes.apple.com/in/app/moamc/id1410645960?mt=8"><img src="/images/appstore.png" class="img-fluid" /></a></li>
+							</ul>
+                </div>
+</div>
+</div>
+</div>
+<div class="container-fuild LightGrayBG d-none">
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12">
+    
+        <div class="disclimer pad10imp" style="text-align: left; font-weight: 700;">
+            <span style="float:left;">CIN-U67120MH2008PLC188186</span>
+            <span class="fl_lrt f-mr-tp"><a href="/tnc/terms-and-conditions.html" class="font12imp">Disclaimer</a> | <a
+                    href="/tnc/terms-and-conditions.html" class="font12imp">Privacy Policy</a> | <a href="/feedback"
+                        class="font12imp">Feedback</a> | <a href="/rssfeeds" class="font129imp">Subscribe our
+                            rss feed
+                            <img src="/images/rss.gif"></a> | <a class="" href="/Pdf/voating-policy.pdf" class="font12imp" target="_blank">
+                                        Voting Policy </a> | <a href="/sitemap" class="font12imp">Sitemap</a>  </span>
+        </div>
+       
+        <div class="newltrnew uclineheight" >
+            <div class="disclimer" style="display:none;">
+                <span class="leftDiv_2"><a href="/tnc/terms-and-conditions.html" class="font12imp">Disclaimer</a> | <a
+                    href="/tnc/terms-and-conditions.html" class="font19imp">Privacy Policy</a> | <a href="/feedback"
+                        class="font19imp">Feedback</a> | <a href="/rssfeeds" class="font19imp">Subscribe our
+                            rss feed
+                            <img src="/images/rss.gif"></a> </span>
+
+                <div class="SocialIconSection desktopblock" style="width: 37% !important;display:none;">
+                    <div class="" style="float: left !important; padding: 0 50px 0 0 !important;">
+                        <ul>
+                            <li><a href="https://www.facebook.com/motilaloswalamc" target="_blank">
+                                <img src="/images/FB.jpg" /></a> </li>
+                            <li><a href="https://twitter.com/MotilalOswalAMC" target="_blank">
+                                <img src="/images/Twitter.jpg" /></a> </li>
+                            
+                            <li><a href="https://youtube.com/motilaloswalamc" target="_blank">
+                                <img src="/images/You-Tube.jpg" /></a> </li>
+                        </ul>
+                    </div>
+                    <div class="clear" style="height: 20px;">
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 NoPadd" style="display:none;">
+                <div class="float-left col-lg-4 col-md-4 col-sm-12 col-xs-12 NoPadd">
+                    <div class="newTollNo NoPadd">
+                        <span>Toll Free Number :</span> <a href="tel:18002006626">1800-200-6626</a></div>
+                </div>
+                <div class="float-left col-lg-4 col-md-4 col-sm-12 col-xs-12 NoPadd">
+                    <div class="SocialIconSection mobileblock" style="width:100% !important;">                                            
+                        <div class="" style="float:left !important;padding:0 50px 0 0 !important;">
+                            <ul>
+                                <li><a href="https://www.facebook.com/motilaloswalamc" target="_blank">
+                                    <img src="/images/FB.jpg" /></a> </li>
+                                <li><a href="https://twitter.com/MotilalOswalAMC" target="_blank">
+                                    <img src="/images/Twitter.jpg" /></a> </li>
+                                
+                                <li><a href="https://youtube.com/motilaloswalamc" target="_blank">
+                                    <img src="/images/You-Tube.jpg" /></a> </li>
+                            </ul>
+                        </div>
+                        <div class="clear" style="height:20px;">
+                </div>
+                    </div>
+                </div>
+                <div class="float-left col-lg-4 col-md-4 col-sm-12 col-xs-12 NoPadd">
+                    <div class="subscribe_wrp pad5pxnew float-left">
+                    <div class="subscribe float-left">
+                        <span>Newsletter Signup</span>
+                        <input name="ctl00$Ucfooter1$nwsletter2" type="text" id="ctl00_Ucfooter1_nwsletter2" value="Email Address" onfocus="this.value=(this.value==&#39;Email Address&#39;)?&#39;&#39;:this.value;" onblur="this.value=!this.value?&#39;Email Address&#39;:this.value;" class="subscribe_input_bg" />
+                        
+                        <input type="submit" name="ctl00$Ucfooter1$Button1" value="Go" onclick="return validateFooter();" id="ctl00_Ucfooter1_Button1" align="middle" class="go_button_1" />
+                        
+                        <div class="clear">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+             </div>
+              <div class="clear">
+            </div>
+            
+            </div>
+          
+        </div>
+		</div>
+		</div>
+    </div>
+</div>
+	
+<div class="container-fuild footermobtap">
+	<div class="container">
+            <div class="mobile_footer_tap">
+                <ul>
+                    <li><i class="tap_call_icon"></i>Tap to call <a href="tel:+91-22 40548002" class="pull-right text-right">+91-22 40548002</a>
+                        <span class="pull-right text-right">|</span> <a href="tel:8108622222" class="pull-right text-right">8108622222</a></li>
+                    <li><i class="communication_detail_icon mob"></i>Write to us<a href="mailto:mfservice@motilaloswal.com" class="pull-right text-right">mfservice@motilaloswal.com</a></li>
+<!--					<li class="moamcappsec"><i class="moamcapp_icon mob"></i>Download app <a href="https://play.google.com/store/apps/details?id=com.mosl.amc&amp;hl=en_IN"><img src="/images/playstore.png" class="img-fluid"></a> <a href="https://itunes.apple.com/in/app/moamc/id1410645960?mt=8"><img src="/images/appstore.png" class="img-fluid"></a></li>
+					<li class="connectussec"><i class="connectus_icon mob"></i>Social connect <a rel="nofollow" target="_blank" href="https://www.facebook.com/motilaloswalamc"> <i class="fa fa-facebook "></i> </a> <a rel="nofollow" target="_blank" href="https://twitter.com/MotilalOswalAMC"> <i class="fa fa-twitter "></i> </a> <a rel="nofollow" target="_blank" href="https://youtube.com/motilaloswalamc"> <i class="fa fa-youtube "></i> </a></li>-->
+                </ul>
+            </div>
+        </div>
+</div>
+	
+<div class="container-fuild mutualfundrisk">
+    <div class="container">
+		<div class="row">
+			<div class="col-md-12" style="border-bottom: 1px solid #ccc; padding-bottom: 5px;">
+		<div class="text-center w-100">
+			<span style=" font-size: 12px; padding-bottom: 5px;" class="visible-mob">CIN-U67120MH2008PLC188186</span>
+                <p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully
+                </p>
+            </div>
+		<div class="text-center w-100">
+                <p class="text-small">KYC is one time exercise while dealing in securities markets - once KYC is done through a SEBI registered intermediary (broker, DP, Mutual Fund etc), you need not undergo the same process again when you approach another intermediary
+                </p>
+            </div>
+			</div>
+			
+			
+            <div class="col-md-3 col-xs-12 copyright-p d-none" style="margin-top: 10px; font-size: 12px;">
+                © Copyright  2015 
+            </div>
+            <div class="col-md-9 col-xs-12  d-none" style="margin-top: 10px;">
+                <div class="best-view text-right">
+                    <p style=" font-size: 12px;color: #444;font-weight: 700;">Site best viewed in IE 9.0+, Mozila Firefox 4.0+ and Google Chrome at 1024 x 768 pixels resolution</p>
+                </div>
+            </div>
+
+            <div class="clear">
+            </div>
+		</div>
+	</div>
+</div>
+<style>
+.serch {
+    float: right;
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+.dropdown1 {
+    border: 1PX solid #e4e4e4;
+        border-right-color: rgb(228, 228, 228);
+        border-right-style: solid;
+        border-right-width: 1px;
+    padding: 10px 15px;
+    float: left;
+    border-right: none;
+    font-weight: 700;
+}
+.new_search_button {
+    float: left;
+    padding: 11px 11px !important;
+    margin-right: 0;
+    background: #fff;
+    font-size: 15px;
+    border: 1px solid #e4e4e4;
+        border-left-color: rgb(228, 228, 228);
+        border-left-style: solid;
+        border-left-width: 1px;
+    cursor: pointer;
+    border-left: none;
+}
+</style>
+
+
+    </div>
+    </form>
+    <script src="/js/sagscroller.js" type="text/javascript"></script>
+    <script src="/js/jquery.tabSlideOut.v1.3.js" type="text/javascript"></script>
+    <script src="/js/jquery.flexnav.js" type="text/javascript"></script>
+ 
+
+  
+
+</body>
+</html>
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        var dir = 0;
+        $("#Onediv").click(function () {
+            $(".login_con_wrp2").show();
+            dir = dir === 0 + "px" ? -150 : 0 + "px";
+            $("#OnedivShow").stop().animate({ right: dir });
+
+        })
+
+    })
+ </script>
+ <script type="text/javascript" language="javascript">
+     $(document).ready(function () {
+         var dir = 0;
+         $("#Twodiv").click(function () {
+             $(".login_con_wrp1").show();
+             $("#Twodiv").toggleClass("nav_minus");
+             dir = dir === 0 + "px" ? -420 : 0 + "px";
+             $("#TwodivShow").stop().animate({ right: dir });
+
+         })
+
+     })
+ </script>
+ <script type="text/javascript" language="javascript">
+     $(document).ready(function () {
+         var dir = 0;
+         $("#Threediv").click(function () {
+             $(".login_con_wrp").show();
+             dir = dir === 0 + "px" ? -250 : 0 + "px";
+             $("#ThreedivShow").stop().animate({ right: dir });
+
+         })
+
+     })
+ </script>

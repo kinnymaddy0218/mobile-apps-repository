@@ -1,0 +1,125 @@
+﻿
+--- Testing Extraction for: Nippon India Small Cap Fund ---
+[Parser] Found no data-rich context for "Nippon India Small Cap Fund", checking for first match of normalized name.
+{
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Banks",
+      "percentage": "25.52%"
+    },
+    {
+      "sector": "IT - Software",
+      "percentage": "8.16%"
+    },
+    {
+      "sector": "Pharmaceuticals &",
+      "percentage": "5.68%"
+    },
+    {
+      "sector": "Biotechnology",
+      "percentage": "5.60%"
+    },
+    {
+      "sector": "Automobiles",
+      "percentage": "5.44%"
+    },
+    {
+      "sector": "Petroleum Products",
+      "percentage": "5.28%"
+    },
+    {
+      "sector": "Electrical",
+      "percentage": "5.14%"
+    },
+    {
+      "sector": "Equipment",
+      "percentage": "5.09%"
+    },
+    {
+      "sector": "Diversified FMCG",
+      "percentage": "4.81%"
+    },
+    {
+      "sector": "Retailing",
+      "percentage": "4.66%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Ashok Leyland Ltd.",
+      "sector": "Other",
+      "percentage": "1.02%"
+    },
+    {
+      "company": "Mahindra & Mahindra Ltd.",
+      "sector": "Other",
+      "percentage": "1.84%"
+    },
+    {
+      "company": "Maruti Suzuki India Ltd.",
+      "sector": "Other",
+      "percentage": "1.30%"
+    },
+    {
+      "company": "Eicher Motors Ltd.",
+      "sector": "Other",
+      "percentage": "1.27%"
+    },
+    {
+      "company": "The Federal Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.43%"
+    },
+    {
+      "company": "AU Small Finance Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.33%"
+    },
+    {
+      "company": "Bank of Baroda",
+      "sector": "Other",
+      "percentage": "1.03%"
+    },
+    {
+      "company": "Varun Beverages Ltd.",
+      "sector": "Other",
+      "percentage": "1.40%"
+    },
+    {
+      "company": "UltraTech Cement Ltd.",
+      "sector": "Other",
+      "percentage": "1.69%"
+    },
+    {
+      "company": "JK Cement Ltd.",
+      "sector": "Other",
+      "percentage": "1.23%"
+    }
+  ],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "6.00%",
+  "mid_cap": "12.00%",
+  "small_cap": "82.00%",
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "6.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "12.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "82.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 51310
+}

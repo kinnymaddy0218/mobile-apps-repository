@@ -1,0 +1,129 @@
+{
+  "fundName": "Nippon India Gilt  Fund - Direct Plan Growth Plan - Growth Option",
+  "amcName": "Nippon India Mutual Fund",
+  "pdfUrl": "https://mf.nipponindiaim.com/InvestorServices/FactSheets/Nippon-FS-Feb-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Banks",
+      "percentage": "9.93%"
+    },
+    {
+      "sector": "Auto Components",
+      "percentage": "8.42%"
+    },
+    {
+      "sector": "Finance",
+      "percentage": "8.27%"
+    },
+    {
+      "sector": "Pharmaceuticals & Biotechnology",
+      "percentage": "6.86%"
+    },
+    {
+      "sector": "Retailing",
+      "percentage": "5.81%"
+    },
+    {
+      "sector": "Capital Markets",
+      "percentage": "5.65%"
+    },
+    {
+      "sector": "Industrial Products",
+      "percentage": "5.52%"
+    },
+    {
+      "sector": "Consumer Durables",
+      "percentage": "5.23%"
+    },
+    {
+      "sector": "Power",
+      "percentage": "4.87%"
+    },
+    {
+      "sector": "Healthcare Services",
+      "percentage": "4.21%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Bharat Electronics Ltd.",
+      "sector": "Other",
+      "percentage": "1.08%"
+    },
+    {
+      "company": "Bharat Forge Ltd.",
+      "sector": "Other",
+      "percentage": "1.88%"
+    },
+    {
+      "company": "Tube Investments of India Ltd.",
+      "sector": "Other",
+      "percentage": "1.40%"
+    },
+    {
+      "company": "ZF Commercial Vehicle Control Systems India Ltd.",
+      "sector": "Other",
+      "percentage": "1.22%"
+    },
+    {
+      "company": "Indian Bank",
+      "sector": "Other",
+      "percentage": "1.75%"
+    },
+    {
+      "company": "Varun Beverages Ltd.",
+      "sector": "Other",
+      "percentage": "1.66%"
+    },
+    {
+      "company": "Dixon Technologies (India) Ltd.",
+      "sector": "Other",
+      "percentage": "1.13%"
+    },
+    {
+      "company": "GE Vernova T&D India Ltd.",
+      "sector": "Other",
+      "percentage": "1.49%"
+    },
+    {
+      "company": "Bharat Heavy Electricals Ltd.",
+      "sector": "Other",
+      "percentage": "1.16%"
+    },
+    {
+      "company": "Sundaram Finance Ltd.",
+      "sector": "Other",
+      "percentage": "1.23%"
+    }
+  ],
+  "expense_ratio": "0.74%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "41,727.36",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "15.41",
+    "beta": "0.93",
+    "sharpe_ratio": "1.17",
+    "alpha": "",
+    "portfolio_turnover": "0.03"
+  },
+  "benchmark_performance": {
+    "name": "NIFTY Midcap 150 TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 770585,
+  "foundAt": 46238,
+  "score": 200200,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T18:50:51.384Z"
+}

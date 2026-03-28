@@ -1,0 +1,112 @@
+{
+  "fundName": "DSP BlackRock FMP - Series 149 - 12M (Maturity Date 19-Jun-2017) - Direct Plan - Dividend Payout - Regular Payout",
+  "amcName": "DSP Mutual Fund",
+  "pdfUrl": "https://www.dspim.com/downloads/dsp-factsheet-february-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Services",
+      "percentage": "3.47%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "2.04%"
+    },
+    {
+      "sector": "Mining",
+      "percentage": "0.19%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.93%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.41%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.65%"
+    },
+    {
+      "company": "Telecom",
+      "sector": "Services",
+      "percentage": "3.34%"
+    },
+    {
+      "company": "Bharti Airtel Ltd.",
+      "sector": "Other",
+      "percentage": "2.20%"
+    },
+    {
+      "company": "Indus Towers Ltd.",
+      "sector": "Other",
+      "percentage": "1.14%"
+    },
+    {
+      "company": "Infosys Ltd.",
+      "sector": "Other",
+      "percentage": "1.44%"
+    },
+    {
+      "company": "HCL Technologies Ltd.",
+      "sector": "Other",
+      "percentage": "1.16%"
+    },
+    {
+      "company": "Craftsman Automation Ltd.",
+      "sector": "Other",
+      "percentage": "0.71%"
+    },
+    {
+      "company": "CIE Automotive India Ltd.",
+      "sector": "Other",
+      "percentage": "0.51%"
+    }
+  ],
+  "expense_ratio": "0.69%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "12,165",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "60.17%",
+  "mid_cap": "23.57%",
+  "small_cap": "11.94%",
+  "risk_ratios": {
+    "standard_deviation": "12.83",
+    "beta": "0.97",
+    "sharpe_ratio": "0.97",
+    "alpha": "5.37",
+    "portfolio_turnover": "12"
+  },
+  "benchmark_performance": {
+    "name": "Nifty 500 (TRI)",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "60.17%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "23.57%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "11.94%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 713420,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-27T00:24:20.745Z"
+}

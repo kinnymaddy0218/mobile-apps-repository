@@ -1,0 +1,86 @@
+{
+  "fundName": "SBI PSU Fund - DIRECT PLAN - GROWTH",
+  "amcName": "SBI Mutual Fund",
+  "pdfUrl": "https://www.sbimf.com/docs/default-source/scheme-factsheets/all-sbimf-schemes-factsheet-february-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "4.24%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "3.72%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Other",
+      "percentage": "3.26%"
+    },
+    {
+      "company": "Indus Towers Ltd.",
+      "sector": "Other",
+      "percentage": "3.25%"
+    },
+    {
+      "company": "Bajaj Finserv Ltd.",
+      "sector": "Other",
+      "percentage": "3.25%"
+    },
+    {
+      "company": "Adani Power Ltd.",
+      "sector": "Other",
+      "percentage": "3.16%"
+    },
+    {
+      "company": "K.P.R. Mill Ltd.",
+      "sector": "Other",
+      "percentage": "3.09%"
+    },
+    {
+      "company": "Torrent Power Ltd.",
+      "sector": "Other",
+      "percentage": "2.96%"
+    },
+    {
+      "company": "Bharti Airtel Ltd.",
+      "sector": "Other",
+      "percentage": "2.82%"
+    },
+    {
+      "company": "Dalmia Bharat Ltd.",
+      "sector": "Other",
+      "percentage": "2.73%"
+    }
+  ],
+  "expense_ratio": "1.04%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "15.19",
+    "beta": "15.19",
+    "sharpe_ratio": "15.19",
+    "alpha": "",
+    "portfolio_turnover": "0.49"
+  },
+  "benchmark_performance": {
+    "name": "BSE 500 (TRI)",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 559885,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-26T10:12:54.789Z"
+}

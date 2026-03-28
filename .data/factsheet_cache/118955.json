@@ -1,0 +1,131 @@
+{
+  "fundName": "HDFC Flexi Cap Fund - Growth Option - Direct Plan",
+  "amcName": "HDFC Mutual Fund",
+  "pdfUrl": "HDFC MF Factsheet - February 2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Banks",
+      "percentage": "34.16%"
+    },
+    {
+      "sector": "Automobiles",
+      "percentage": "9.44%"
+    },
+    {
+      "sector": "IT - Software",
+      "percentage": "5.68%"
+    },
+    {
+      "sector": "Diversified Consumer Services",
+      "percentage": "4.93%"
+    },
+    {
+      "sector": "Other",
+      "percentage": "4.61%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "3.46%"
+    },
+    {
+      "sector": "Retailing",
+      "percentage": "2.98%"
+    },
+    {
+      "sector": "Construction",
+      "percentage": "2.85%"
+    },
+    {
+      "sector": "Power",
+      "percentage": "2.71%"
+    },
+    {
+      "sector": "Auto Components",
+      "percentage": "1.11%"
+    },
+    {
+      "sector": "Beverages",
+      "percentage": "0.79%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "8.78%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "7.44%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "7.25%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Banks",
+      "percentage": "5.26%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Banks",
+      "percentage": "3.76%"
+    },
+    {
+      "company": "Bharti Airtel Ltd. Telecom",
+      "sector": "Diversified Consumer Services",
+      "percentage": "3.06%"
+    },
+    {
+      "company": "Maruti Suzuki India Ltd.",
+      "sector": "Automobiles",
+      "percentage": "2.96%"
+    },
+    {
+      "company": "HCL Technologies Ltd. IT",
+      "sector": "IT - Software",
+      "percentage": "2.94%"
+    },
+    {
+      "company": "Larsen and Toubro Ltd.",
+      "sector": "Construction",
+      "percentage": "2.85%"
+    },
+    {
+      "company": "India Ltd.",
+      "sector": "Power",
+      "percentage": "2.71%"
+    }
+  ],
+  "expense_ratio": "0.70%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "50.00%",
+  "mid_cap": "30.00%",
+  "small_cap": "20.00%",
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "50.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "30.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "20.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 748609,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-19T03:19:34.616Z"
+}

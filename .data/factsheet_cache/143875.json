@@ -1,0 +1,101 @@
+{
+  "fundName": "ICICI Prudential Pharma Healthcare and Diagnostics (P.H.D) Fund - IDCW Option",
+  "amcName": "ICICI Prudential Mutual Fund",
+  "pdfUrl": "https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "(Annualised) :",
+      "percentage": "15.85%"
+    },
+    {
+      "sector": "Services",
+      "percentage": "6.12%"
+    },
+    {
+      "sector": "Average Dividend Yield :",
+      "percentage": "1.08%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Std Dev",
+      "sector": "(Annualised) :",
+      "percentage": "15.85%"
+    },
+    {
+      "company": "hospitals, diagnostics, wellness and allied companies.",
+      "sector": "Average Dividend Yield :",
+      "percentage": "1.08%"
+    },
+    {
+      "company": "Chemicals & Petrochemicals",
+      "sector": "Other",
+      "percentage": "1.17%"
+    },
+    {
+      "company": "Fine Organic Industries Ltd.",
+      "sector": "Other",
+      "percentage": "1.17%"
+    },
+    {
+      "company": "Healthcare",
+      "sector": "Services",
+      "percentage": "6.12%"
+    },
+    {
+      "company": "Syngene International Ltd.",
+      "sector": "Other",
+      "percentage": "3.16%"
+    },
+    {
+      "company": "Thyrocare Technologies Ltd.",
+      "sector": "Other",
+      "percentage": "1.75%"
+    },
+    {
+      "company": "Metropolis Healthcare Ltd.",
+      "sector": "Other",
+      "percentage": "1.21%"
+    },
+    {
+      "company": "Medi Assist Healthcare Services Ltd.",
+      "sector": "Other",
+      "percentage": "1.31%"
+    },
+    {
+      "company": "Sun Pharmaceutical Industries Ltd.",
+      "sector": "Other",
+      "percentage": "11.21%"
+    }
+  ],
+  "expense_ratio": "1.04%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "15.85",
+    "beta": "0.94",
+    "sharpe_ratio": "1.32",
+    "alpha": "",
+    "portfolio_turnover": "0.56"
+  },
+  "benchmark_performance": {
+    "name": "This product labelling is applicable only to the scheme",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 1020481,
+  "foundAt": 225665,
+  "score": 124800,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-25T21:07:11.476Z"
+}

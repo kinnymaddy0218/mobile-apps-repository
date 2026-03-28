@@ -1,0 +1,126 @@
+{
+  "fundName": "Reliance Fixed Maturity Fund- Series-2-Annual Plan Series-2-Dividend Option",
+  "amcName": "SBI Mutual Fund",
+  "pdfUrl": "https://www.sbimf.com/docs/default-source/scheme-factsheets/all-sbimf-schemes-factsheet-february-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "days -",
+      "percentage": "0.10%"
+    },
+    {
+      "sector": "days -",
+      "percentage": "0.10%"
+    },
+    {
+      "sector": "Regular-",
+      "percentage": "1.47%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "0.79%"
+    },
+    {
+      "sector": "Regular-",
+      "percentage": "1.94%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "1.30%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "0.82%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "0.84%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "0.80%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "0.73%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "0.72%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "0.86%"
+    },
+    {
+      "sector": "Direct-",
+      "percentage": "1.25%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Information Technology",
+      "sector": "Other",
+      "percentage": "8.19%"
+    },
+    {
+      "company": "Capital Goods",
+      "sector": "Other",
+      "percentage": "7.60%"
+    },
+    {
+      "company": "Consumer Durables",
+      "sector": "Other",
+      "percentage": "5.85%"
+    },
+    {
+      "company": "Construction Materials",
+      "sector": "Other",
+      "percentage": "3.74%"
+    },
+    {
+      "company": "Consumer Services",
+      "sector": "Other",
+      "percentage": "3.70%"
+    },
+    {
+      "company": "Metals & Mining",
+      "sector": "Other",
+      "percentage": "2.81%"
+    },
+    {
+      "company": "Financial Services",
+      "sector": "Other",
+      "percentage": "40.15%"
+    },
+    {
+      "company": "Metals & Mining",
+      "sector": "Other",
+      "percentage": "7.87%"
+    },
+    {
+      "company": "Oil, Gas & Consumable Fuels",
+      "sector": "Other",
+      "percentage": "6.07%"
+    },
+    {
+      "company": "Capital Goods",
+      "sector": "Other",
+      "percentage": "5.20%"
+    }
+  ],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 559885,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-20T03:08:19.634Z"
+}

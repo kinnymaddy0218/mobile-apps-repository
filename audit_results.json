@@ -1,0 +1,134 @@
+[
+  {
+    "amc": "SBI Mutual Fund",
+    "status": "PASS",
+    "details": "",
+    "funds": [
+      {
+        "name": "Sample Fund 119598",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 2,
+        "ter": "0.79%"
+      },
+      {
+        "name": "Sample Fund 119749",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 2,
+        "ter": "0.79%"
+      },
+      {
+        "name": "Sample Fund 120465",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 2,
+        "ter": "0.79%"
+      },
+      {
+        "name": "Sample Fund 125497",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 2,
+        "ter": "0.79%"
+      }
+    ],
+    "url": "https://www.sbimf.com/docs/default-source/scheme-factsheets/all-sbimf-schemes-factsheet-february-2026.pdf"
+  },
+  {
+    "amc": "HDFC Mutual Fund",
+    "status": "PASS",
+    "details": "",
+    "funds": [
+      {
+        "name": "Sample Fund 100119",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 17,
+        "ter": "0.70%"
+      },
+      {
+        "name": "Sample Fund 118955",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 17,
+        "ter": "0.70%"
+      }
+    ],
+    "url": "HDFC MF Factsheet - February 2026.pdf"
+  },
+  {
+    "amc": "HDFC Index Solutions",
+    "status": "PASS",
+    "details": "",
+    "funds": [
+      {
+        "name": "Sample Fund 118989",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 18,
+        "ter": "0.20%"
+      }
+    ],
+    "url": "HDFC MF Index Solutions Factsheet - February 2026.pdf"
+  },
+  {
+    "amc": "ICICI Prudential Mutual Fund",
+    "status": "PASS",
+    "details": "",
+    "funds": [
+      {
+        "name": "Sample Fund 100378",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 2,
+        "ter": "0.85%"
+      },
+      {
+        "name": "Sample Fund 120586",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 2,
+        "ter": "0.85%"
+      }
+    ],
+    "url": "https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf"
+  },
+  {
+    "amc": "Kotak Mutual Fund",
+    "status": "PASS",
+    "details": "",
+    "funds": [
+      {
+        "name": "Sample Fund 119280",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 37,
+        "ter": "1.73%"
+      }
+    ],
+    "url": "https://www.kotakmf.com/factsheet/feb_2026/Kotak%20MF%20Factsheet%20February%202026.pdf"
+  },
+  {
+    "amc": "Tata Mutual Fund",
+    "status": "PASS",
+    "details": "",
+    "funds": [
+      {
+        "name": "Sample Fund 119106",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 45,
+        "ter": "0.97%"
+      },
+      {
+        "name": "Sample Fund 135800",
+        "status": "PASS",
+        "holdings": 10,
+        "sectors": 45,
+        "ter": "0.97%"
+      }
+    ],
+    "url": "https://betacms.tatamutualfund.com/system/files/2026-03/TataMF%20Factsheet%20-%20February%202026.pdf"
+  }
+]

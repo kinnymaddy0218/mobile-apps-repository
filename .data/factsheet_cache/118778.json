@@ -1,0 +1,88 @@
+{
+  "fundName": "Nippon India Small Cap Fund - Direct Plan Growth Plan - Growth Option",
+  "amcName": "Nippon India Mutual Fund",
+  "pdfUrl": "https://mf.nipponindiaim.com/InvestorServices/FactSheets/Nippon-FS-Feb-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [
+    {
+      "company": "Bharat Electronics Ltd.",
+      "sector": "Other",
+      "percentage": "1.65%"
+    },
+    {
+      "company": "Mahindra & Mahindra Ltd.",
+      "sector": "Other",
+      "percentage": "3.16%"
+    },
+    {
+      "company": "Maruti Suzuki India Ltd.",
+      "sector": "Other",
+      "percentage": "1.98%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "3.08%"
+    },
+    {
+      "company": "UltraTech Cement Ltd.",
+      "sector": "Other",
+      "percentage": "1.54%"
+    },
+    {
+      "company": "Titan Company Ltd.",
+      "sector": "Other",
+      "percentage": "1.67%"
+    },
+    {
+      "company": "Asian Paints Ltd.",
+      "sector": "Other",
+      "percentage": "1.13%"
+    },
+    {
+      "company": "Hindustan Unilever Ltd.",
+      "sector": "Other",
+      "percentage": "2.18%"
+    },
+    {
+      "company": "Tata Steel Ltd.",
+      "sector": "Other",
+      "percentage": "1.63%"
+    },
+    {
+      "company": "Bajaj Finance Ltd.",
+      "sector": "Other",
+      "percentage": "2.50%"
+    }
+  ],
+  "expense_ratio": "0.03%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "6.00%",
+  "mid_cap": "12.00%",
+  "small_cap": "82.00%",
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "6.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "12.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "82.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 770585,
+  "foundAt": 270648,
+  "score": 99900,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-21T00:11:39.811Z"
+}

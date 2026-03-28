@@ -1,0 +1,97 @@
+{
+  "fundName": "DSP Natural Resources And New Energy Fund - Regular - Growth",
+  "amcName": "DSP Mutual Fund",
+  "pdfUrl": "https://www.dspim.com/downloads/dsp-factsheet-february-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Services",
+      "percentage": "5.97%"
+    },
+    {
+      "sector": "Metals",
+      "percentage": "3.72%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "11.81%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Other",
+      "percentage": "8.57%"
+    },
+    {
+      "company": "State Bank of India",
+      "sector": "Other",
+      "percentage": "4.34%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Other",
+      "percentage": "3.45%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.66%"
+    },
+    {
+      "company": "Infosys Ltd.",
+      "sector": "Other",
+      "percentage": "3.96%"
+    },
+    {
+      "company": "Tata Consultancy Services Ltd.",
+      "sector": "Other",
+      "percentage": "2.34%"
+    },
+    {
+      "company": "HCL Technologies Ltd.",
+      "sector": "Other",
+      "percentage": "1.28%"
+    },
+    {
+      "company": "Tech Mahindra Ltd.",
+      "sector": "Other",
+      "percentage": "0.75%"
+    },
+    {
+      "company": "Wipro Ltd.",
+      "sector": "Other",
+      "percentage": "0.50%"
+    }
+  ],
+  "expense_ratio": "0.71%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "1,155",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "15.05",
+    "beta": "1.03",
+    "sharpe_ratio": "1.35",
+    "alpha": "5.37",
+    "portfolio_turnover": "11"
+  },
+  "benchmark_performance": {
+    "name": "Nifty 500 TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 713420,
+  "foundAt": 56880,
+  "score": 40200,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-25T21:07:27.315Z"
+}

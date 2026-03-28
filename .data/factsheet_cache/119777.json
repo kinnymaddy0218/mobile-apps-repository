@@ -1,0 +1,235 @@
+{
+  "fundName": "Kotak Multi Asset Omni FOF - Direct Growth - Direct",
+  "amcName": "Kotak Mutual Fund",
+  "pdfUrl": "https://www.kotakmf.com/factsheet/feb_2026/Kotak%20MF%20Factsheet%20February%202026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "India Cements Ltd.",
+      "percentage": "0.36%"
+    },
+    {
+      "sector": "Ferrous Metals",
+      "percentage": "2.14%"
+    },
+    {
+      "sector": "Tata Steel Ltd.",
+      "percentage": "2.14%"
+    },
+    {
+      "sector": "Transport Services",
+      "percentage": "1.83%"
+    },
+    {
+      "sector": "Inter Globe Aviation Ltd",
+      "percentage": "1.83%"
+    },
+    {
+      "sector": "Aerospace and Defense",
+      "percentage": "1.72%"
+    },
+    {
+      "sector": "Bharat Electronics Ltd.",
+      "percentage": "1.38%"
+    },
+    {
+      "sector": "ASTRA MICROWAVE PRODUCTS LTD.",
+      "percentage": "0.34%"
+    },
+    {
+      "sector": "Chemicals and Petrochemicals",
+      "percentage": "1.53%"
+    },
+    {
+      "sector": "SOLAR INDUSTRIES INDIA LIMITED",
+      "percentage": "1.53%"
+    },
+    {
+      "sector": "Industrial Products",
+      "percentage": "1.41%"
+    },
+    {
+      "sector": "Cummins India Ltd.",
+      "percentage": "1.07%"
+    },
+    {
+      "sector": "Polycab India Ltd.",
+      "percentage": "0.34%"
+    },
+    {
+      "sector": "Consumer Durables",
+      "percentage": "1.23%"
+    },
+    {
+      "sector": "LG ELECTRONICS INDIA LTD",
+      "percentage": "0.64%"
+    },
+    {
+      "sector": "V-Guard Industries Ltd.",
+      "percentage": "0.59%"
+    },
+    {
+      "sector": "Fertilizers and Agrochemicals",
+      "percentage": "1.22%"
+    },
+    {
+      "sector": "Coromandel International Ltd.",
+      "percentage": "1.22%"
+    },
+    {
+      "sector": "Personal Products",
+      "percentage": "1.21%"
+    },
+    {
+      "sector": "Godrej Consumer Products Ltd.",
+      "percentage": "1.21%"
+    },
+    {
+      "sector": "Beverages",
+      "percentage": "1.15%"
+    },
+    {
+      "sector": "UNITED SPIRITS LTD.",
+      "percentage": "1.15%"
+    },
+    {
+      "sector": "Non - Ferrous Metals",
+      "percentage": "1.02%"
+    },
+    {
+      "sector": "Hindalco Industries Ltd",
+      "percentage": "1.02%"
+    },
+    {
+      "sector": "Healthcare Services",
+      "percentage": "0.93%"
+    },
+    {
+      "sector": "Apollo Hospitals Enterprises Ltd.",
+      "percentage": "0.93%"
+    },
+    {
+      "sector": "Insurance",
+      "percentage": "0.82%"
+    },
+    {
+      "sector": "HDFC Life Insurance Company Ltd.",
+      "percentage": "0.82%"
+    },
+    {
+      "sector": "Realty",
+      "percentage": "0.80%"
+    },
+    {
+      "sector": "OBEROI REALTY LTD",
+      "percentage": "0.51%"
+    },
+    {
+      "sector": "Mahindra Lifespace Developers Ltd",
+      "percentage": "0.29%"
+    },
+    {
+      "sector": "Food Products",
+      "percentage": "0.77%"
+    },
+    {
+      "sector": "Britannia Industries Ltd.",
+      "percentage": "0.77%"
+    },
+    {
+      "sector": "Gas",
+      "percentage": "0.57%"
+    },
+    {
+      "sector": "Gujarat State Petronet Ltd.",
+      "percentage": "0.57%"
+    },
+    {
+      "sector": "Consumable Fuels",
+      "percentage": "0.12%"
+    },
+    {
+      "sector": "Coal India Ltd.",
+      "percentage": "0.12%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Coal India Ltd.-MAR2026",
+      "sector": "Other",
+      "percentage": "0.09%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Other",
+      "percentage": "7.36%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "7.01%"
+    },
+    {
+      "company": "STATE BANK OF INDIA",
+      "sector": "Other",
+      "percentage": "4.83%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Other",
+      "percentage": "3.35%"
+    },
+    {
+      "company": "KOTAK MAHINDRA BANK LTD.",
+      "sector": "Other",
+      "percentage": "1.55%"
+    },
+    {
+      "company": "BANK OF MAHARASHTRA",
+      "sector": "Other",
+      "percentage": "0.15%"
+    },
+    {
+      "company": "Petroleum Products",
+      "sector": "Other",
+      "percentage": "7.88%"
+    },
+    {
+      "company": "RELIANCE INDUSTRIES LTD.",
+      "sector": "Other",
+      "percentage": "6.39%"
+    },
+    {
+      "company": "Bharat Petroleum Corporation Ltd.",
+      "sector": "Other",
+      "percentage": "1.49%"
+    }
+  ],
+  "expense_ratio": "1.73%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "11,029.07",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "2.75",
+    "beta": "0.96",
+    "sharpe_ratio": "0.91",
+    "alpha": "",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 1241472,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-27T00:08:24.442Z"
+}

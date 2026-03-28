@@ -1,0 +1,104 @@
+{
+  "fundName": "Invesco India Contra Fund - Direct Plan - Growth",
+  "amcName": "Invesco Mutual Fund",
+  "pdfUrl": "https://invescomutualfund.com/docs/default-source/factsheet/invesco-mf-factsheet---february-2026.pdf?sfvrsn=e9389ac2_0",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Company Limited",
+      "percentage": "1.22%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "7.06%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Other",
+      "percentage": "5.15%"
+    },
+    {
+      "company": "Larsen & Toubro Ltd.",
+      "sector": "Other",
+      "percentage": "4.08%"
+    },
+    {
+      "company": "Infosys Ltd.",
+      "sector": "Other",
+      "percentage": "3.80%"
+    },
+    {
+      "company": "Mahindra & Mahindra Ltd.",
+      "sector": "Other",
+      "percentage": "3.79%"
+    },
+    {
+      "company": "Axis Bank Ltd.",
+      "sector": "Other",
+      "percentage": "3.61%"
+    },
+    {
+      "company": "Reliance Industries Ltd.",
+      "sector": "Other",
+      "percentage": "3.41%"
+    },
+    {
+      "company": "Cholamandalam Investment and",
+      "sector": "Other",
+      "percentage": "2.53%"
+    },
+    {
+      "company": "Apollo Hospitals Enterprise Ltd.",
+      "sector": "Other",
+      "percentage": "2.23%"
+    },
+    {
+      "company": "The Federal Bank Ltd.",
+      "sector": "Other",
+      "percentage": "2.03%"
+    }
+  ],
+  "expense_ratio": "0.51%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "57.19%",
+  "mid_cap": "25.00%",
+  "small_cap": "14.53%",
+  "risk_ratios": {
+    "standard_deviation": "3.86",
+    "beta": "1.02",
+    "sharpe_ratio": "0.30",
+    "alpha": "",
+    "portfolio_turnover": "1"
+  },
+  "benchmark_performance": {
+    "name": "BSE 500 TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "57.19%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "25.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "14.53%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 408981,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-27T01:22:31.989Z"
+}

@@ -1,0 +1,35 @@
+{
+  "fundName": "SBI GOLD FUND- DIRECT PLAN - GROWTH",
+  "amcName": "SBI Mutual Fund",
+  "pdfUrl": "https://www.sbimf.com/docs/default-source/scheme-factsheets/all-sbimf-schemes-factsheet-february-2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "risk_ratios": {
+    "standard_deviation": "",
+    "beta": "",
+    "sharpe_ratio": "",
+    "alpha": "",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "BSE Sensex TRI",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 559885,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T18:44:17.417Z"
+}

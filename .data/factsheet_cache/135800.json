@@ -1,0 +1,267 @@
+{
+  "fundName": "Tata Digital India Fund-Direct Plan-Growth",
+  "amcName": "Tata Mutual Fund",
+  "pdfUrl": "https://betacms.tatamutualfund.com/system/files/2026-03/TataMF%20Factsheet%20-%20February%202026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "ICICI Bank Ltd.",
+      "percentage": "3.67%"
+    },
+    {
+      "sector": "Bharti Airtel Ltd.",
+      "percentage": "2.63%"
+    },
+    {
+      "sector": "Eternal Ltd.",
+      "percentage": "2.41%"
+    },
+    {
+      "sector": "Reliance  Industries Ltd.",
+      "percentage": "2.17%"
+    },
+    {
+      "sector": "Jsw Steel  Ltd.",
+      "percentage": "2.04%"
+    },
+    {
+      "sector": "ITC Ltd.",
+      "percentage": "2.00%"
+    },
+    {
+      "sector": "Vedanta  Ltd.",
+      "percentage": "1.60%"
+    },
+    {
+      "sector": "Jio Financial Services Ltd.",
+      "percentage": "1.51%"
+    },
+    {
+      "sector": "Bharat Electronics Ltd.",
+      "percentage": "1.42%"
+    },
+    {
+      "sector": "Dlf Ltd.",
+      "percentage": "1.34%"
+    },
+    {
+      "sector": "Vodafone Idea Ltd.",
+      "percentage": "1.29%"
+    },
+    {
+      "sector": "Kotak Mahindra Bank Ltd.",
+      "percentage": "1.18%"
+    },
+    {
+      "sector": "Steel Authority India Ltd.",
+      "percentage": "1.16%"
+    },
+    {
+      "sector": "Multi Commodity Exchange Of Ind Ltd.",
+      "percentage": "1.09%"
+    },
+    {
+      "sector": "Max  Financial Services Ltd.",
+      "percentage": "1.05%"
+    },
+    {
+      "sector": "Hindustan Aeronautics Ltd.",
+      "percentage": "0.99%"
+    },
+    {
+      "sector": "Marico Ltd.",
+      "percentage": "0.98%"
+    },
+    {
+      "sector": "HDFC Bank Ltd.",
+      "percentage": "0.94%"
+    },
+    {
+      "sector": "Adani Energy Solutions Ltd.",
+      "percentage": "0.90%"
+    },
+    {
+      "sector": "Varun Beverages Ltd.",
+      "percentage": "0.89%"
+    },
+    {
+      "sector": "Bharat Heavy Electricals Ltd.",
+      "percentage": "0.87%"
+    },
+    {
+      "sector": "Indus Towers Ltd.",
+      "percentage": "0.78%"
+    },
+    {
+      "sector": "Aurobindo Pharma  Ltd.",
+      "percentage": "0.76%"
+    },
+    {
+      "sector": "Laurus Labs Ltd.",
+      "percentage": "0.74%"
+    },
+    {
+      "sector": "Glenmark Pharmaceuticals Ltd.",
+      "percentage": "0.72%"
+    },
+    {
+      "sector": "ICICI  Prudential Life Insurance Company Ltd.",
+      "percentage": "0.66%"
+    },
+    {
+      "sector": "Tvs Motor Company Ltd.",
+      "percentage": "0.65%"
+    },
+    {
+      "sector": "Tata Steel Ltd.",
+      "percentage": "0.62%"
+    },
+    {
+      "sector": "Nestle India Ltd.",
+      "percentage": "0.61%"
+    },
+    {
+      "sector": "Sammaan Capital Ltd.",
+      "percentage": "0.61%"
+    },
+    {
+      "sector": "Adani Green Energy Ltd.",
+      "percentage": "0.60%"
+    },
+    {
+      "sector": "Biocon Ltd.",
+      "percentage": "0.60%"
+    },
+    {
+      "sector": "Asian Paints Ltd.",
+      "percentage": "0.59%"
+    },
+    {
+      "sector": "Rec Ltd.",
+      "percentage": "0.58%"
+    },
+    {
+      "sector": "State Bank Of India",
+      "percentage": "0.56%"
+    },
+    {
+      "sector": "Ambuja Cements Ltd.",
+      "percentage": "0.55%"
+    },
+    {
+      "sector": "Coforge Ltd.",
+      "percentage": "0.54%"
+    },
+    {
+      "sector": "Punjab National Bank",
+      "percentage": "0.54%"
+    },
+    {
+      "sector": "Grasim Industries Ltd.",
+      "percentage": "0.48%"
+    },
+    {
+      "sector": "NMDC Ltd.",
+      "percentage": "0.48%"
+    },
+    {
+      "sector": "Patanjali  Foods Ltd.",
+      "percentage": "0.48%"
+    },
+    {
+      "sector": "Samvardhana Motherson International  Ltd.",
+      "percentage": "0.47%"
+    },
+    {
+      "sector": "Adani Ports And Special Economic Zone Ltd.",
+      "percentage": "0.47%"
+    },
+    {
+      "sector": "National Aluminium Co. Ltd.",
+      "percentage": "0.47%"
+    },
+    {
+      "sector": "Tata Motors Passenger Vehicles Ltd.",
+      "percentage": "0.45%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "ICICI Bank Ltd.",
+      "percentage": "3.67%"
+    },
+    {
+      "company": "ICICI Bank Ltd.",
+      "sector": "Bharti Airtel Ltd.",
+      "percentage": "2.63%"
+    },
+    {
+      "company": "Bharti Airtel Ltd.",
+      "sector": "Eternal Ltd.",
+      "percentage": "2.41%"
+    },
+    {
+      "company": "Eternal Ltd.",
+      "sector": "Reliance  Industries Ltd.",
+      "percentage": "2.17%"
+    },
+    {
+      "company": "Reliance Industries Ltd.",
+      "sector": "Jsw Steel  Ltd.",
+      "percentage": "2.04%"
+    },
+    {
+      "company": "Jsw Steel Ltd.",
+      "sector": "ITC Ltd.",
+      "percentage": "2.00%"
+    },
+    {
+      "company": "ITC Ltd.",
+      "sector": "Other",
+      "percentage": "1.75%"
+    },
+    {
+      "company": "Shriram Finance Ltd.",
+      "sector": "Vedanta  Ltd.",
+      "percentage": "1.60%"
+    },
+    {
+      "company": "Vedanta Ltd.",
+      "sector": "Jio Financial Services Ltd.",
+      "percentage": "1.51%"
+    },
+    {
+      "company": "Jio Financial Services Ltd.",
+      "sector": "Bharat Electronics Ltd.",
+      "percentage": "1.42%"
+    }
+  ],
+  "expense_ratio": "0.97%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "80.00%",
+  "mid_cap": "15.00%",
+  "small_cap": "5.00%",
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "80.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "15.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "5.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 687821,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-20T10:54:02.819Z"
+}

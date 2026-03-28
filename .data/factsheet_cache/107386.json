@@ -1,0 +1,82 @@
+{
+  "fundName": "ICICI Prudential FMP series 42 - 16 Mths Plan - Retail Growth Option",
+  "amcName": "ICICI Prudential Mutual Fund",
+  "pdfUrl": "https://www.icicipruamc.com/blob/knowledgecentre/factsheet-complete/Complete.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [
+    {
+      "sector": "Metals",
+      "percentage": "5.70%"
+    },
+    {
+      "sector": "Services",
+      "percentage": "1.14%"
+    }
+  ],
+  "top_holdings": [
+    {
+      "company": "Aerospace & Defense",
+      "sector": "Other",
+      "percentage": "1.06%"
+    },
+    {
+      "company": "Bharat Electronics Ltd.",
+      "sector": "Other",
+      "percentage": "1.06%"
+    },
+    {
+      "company": "Agricultural, Commercial & Construction Vehicles",
+      "sector": "Other",
+      "percentage": "2.57%"
+    },
+    {
+      "company": "Tata Motors Ltd. - Futures",
+      "sector": "Other",
+      "percentage": "2.57%"
+    },
+    {
+      "company": "Mahindra & Mahindra Ltd.",
+      "sector": "Other",
+      "percentage": "1.96%"
+    },
+    {
+      "company": "Maruti Suzuki India Ltd.",
+      "sector": "Other",
+      "percentage": "1.47%"
+    },
+    {
+      "company": "HDFC Bank Ltd.",
+      "sector": "Other",
+      "percentage": "1.95%"
+    },
+    {
+      "company": "Kotak Mahindra Bank Ltd.",
+      "sector": "Other",
+      "percentage": "0.98%"
+    },
+    {
+      "company": "United Spirits Ltd.",
+      "sector": "Other",
+      "percentage": "1.00%"
+    },
+    {
+      "company": "Capital Markets",
+      "sector": "Other",
+      "percentage": "5.07%"
+    }
+  ],
+  "expense_ratio": "0.85%",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "50",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "",
+  "mid_cap": "",
+  "small_cap": "",
+  "market_cap_allocation": [],
+  "source": "Live PDF Extraction",
+  "rawLength": 1020481,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-20T06:01:54.111Z"
+}

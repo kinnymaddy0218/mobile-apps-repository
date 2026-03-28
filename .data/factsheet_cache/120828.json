@@ -1,0 +1,99 @@
+{
+  "fundName": "quant Small Cap Fund - Growth Option - Direct Plan",
+  "amcName": "Quant Mutual Fund",
+  "pdfUrl": "https://quantmutual.com/Admin/Factsheet/quant_Factsheet_February_2026.pdf",
+  "asset_allocation": [],
+  "sector_allocation": [],
+  "top_holdings": [
+    {
+      "company": "- Correlation coefficient with the Market:",
+      "sector": "Other",
+      "percentage": "0.8%"
+    },
+    {
+      "company": "Sortino Ratio = (12% - 3%) / 8% =",
+      "sector": "Other",
+      "percentage": "1.12%"
+    },
+    {
+      "company": "R- Squared = (0.8)^2 =",
+      "sector": "Other",
+      "percentage": "0.64%"
+    },
+    {
+      "company": "Downside Deviation ≈ Square Root of [(-2%)^2 + (-4%)^2 + (-1%)^2 + (-5%)^2 + (-3%)^2 / 5] ≈",
+      "sector": "Other",
+      "percentage": "3.06%"
+    },
+    {
+      "company": "Upside Deviation ≈ Square Root of [(5%)^2 + (8%)^2 + (12%)^2 + (15%)^2 + (18%)^2 / 5] ≈",
+      "sector": "Other",
+      "percentage": "6.88%"
+    },
+    {
+      "company": "30-Nov-21",
+      "sector": "Other",
+      "percentage": "0.06%"
+    },
+    {
+      "company": "2020-2021 29-Sep-20",
+      "sector": "Other",
+      "percentage": "0.07%"
+    },
+    {
+      "company": "2020-2021 30-Apr-20",
+      "sector": "Other",
+      "percentage": "0.05%"
+    },
+    {
+      "company": "2019-2020 31-Mar-20",
+      "sector": "Other",
+      "percentage": "0.01%"
+    },
+    {
+      "company": "2019-2020 28-Feb-20",
+      "sector": "Other",
+      "percentage": "0.07%"
+    }
+  ],
+  "expense_ratio": "",
+  "turnover_ratio": "",
+  "exit_load": "",
+  "aum": "",
+  "inception_date": "",
+  "min_investment": "",
+  "large_cap": "6.00%",
+  "mid_cap": "12.00%",
+  "small_cap": "82.00%",
+  "risk_ratios": {
+    "standard_deviation": "",
+    "beta": "0.00",
+    "sharpe_ratio": "1.59",
+    "alpha": "1.59",
+    "portfolio_turnover": ""
+  },
+  "benchmark_performance": {
+    "name": "NIFTY SMAL",
+    "one_year": "",
+    "three_year": "",
+    "five_year": ""
+  },
+  "market_cap_allocation": [
+    {
+      "category": "Large Cap",
+      "percentage": "6.00%"
+    },
+    {
+      "category": "Mid Cap",
+      "percentage": "12.00%"
+    },
+    {
+      "category": "Small Cap",
+      "percentage": "82.00%"
+    }
+  ],
+  "source": "Live PDF Extraction",
+  "rawLength": 189308,
+  "extractedMonthYear": "3-2026",
+  "extractionTimestamp": "2026-03-23T18:42:19.552Z"
+}
