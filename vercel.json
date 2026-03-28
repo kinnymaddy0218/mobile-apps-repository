@@ -1,12 +1,13 @@
 {
-    "crons": [
-        {
-            "path": "/api/cron/update-rankings",
-            "schedule": "0 0 * * *"
-        },
-        {
-            "path": "/api/cron/factsheets-refresh",
-            "schedule": "0 0 1 * *"
-        }
-    ]
+  "name": "mf-research",
+  "crons": [
+    {
+      "path": "/api/cron/update-rankings",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/factsheets-refresh",
+      "schedule": "0 0 1 * *"
+    }
+  ]
 }
