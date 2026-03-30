@@ -283,13 +283,13 @@ export default function PortfolioArchitectPage() {
                                     disabled={loading || totalWeight !== 100 || selectedFunds.length < 2}
                                     className="w-full py-5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 disabled:from-slate-800 disabled:to-slate-800 disabled:text-slate-500 text-white rounded-[2rem] font-black transition-all shadow-xl shadow-indigo-500/20 flex items-center justify-center gap-3 group"
                                 >
-                                    {loading ? <Loader className="animate-spin" size={20} /> : <> <Zap size={20} className="fill-white" /> <span>Start Simulation</span> </>}
+                                    {loading ? <Loader className="animate-spin" size={20} /> : <> <Zap size={20} className="fill-white" /> <span>Execute Portfolio X-Ray</span> </>}
                                 </button>
                             </div>
                         </div>
                     </aside>
 
-                    {/* Simulation Engine Results */}
+                    {/* Institutional Intelligence Engine Results */}
                     <section className="lg:col-span-8 space-y-8">
                         {loading ? (
                             <div className="space-y-8 animate-pulse pt-4">
@@ -300,159 +300,199 @@ export default function PortfolioArchitectPage() {
                         ) : results ? (
                             <div className="space-y-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                                 
-                                {/* 1. Market Cap HEATMAP */}
-                                <div className="bg-[var(--bg-card)] border border-[var(--border-primary)] rounded-[2.5rem] p-10 shadow-2xl relative overflow-hidden">
-                                    <div className="flex items-center gap-3 mb-10">
-                                        <div className="p-2.5 bg-blue-500/10 rounded-xl">
-                                            <MousePointer2 size={20} className="text-blue-400" />
+                                {/* 1. Institutional Portfolio DNA (Heatmap + Stats) */}
+                                <div className="bg-[var(--bg-card)] border border-[var(--border-primary)] rounded-[3rem] p-1 shadow-2xl relative overflow-hidden group">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-violet-500/5 pointer-events-none"></div>
+                                    <div className="p-10">
+                                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+                                            <div className="space-y-2">
+                                                <div className="flex items-center gap-3 mb-2">
+                                                    <div className="p-2.5 bg-indigo-500/10 rounded-xl">
+                                                        <Activity size={20} className="text-indigo-400" />
+                                                    </div>
+                                                    <h3 className="text-2xl font-black text-[var(--text-primary)] tracking-tighter">Institutional Portfolio DNA</h3>
+                                                </div>
+                                                <p className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-[0.2em] ml-1">Aggregate Mixture Intelligence</p>
+                                            </div>
+                                            
+                                            <div className="flex gap-4">
+                                                <div className="text-right">
+                                                    <p className="text-[10px] font-black uppercase tracking-widest text-indigo-400">Total Alpha</p>
+                                                    <p className={`text-3xl font-black tracking-tighter ${results.mixtureStats.alpha > 0 ? 'text-[var(--text-primary)]' : 'text-red-400'}`}>
+                                                        {results.mixtureStats.alpha > 0 ? '+' : ''}{results.mixtureStats.alpha.toFixed(1)}%
+                                                    </p>
+                                                </div>
+                                                <div className="w-px h-12 bg-[var(--border-primary)]"></div>
+                                                <div className="text-right">
+                                                    <p className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)]">Efficiency Score</p>
+                                                    <p className="text-3xl font-black text-[var(--text-primary)] tracking-tighter">{(100 - results.mixtureStats.expense * 10).toFixed(0)}</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <h3 className="text-2xl font-black text-[var(--text-primary)] tracking-tight">Market Cap Heatmap</h3>
-                                    </div>
-                                    <div className="flex h-32 w-full rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-primary)] mb-10">
-                                        <div className="h-full bg-gradient-to-br from-indigo-500 to-indigo-700 flex flex-col items-center justify-center relative group" style={{ width: `${results.mixtureStats.large}%` }}>
-                                            <span className="text-2xl font-black text-white">{results.mixtureStats.large.toFixed(0)}%</span>
-                                            <span className="text-[10px] uppercase font-black text-indigo-200 tracking-widest">Large</span>
-                                        </div>
-                                        <div className="h-full bg-gradient-to-br from-violet-500 to-violet-700 flex flex-col items-center justify-center border-x border-[var(--border-primary)]/30" style={{ width: `${results.mixtureStats.mid}%` }}>
-                                            <span className="text-2xl font-black text-white">{results.mixtureStats.mid.toFixed(0)}%</span>
-                                            <span className="text-[10px] uppercase font-black text-violet-200 tracking-widest">Mid</span>
-                                        </div>
-                                        <div className="h-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-700 flex flex-col items-center justify-center" style={{ width: `${results.mixtureStats.small}%` }}>
-                                            <span className="text-2xl font-black text-white">{results.mixtureStats.small.toFixed(0)}%</span>
-                                            <span className="text-[10px] uppercase font-black text-fuchsia-200 tracking-widest">Small</span>
-                                        </div>
-                                    </div>
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                                        <div className="p-5 bg-[var(--bg-tertiary)]/30 rounded-2xl border border-[var(--border-primary)]">
-                                            <p className="text-[10px] uppercase font-black text-[var(--text-muted)] tracking-wider mb-2">Mixture PE</p>
-                                            <p className="text-2xl font-black text-[var(--text-primary)]">{results.mixtureStats.pe.toFixed(1)}x</p>
-                                        </div>
-                                        <div className="p-5 bg-[var(--bg-tertiary)]/30 rounded-2xl border border-[var(--border-primary)]">
-                                            <p className="text-[10px] uppercase font-black text-[var(--text-muted)] tracking-wider mb-2">Mixture PB</p>
-                                            <p className="text-2xl font-black text-[var(--text-primary)]">{results.mixtureStats.pb.toFixed(1)}x</p>
-                                        </div>
-                                        <div className="p-5 bg-[var(--bg-tertiary)]/30 rounded-2xl border border-[var(--border-primary)]">
-                                            <p className="text-[10px] uppercase font-black text-[var(--text-muted)] tracking-wider mb-2">Expense</p>
-                                            <p className="text-2xl font-black text-emerald-400">{results.mixtureStats.expense.toFixed(2)}%</p>
-                                        </div>
-                                        <div className="p-5 bg-[var(--bg-tertiary)]/30 rounded-2xl border border-[var(--border-primary)]">
-                                            <p className="text-[10px] uppercase font-black text-[var(--text-muted)] tracking-wider mb-2">Alpha vs Nifty</p>
-                                            <p className={`text-2xl font-black ${results.mixtureStats.alpha > 0 ? 'text-indigo-400' : 'text-red-400'}`}>
-                                                {results.mixtureStats.alpha > 0 ? '+' : ''}{results.mixtureStats.alpha.toFixed(1)}%
-                                            </p>
+
+                                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                                            {/* Visual Heatmap Column */}
+                                            <div className="lg:col-span-2 space-y-6">
+                                                <div className="flex h-44 w-full rounded-[2rem] overflow-hidden shadow-inner border-4 border-[var(--bg-tertiary)] bg-[var(--bg-tertiary)]">
+                                                    <div className="h-full bg-gradient-to-br from-indigo-500 to-indigo-700 flex flex-col items-center justify-center relative group transition-all duration-700 hover:brightness-110" style={{ width: `${results.mixtureStats.large}%` }}>
+                                                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                                        <span className="text-3xl font-black text-white tracking-tighter">{results.mixtureStats.large.toFixed(0)}%</span>
+                                                        <span className="text-[9px] uppercase font-black text-indigo-200 tracking-[0.3em] mt-1">Large Cap</span>
+                                                    </div>
+                                                    <div className="h-full bg-gradient-to-br from-violet-500 to-violet-700 flex flex-col items-center justify-center border-x-4 border-[var(--bg-tertiary)] relative group transition-all duration-700 hover:brightness-110" style={{ width: `${results.mixtureStats.mid}%` }}>
+                                                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                                        <span className="text-3xl font-black text-white tracking-tighter">{results.mixtureStats.mid.toFixed(0)}%</span>
+                                                        <span className="text-[9px] uppercase font-black text-violet-200 tracking-[0.3em] mt-1">Mid Cap</span>
+                                                    </div>
+                                                    <div className="h-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-700 flex flex-col items-center justify-center relative group transition-all duration-700 hover:brightness-110" style={{ width: `${results.mixtureStats.small}%` }}>
+                                                        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                                        <span className="text-3xl font-black text-white tracking-tighter">{results.mixtureStats.small.toFixed(0)}%</span>
+                                                        <span className="text-[9px] uppercase font-black text-fuchsia-200 tracking-[0.3em] mt-1">Small Cap</span>
+                                                    </div>
+                                                </div>
+                                                <p className="text-[10px] font-bold text-[var(--text-muted)] italic text-center uppercase tracking-[0.4em] opacity-60">Interactive Market Exposure Architecture</p>
+                                            </div>
+
+                                            {/* Core Metrics Column */}
+                                            <div className="grid grid-cols-2 gap-4">
+                                                <div className="p-6 bg-[var(--bg-tertiary)]/40 rounded-3xl border border-[var(--border-primary)] flex flex-col justify-between group hover:border-indigo-500/30 transition-colors shadow-sm">
+                                                    <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-widest">Mixture PE</p>
+                                                    <p className="text-2xl font-black text-[var(--text-primary)] mt-2">{results.mixtureStats.pe.toFixed(1)}<span className="text-xs ml-1 opacity-40">x</span></p>
+                                                </div>
+                                                <div className="p-6 bg-[var(--bg-tertiary)]/40 rounded-3xl border border-[var(--border-primary)] flex flex-col justify-between group hover:border-violet-500/30 transition-colors shadow-sm">
+                                                    <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-widest">Mixture PB</p>
+                                                    <p className="text-2xl font-black text-[var(--text-primary)] mt-2">{results.mixtureStats.pb.toFixed(1)}<span className="text-xs ml-1 opacity-40">x</span></p>
+                                                </div>
+                                                <div className="p-6 bg-[var(--bg-tertiary)]/40 rounded-3xl border border-[var(--border-primary)] flex flex-col justify-between group hover:border-emerald-500/30 transition-colors shadow-sm">
+                                                    <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-widest">Op. Expense</p>
+                                                    <p className="text-2xl font-black text-emerald-500 mt-2">{results.mixtureStats.expense.toFixed(2)}<span className="text-xs ml-1 opacity-40">%</span></p>
+                                                </div>
+                                                <div className="p-6 bg-[var(--bg-tertiary)]/40 rounded-3xl border border-[var(--border-primary)] flex flex-col justify-between group hover:border-blue-500/30 transition-colors shadow-sm">
+                                                    <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-widest">Risk Alpha</p>
+                                                    <p className={`text-2xl font-black mt-2 ${results.mixtureStats.alpha > 0 ? 'text-indigo-400' : 'text-red-400'}`}>
+                                                        {results.mixtureStats.alpha > 0 ? '+' : ''}{results.mixtureStats.alpha.toFixed(1)}<span className="text-xs ml-1 opacity-40">%</span>
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* 2. Overlap & Pro Verdict Section */}
-                                <div className="space-y-6">
-                                    <div className="flex items-center gap-3">
-                                        <div className="p-2.5 bg-orange-500/10 rounded-xl">
-                                            <Shield size={20} className="text-orange-400" />
+                                 {/* 2. Overlap & Pro Verdict Section */}
+                                <div className="space-y-8">
+                                    {/* Pairwise Navigator Integration */}
+                                    <div className="bg-[var(--bg-tertiary)]/30 p-2 rounded-[2.5rem] border border-[var(--border-primary)] shadow-sm">
+                                        <div className="flex items-center justify-between px-8 py-5 border-b border-[var(--border-primary)]/50 mb-3">
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse shadow-[0_0_8px_rgba(99,102,241,0.6)]"></div>
+                                                <h3 className="text-[11px] font-black uppercase tracking-[0.4em] text-[var(--text-primary)]">Strategy Comparison Matrix</h3>
+                                            </div>
+                                            <div className="flex items-center gap-4">
+                                                <span className="text-[10px] font-black text-indigo-400 bg-indigo-400/10 px-4 py-1.5 rounded-full uppercase tracking-widest">{activePairIndex + 1} / {results.overlapMatrix.length} PAIRS</span>
+                                            </div>
                                         </div>
-                                        <h3 className="text-2xl font-black text-[var(--text-primary)] tracking-tight italic">Structural Coverage</h3>
+                                        <div className="flex items-center gap-3 overflow-x-auto p-3 no-scrollbar">
+                                            {results.overlapMatrix.map((pair, idx) => (
+                                                <button 
+                                                    key={idx}
+                                                    onClick={() => setActivePairIndex(idx)}
+                                                    className={`flex-shrink-0 px-10 py-5 rounded-3xl border transition-all duration-500 flex flex-col items-center justify-center gap-1.5 group relative overflow-hidden ${
+                                                        activePairIndex === idx 
+                                                        ? "bg-[var(--bg-card)] border-indigo-500/50 text-[var(--text-primary)] shadow-2xl scale-[1.02]" 
+                                                        : "bg-transparent border-transparent text-[var(--text-muted)] hover:bg-[var(--bg-card)]/50 hover:border-[var(--border-primary)]"
+                                                    }`}
+                                                >
+                                                    {activePairIndex === idx && (
+                                                        <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/5 to-transparent pointer-events-none"></div>
+                                                    )}
+                                                    <span className="text-[11px] font-black tracking-tight whitespace-nowrap uppercase">
+                                                        {pair.fund1.split(' ').slice(0, 2).join(' ')}
+                                                    </span>
+                                                    <span className="text-[9px] font-black opacity-20 uppercase tracking-[0.3em]">vs</span>
+                                                    <span className="text-[11px] font-black tracking-tight whitespace-nowrap uppercase">
+                                                        {pair.fund2.split(' ').slice(0, 2).join(' ')}
+                                                    </span>
+                                                    {activePairIndex === idx && (
+                                                        <div className="absolute bottom-0 left-1/4 right-1/4 h-1 bg-indigo-500 rounded-t-full shadow-[0_-2px_10px_rgba(99,102,241,0.5)]"></div>
+                                                    )}
+                                                </button>
+                                            ))}
+                                        </div>
                                     </div>
 
-                                    {/* Pairwise Navigator Integration */}
-                                    <div className="space-y-12">
-                                        {results.overlapMatrix?.length > 1 && (
-                                            <div className="flex flex-col gap-4">
-                                                <div className="flex items-center justify-between">
-                                                    <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[var(--accent-primary)]">Strategy Comparison Navigator</h3>
-                                                    <span className="text-[10px] font-bold text-[var(--text-muted)]">{activePairIndex + 1} of {results.overlapMatrix.length} Pairwise Combinations</span>
+                                    {/* Focused Pair Diagnostic View */}
+                                    {results.overlapMatrix?.[activePairIndex] && (() => {
+                                        const pair = results.overlapMatrix[activePairIndex];
+                                        return (
+                                            <div key={activePairIndex} className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch animate-in zoom-in-95 duration-700">
+                                                <div className="flex flex-col gap-6">
+                                                    <div className="bg-[var(--bg-card)] rounded-[4rem] border border-[var(--border-primary)] p-16 flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl transition-all hover:border-indigo-500/20">
+                                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent"></div>
+                                                        <VennDiagram overlapPercentage={pair.overlap} />
+                                                        <div className="mt-16 text-center space-y-3">
+                                                            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 mb-2">
+                                                                <span className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.2em]">Structural Analysis</span>
+                                                            </div>
+                                                            <p className="text-5xl font-black text-[var(--text-primary)] tracking-tighter">{pair.overlap}%</p>
+                                                            <p className="text-[10px] uppercase tracking-[0.4em] text-[var(--text-muted)] font-black">Strategic Redundancy Index</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="bg-[var(--bg-card)] rounded-[2.5rem] border border-[var(--border-primary)] p-8 shadow-xl">
+                                                        <div className="flex items-center justify-between mb-6">
+                                                            <div className="flex items-center gap-3">
+                                                                <Activity size={18} className="text-indigo-400" />
+                                                                <h4 className="text-xs font-black uppercase tracking-widest text-[var(--text-primary)]">Exposure Proof</h4>
+                                                            </div>
+                                                            <button 
+                                                                onClick={() => setActiveDetailPair(pair)}
+                                                                className="px-5 py-2.5 bg-indigo-500 hover:bg-indigo-600 text-white text-[10px] font-black uppercase tracking-widest rounded-xl shadow-lg shadow-indigo-500/20 active:scale-95 transition-all"
+                                                            >
+                                                                View Documentation
+                                                            </button>
+                                                        </div>
+                                                        <div className="space-y-4">
+                                                            {(pair.common || []).slice(0, 3).map((st, sIdx) => (
+                                                                <div key={sIdx} className="flex items-center justify-between p-4 bg-[var(--bg-tertiary)]/50 rounded-2xl border border-[var(--border-primary)]">
+                                                                    <span className="text-xs font-bold text-[var(--text-primary)] uppercase tracking-tighter">{st.stock}</span>
+                                                                    <span className="text-[10px] font-black text-indigo-400 bg-indigo-400/10 px-2 py-1 rounded-md">{(st.overlap || 0).toFixed(2)}%</span>
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div className="flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar">
-                                                    {results.overlapMatrix.map((pair, idx) => (
-                                                        <button 
-                                                            key={idx}
-                                                            onClick={() => setActivePairIndex(idx)}
-                                                            className={`flex-shrink-0 px-6 py-3 rounded-2xl border transition-all duration-300 flex items-center gap-3 ${
-                                                                activePairIndex === idx 
-                                                                ? "bg-[var(--accent-primary)] border-[var(--accent-primary)] text-white shadow-xl shadow-indigo-500/20 scale-105" 
-                                                                : "bg-[var(--bg-card)] border-[var(--border-primary)] text-[var(--text-secondary)] hover:border-[var(--accent-primary)]"
-                                                            }`}
-                                                        >
-                                                            <div className={`w-2 h-2 rounded-full ${activePairIndex === idx ? "bg-white animate-pulse" : "bg-[var(--border-primary)]"}`}></div>
-                                                            <span className="text-[11px] font-black tracking-tight whitespace-nowrap uppercase">
-                                                                {pair.fund1.split(' ').slice(0, 2).join(' ')} <span className="opacity-40 px-1 italic">vs</span> {pair.fund2.split(' ').slice(0, 2).join(' ')}
-                                                            </span>
-                                                        </button>
-                                                    ))}
+
+                                                <div className="bg-[var(--bg-card)] rounded-[3rem] border border-[var(--border-primary)] p-10 shadow-2xl flex flex-col justify-between">
+                                                    <div>
+                                                        <div className="flex items-center gap-3 mb-8">
+                                                            <Shield size={20} className="text-emerald-400" />
+                                                            <h4 className="text-xs font-black uppercase tracking-widest text-[var(--text-primary)]">Algorithm Verdict</h4>
+                                                        </div>
+                                                        <div className="p-8 rounded-[2rem] bg-[var(--bg-tertiary)]/50 border border-[var(--border-primary)] italic font-semibold text-lg text-[var(--text-primary)] leading-relaxed mb-6">
+                                                            "{pair.verdict}"
+                                                        </div>
+                                                        <div className="space-y-4">
+                                                            <div className={`p-5 rounded-2xl border ${pair.overlap > 55 ? 'bg-red-500/5 border-red-500/20' : 'bg-emerald-500/5 border-emerald-500/20'}`}>
+                                                                <p className={`text-[10px] font-black uppercase tracking-widest mb-1 ${pair.overlap > 55 ? 'text-red-400' : 'text-emerald-400'}`}>Strategic Implication</p>
+                                                                <p className="text-sm text-[var(--text-primary)] font-medium">
+                                                                    {pair.overlap > 55 
+                                                                        ? "Critical concentration detected. This setup leads to massive manager overlap without significant alpha differentiation."
+                                                                        : "Strong diversification balance. Funds maintain unique alpha-generation corridors with manageable commonality."}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="pt-8 border-t border-[var(--border-primary)] flex justify-between items-center text-[9px] font-black uppercase tracking-widest text-[var(--text-muted)]">
+                                                        <span>Institutional Agent v4.2</span>
+                                                        <div className="flex -space-x-3">
+                                                            <div className="w-8 h-8 rounded-full border-2 border-[var(--bg-card)] bg-indigo-500 flex items-center justify-center text-white">A</div>
+                                                            <div className="w-8 h-8 rounded-full border-2 border-[var(--bg-card)] bg-violet-600 flex items-center justify-center text-white">B</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        )}
-
-                                        {/* Focused Pair Diagnostic View */}
-                                        {results.overlapMatrix?.[activePairIndex] && (() => {
-                                            const pair = results.overlapMatrix[activePairIndex];
-                                            return (
-                                                <div key={activePairIndex} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch animate-in zoom-in-95 duration-500">
-                                                    <div className="flex flex-col gap-6">
-                                                        <div className="bg-[var(--bg-card)] rounded-[3rem] border border-[var(--border-primary)] p-12 flex flex-col items-center justify-center relative overflow-hidden group shadow-2xl">
-                                                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 opacity-50"></div>
-                                                            <VennDiagram overlapPercentage={pair.overlap} />
-                                                            <div className="mt-12 text-center relative z-10">
-                                                                <p className="text-4xl font-black text-[var(--text-primary)] tracking-tighter mb-2">{pair.overlap}%</p>
-                                                                <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--text-muted)] font-black">Structural Redundancy Score</p>
-                                                            </div>
-                                                        </div>
-
-                                                        <div className="bg-[var(--bg-card)] rounded-[2.5rem] border border-[var(--border-primary)] p-8 shadow-xl">
-                                                            <div className="flex items-center justify-between mb-6">
-                                                                <div className="flex items-center gap-3">
-                                                                    <Activity size={18} className="text-indigo-400" />
-                                                                    <h4 className="text-xs font-black uppercase tracking-widest text-[var(--text-primary)]">Exposure Proof</h4>
-                                                                </div>
-                                                                <button 
-                                                                    onClick={() => setActiveDetailPair(pair)}
-                                                                    className="px-5 py-2.5 bg-indigo-500 hover:bg-indigo-600 text-white text-[10px] font-black uppercase tracking-widest rounded-xl shadow-lg shadow-indigo-500/20 active:scale-95 transition-all"
-                                                                >
-                                                                    View Documentation
-                                                                </button>
-                                                            </div>
-                                                            <div className="space-y-4">
-                                                                {(pair.common || []).slice(0, 3).map((st, sIdx) => (
-                                                                    <div key={sIdx} className="flex items-center justify-between p-4 bg-[var(--bg-tertiary)]/50 rounded-2xl border border-[var(--border-primary)]">
-                                                                        <span className="text-xs font-bold text-[var(--text-primary)] uppercase tracking-tighter">{st.stock}</span>
-                                                                        <span className="text-[10px] font-black text-indigo-400 bg-indigo-400/10 px-2 py-1 rounded-md">{(st.overlap || 0).toFixed(2)}%</span>
-                                                                    </div>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div className="bg-[var(--bg-card)] rounded-[3rem] border border-[var(--border-primary)] p-10 shadow-2xl flex flex-col justify-between">
-                                                        <div>
-                                                            <div className="flex items-center gap-3 mb-8">
-                                                                <Shield size={20} className="text-emerald-400" />
-                                                                <h4 className="text-xs font-black uppercase tracking-widest text-[var(--text-primary)]">Algorithm Verdict</h4>
-                                                            </div>
-                                                            <div className="p-8 rounded-[2rem] bg-[var(--bg-tertiary)]/50 border border-[var(--border-primary)] italic font-semibold text-lg text-[var(--text-primary)] leading-relaxed mb-6">
-                                                                "{pair.verdict}"
-                                                            </div>
-                                                             <div className="space-y-4">
-                                                                <div className={`p-5 rounded-2xl border ${pair.overlap > 55 ? 'bg-red-500/5 border-red-500/20' : 'bg-emerald-500/5 border-emerald-500/20'}`}>
-                                                                    <p className={`text-[10px] font-black uppercase tracking-widest mb-1 ${pair.overlap > 55 ? 'text-red-400' : 'text-emerald-400'}`}>Strategic Implication</p>
-                                                                    <p className="text-sm text-[var(--text-primary)] font-medium">
-                                                                        {pair.overlap > 55 
-                                                                            ? "Critical concentration detected. This setup leads to massive manager overlap without significant alpha differentiation."
-                                                                            : "Strong diversification balance. Funds maintain unique alpha-generation corridors with manageable commonality."}
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="pt-8 border-t border-[var(--border-primary)] flex justify-between items-center text-[9px] font-black uppercase tracking-widest text-[var(--text-muted)]">
-                                                            <span>Institutional Agent v4.2</span>
-                                                            <div className="flex -space-x-3">
-                                                                <div className="w-8 h-8 rounded-full border-2 border-[var(--bg-card)] bg-indigo-500 flex items-center justify-center text-white">A</div>
-                                                                <div className="w-8 h-8 rounded-full border-2 border-[var(--bg-card)] bg-violet-600 flex items-center justify-center text-white">B</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            );
-                                        })()}
-                                    </div>
+                                        );
+                                    })()}
                                 </div>
 
                                 {/* 3. Risk Concentration & Sector Architecture */}
@@ -528,77 +568,119 @@ export default function PortfolioArchitectPage() {
                 </div>
             </main>
 
-            {/* Overlap Evidence Modal */}
+            {/* Forensic Detail Dossier Modal */}
             {activeDetailPair && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10">
-                    <div className="absolute inset-0 bg-black/60 backdrop-blur-2xl" onClick={() => setActiveDetailPair(null)} />
-                    <div className="relative w-full max-w-5xl bg-[var(--bg-primary)] rounded-[4rem] border border-[var(--border-primary)] shadow-3xl flex flex-col max-h-[92vh] overflow-hidden animate-in fade-in zoom-in duration-500">
-                        {/* Modal Header */}
-                        <div className="p-10 border-b border-[var(--border-primary)] flex justify-between items-center bg-gradient-to-r from-indigo-500/10 to-transparent">
-                            <div className="space-y-2">
-                                <h3 className="text-3xl font-black text-[var(--text-primary)] tracking-tighter italic">Stock <span className="text-indigo-400 underline decoration-indigo-500/30">Evidence</span></h3>
-                                <div className="flex items-center gap-3 text-[10px] font-black text-[var(--text-muted)] uppercase tracking-widest bg-[var(--bg-tertiary)] px-4 py-1.5 rounded-full border border-[var(--border-primary)] w-fit">
-                                    <span className="text-indigo-500">{activeDetailPair?.fund1 || "Strategy A"}</span>
-                                    <span className="opacity-40">vs</span>
-                                    <span className="text-indigo-500">{activeDetailPair?.fund2 || "Strategy B"}</span>
+                    <div className="absolute inset-0 bg-black/80 backdrop-blur-3xl animate-in fade-in duration-500" onClick={() => setActiveDetailPair(null)} />
+                    <div className="relative w-full max-w-6xl bg-[var(--bg-primary)] rounded-[4.5rem] border border-[var(--border-primary)] shadow-3xl flex flex-col max-h-[92vh] overflow-hidden animate-in zoom-in-95 duration-500">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.5)]"></div>
+                        
+                        {/* Dossier Header */}
+                        <div className="p-12 border-b border-[var(--border-primary)]/50 flex justify-between items-center bg-gradient-to-b from-[var(--bg-tertiary)]/30 to-transparent">
+                            <div className="space-y-3">
+                                <div className="flex items-center gap-3">
+                                    <div className="p-2.5 bg-indigo-500/10 rounded-xl border border-indigo-500/20">
+                                        <Database size={24} className="text-indigo-400" />
+                                    </div>
+                                    <h3 className="text-3xl font-black text-[var(--text-primary)] tracking-tighter italic">Forensic <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">Intersection Dossier</span></h3>
+                                </div>
+                                <div className="flex items-center gap-2 overflow-hidden px-4 py-2 rounded-2xl bg-black/20 border border-[var(--border-primary)] w-fit backdrop-blur-xl">
+                                    <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest leading-none">{activeDetailPair?.fund1 || "Strategy Alpha"}</span>
+                                    <span className="text-[9px] text-[var(--text-muted)] font-black uppercase opacity-30 px-1">⬌</span>
+                                    <span className="text-[10px] font-black text-violet-400 uppercase tracking-widest leading-none">{activeDetailPair?.fund2 || "Strategy Beta"}</span>
                                 </div>
                             </div>
-                            <button onClick={() => setActiveDetailPair(null)} className="p-5 bg-[var(--bg-tertiary)] rounded-full hover:bg-[var(--accent-primary)] hover:text-white text-[var(--text-muted)] transition-all shadow-inner">
-                                <X size={24} />
+                            <button 
+                                onClick={() => setActiveDetailPair(null)} 
+                                className="w-16 h-16 bg-[var(--bg-tertiary)] hover:bg-black rounded-3xl border border-[var(--border-primary)] flex items-center justify-center text-[var(--text-muted)] hover:text-white transition-all shadow-xl group"
+                            >
+                                <X size={24} className="group-hover:rotate-90 transition-transform duration-500" />
                             </button>
                         </div>
 
-                        {/* Modal Content */}
-                        <div className="flex-1 overflow-y-auto p-8 custom-scrollbar">
-                            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
-                                <div className="md:col-span-1 flex flex-col items-center justify-center bg-[var(--bg-tertiary)]/40 rounded-[2.5rem] border border-[var(--border-primary)] p-8 transform hover:scale-105 transition-all duration-500 shadow-inner">
-                                    <p className="text-[10px] uppercase font-black text-[var(--text-muted)] tracking-widest mb-3">Redundancy</p>
-                                    <p className="text-6xl font-black text-indigo-500 tracking-tighter">{(activeDetailPair?.overlap || 0).toFixed(1)}%</p>
+                        {/* Dossier Body */}
+                        <div className="flex-1 overflow-y-auto p-12 custom-scrollbar space-y-12">
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+                                <div className="md:col-span-1 bg-gradient-to-br from-indigo-600/10 to-transparent rounded-[3rem] border border-indigo-500/20 p-10 flex flex-col items-center justify-center shadow-inner relative group overflow-hidden">
+                                    <div className="absolute inset-0 bg-indigo-500/5 translate-y-full group-hover:translate-y-0 transition-transform duration-[2s]"></div>
+                                    <p className="text-[10px] uppercase font-black text-indigo-400 tracking-[0.3em] mb-4 relative z-10">Redundancy</p>
+                                    <p className="text-7xl font-black text-[var(--text-primary)] tracking-[-0.05em] relative z-10">{(activeDetailPair?.overlap || 0).toFixed(1)}<span className="text-xl text-indigo-500/50 -ml-1">%</span></p>
                                 </div>
-                                <div className="md:col-span-3 bg-[var(--bg-tertiary)]/20 rounded-[2.5rem] border border-[var(--border-primary)] p-10 flex items-center gap-8 shadow-sm">
-                                    <div className="p-5 bg-indigo-500 rounded-2xl text-white shadow-xl shadow-indigo-500/20">
-                                        <Info size={24} />
+                                <div className="md:col-span-3 bg-[var(--bg-tertiary)]/20 rounded-[3rem] border border-[var(--border-primary)] p-12 flex items-center gap-10 relative overflow-hidden backdrop-blur-3xl group">
+                                    <div className="absolute -right-20 -top-20 w-64 h-64 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+                                    <div className="w-16 h-16 bg-[var(--bg-card)] rounded-2xl flex items-center justify-center border border-[var(--border-primary)] shadow-2xl relative z-10 shrink-0">
+                                        <ShieldCheck size={32} className="text-indigo-400" />
                                     </div>
-                                    <p className="text-sm text-[var(--text-muted)] leading-relaxed font-medium">
-                                        Structural redundancy represents the minimum common weight shared across individual securities. A score above 45% suggests these strategies are structurally synchronized and may not provide meaningful diversification benefits.
-                                    </p>
+                                    <div className="relative z-10">
+                                        <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-[var(--text-primary)] mb-2">Structural Intelligence Insight</h4>
+                                        <p className="text-sm text-[var(--text-muted)] font-medium leading-loose max-w-2xl italic tracking-wide">
+                                            The Structural Redundancy Index for this pair indicates a minimum common investment of <span className="text-indigo-400 font-bold">{(activeDetailPair?.overlap || 0).toFixed(1)}%</span> across all underlying tickers. Portfolios exceeding 45% overlap typically signify internal cannibalization, diminishing the potential for risk-adjusted alpha generation.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="bg-[var(--bg-card)] rounded-[3rem] border border-[var(--border-primary)] overflow-hidden shadow-2xl">
-                                <table className="w-full text-left border-collapse">
-                                    <thead>
-                                        <tr className="bg-[var(--bg-tertiary)] text-[10px] uppercase font-black text-[var(--text-muted)] tracking-[0.2em] border-b border-[var(--border-primary)]">
-                                            <th className="px-10 py-6">Security Intelligence</th>
-                                            <th className="px-10 py-6 text-indigo-500">Strategy A %</th>
-                                            <th className="px-10 py-6 text-violet-500">Strategy B %</th>
-                                            <th className="px-10 py-6 text-emerald-500">Mutual Impact %</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="divide-y divide-[var(--border-primary)]">
-                                        {(activeDetailPair?.common || []).map((st, si) => (
-                                            <tr key={si} className="hover:bg-indigo-500/5 transition-colors group">
-                                                <td className="px-10 py-6">
-                                                    <p className="text-xs font-bold text-[var(--text-primary)] group-hover:text-indigo-500 transition-colors uppercase tracking-tight">{st.stock}</p>
-                                                </td>
-                                                <td className="px-10 py-6 text-xs text-[var(--text-secondary)] font-medium italic">{(st.percA || 0).toFixed(2)}%</td>
-                                                <td className="px-10 py-6 text-xs text-[var(--text-secondary)] font-medium italic">{(st.percB || 0).toFixed(2)}%</td>
-                                                <td className="px-10 py-6">
-                                                    <span className="px-4 py-1.5 bg-emerald-500/10 text-emerald-500 text-[10px] font-black rounded-xl border border-emerald-500/20 shadow-sm shadow-emerald-500/10">
-                                                        {(st.overlap || 0).toFixed(2)}%
-                                                    </span>
-                                                </td>
+                            <div className="space-y-6">
+                                <div className="flex items-center justify-between px-2">
+                                    <div className="flex items-center gap-3">
+                                        <div className="p-2 bg-emerald-500/10 rounded-lg">
+                                            <ListTree size={16} className="text-emerald-400" />
+                                        </div>
+                                        <h4 className="text-xs font-black uppercase tracking-widest text-[var(--text-primary)]">Security Intersection Breakdown</h4>
+                                    </div>
+                                    <span className="text-[10px] font-black text-[var(--text-muted)] uppercase tracking-widest">Showing Top {activeDetailPair?.common?.length || 0} Holdings</span>
+                                </div>
+                                
+                                <div className="bg-[var(--bg-card)] rounded-[4rem] border border-[var(--border-primary)] overflow-hidden shadow-3xl">
+                                    <table className="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr className="bg-[var(--bg-tertiary)]/50 text-[10px] uppercase font-black text-[var(--text-muted)] tracking-[0.3em] border-b border-[var(--border-primary)]/50">
+                                                <th className="px-12 py-8">Ticker Intelligence</th>
+                                                <th className="px-12 py-8 text-indigo-400/80">Strategy Alpha %</th>
+                                                <th className="px-12 py-8 text-violet-400/80">Strategy Beta %</th>
+                                                <th className="px-12 py-8 text-emerald-400">Net Redundancy %</th>
                                             </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody className="divide-y divide-[var(--border-primary)]/30">
+                                            {(activeDetailPair?.common || []).map((st, si) => (
+                                                <tr key={si} className="hover:bg-indigo-500/[0.03] transition-all duration-300 group">
+                                                    <td className="px-12 py-7">
+                                                        <div className="flex flex-col gap-1">
+                                                            <span className="text-[13px] font-black text-[var(--text-primary)] group-hover:text-indigo-400 transition-colors uppercase tracking-tight">{st.stock}</span>
+                                                            <span className="text-[9px] font-black text-[var(--text-muted)] uppercase tracking-widest italic opacity-40">Verified Institutional Security</span>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-12 py-7 text-xs text-[var(--text-secondary)] font-black tracking-tight italic opacity-60">{(st.percA || 0).toFixed(2)}%</td>
+                                                    <td className="px-12 py-7 text-xs text-[var(--text-secondary)] font-black tracking-tight italic opacity-60">{(st.percB || 0).toFixed(2)}%</td>
+                                                    <td className="px-12 py-7">
+                                                        <div className="flex items-center gap-3">
+                                                            <div className="w-24 h-1.5 bg-[var(--border-primary)]/20 rounded-full overflow-hidden shrink-0">
+                                                                <div className="h-full bg-emerald-500 rounded-full shadow-[0_0_8px_rgba(16,185,129,0.4)]" style={{ width: `${(st.overlap || 0) * 10}%` }}></div>
+                                                            </div>
+                                                            <span className="text-[11px] font-black text-emerald-400 tracking-widest">
+                                                                {(st.overlap || 0).toFixed(2)}%
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="p-10 border-t border-[var(--border-primary)] bg-[var(--bg-tertiary)]/20 text-center">
-                            <p className="text-[11px] text-[var(--text-muted)] uppercase font-black tracking-widest italic">
-                                Forensic analysis powered by Institutional Factsheet Engine v4.2 • Refinement required for high-frequency strategies
-                            </p>
+                        {/* Dossier Footer */}
+                        <div className="p-10 border-t border-[var(--border-primary)]/50 bg-[var(--bg-tertiary)]/40 flex items-center justify-between">
+                            <div className="flex items-center gap-4">
+                                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                                <p className="text-[10px] text-[var(--text-muted)] uppercase font-black tracking-[0.2em] italic">
+                                    Verified Data Stream • Factsheet Hub Engine v5.1.2 • <span className="text-indigo-400">Institutional Access</span>
+                                </p>
+                            </div>
+                            <button onClick={() => window.print()} className="px-8 py-3 bg-[var(--bg-card)] border border-[var(--border-primary)] rounded-2xl text-[10px] font-black uppercase tracking-widest text-[var(--text-primary)] hover:bg-black transition-all shadow-xl flex items-center gap-2">
+                                <Activity size={14} /> Export Technical Dossier
+                            </button>
                         </div>
                     </div>
                 </div>

@@ -97,56 +97,58 @@
 /* ========================================
    LIGHT THEME
    ======================================== */
+/* ========================================
+   LIGHT THEME (Institutional Slate)
+   ======================================== */
 [data-theme='light'] {
-  --bg-primary: #fcfdfe;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-primary: #f8fafc;        /* Slate 50 - Subtle Depth */
+  --bg-secondary: #ffffff;      /* White */
+  --bg-tertiary: #f1f5f9;       /* Slate 100 */
+  --bg-card: #ffffff;
   --bg-card-hover: #ffffff;
   --bg-input: #f8fafc;
   --bg-sidebar: rgba(255, 255, 255, 0.98);
 
-  --text-primary: #020617;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --text-primary: #0f172a;      /* Slate 900 */
+  --text-secondary: #475569;    /* Slate 600 */
+  --text-muted: #64748b;        /* Slate 500 */
   --text-inverse: #ffffff;
 
-  --border-primary: rgba(15, 23, 42, 0.08);
-  --border-secondary: rgba(15, 23, 42, 0.05);
-  --border-focus: #4f46e5;
+  --border-primary: rgba(15, 23, 42, 0.06);
+  --border-secondary: rgba(15, 23, 42, 0.04);
+  --border-focus: #6366f1;
 
   --accent-primary: #6366f1;
   --accent-primary-hover: #4f46e5;
-  --accent-primary-soft: rgba(79, 70, 229, 0.08);
-  --accent-secondary: #9333ea;
+  --accent-primary-soft: rgba(99, 102, 241, 0.08);
+  --accent-secondary: #8b5cf6;
 
-  --color-positive: #059669;
-  --color-positive-soft: rgba(5, 150, 105, 0.1);
-  --color-negative: #e11d48;
-  --color-negative-soft: rgba(225, 29, 72, 0.1);
-  --color-warning: #d97706;
-  --color-warning-soft: rgba(217, 119, 6, 0.1);
-  --color-info: #2563eb;
-  --color-info-soft: rgba(37, 99, 235, 0.1);
+  --color-positive: #10b981;
+  --color-positive-soft: rgba(16, 185, 129, 0.1);
+  --color-negative: #ef4444;
+  --color-negative-soft: rgba(239, 68, 68, 0.1);
+  --color-warning: #f59e0b;
+  --color-warning-soft: rgba(245, 158, 11, 0.1);
+  --color-info: #3b82f6;
+  --color-info-soft: rgba(59, 130, 246, 0.1);
 
-  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
-  --gradient-accent: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
-  --gradient-hero: linear-gradient(135deg, #fcfdfe 0%, #eef2ff 50%, #fcfdfe 100%);
-  --gradient-card: linear-gradient(145deg, rgba(79, 70, 229, 0.03) 0%, rgba(147, 51, 234, 0.01) 100%);
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+  --gradient-hero: linear-gradient(135deg, #f8fafc 0%, #eff6ff 50%, #f8fafc 100%);
+  --gradient-card: linear-gradient(145deg, rgba(99, 102, 241, 0.02) 0%, rgba(168, 85, 247, 0.01) 100%);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 32px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.05); /* Softer Institutional Shadow */
+  --shadow-lg: 0 10px 40px rgba(15, 23, 42, 0.06);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.08);
 
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(15, 23, 42, 0.05);
-  --glass-blur: blur(24px);
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(15, 23, 42, 0.03);
+  --glass-blur: blur(20px);
 
-  /* Theme-aware masks for overlays/borders */
-  --mask-light: rgba(15, 23, 42, 0.02);
-  --mask-medium: rgba(15, 23, 42, 0.05);
-  --mask-heavy: rgba(15, 23, 42, 0.1);
+  --mask-light: rgba(15, 23, 42, 0.01);
+  --mask-medium: rgba(15, 23, 42, 0.03);
+  --mask-heavy: rgba(15, 23, 42, 0.08);
 }
 
 /* ========================================
