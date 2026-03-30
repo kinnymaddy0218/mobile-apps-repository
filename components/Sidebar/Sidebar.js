@@ -10,6 +10,7 @@ import styles from './Sidebar.module.css';
 const navItems = [
     { href: '/', label: 'Dashboard', icon: '📊' },
     { href: '/portfolio', label: 'My Portfolio', icon: '✨' },
+    { href: '/portfolio/x-ray', label: 'Portfolio X-Ray', icon: '🔬' },
     { href: '/factsheets', label: 'Factsheet Hub', icon: '🏆' },
     { href: '/search', label: 'Search Funds', icon: '🔍' },
     { href: '/stress-test', label: 'Stress Tester', icon: '🛡️' },
