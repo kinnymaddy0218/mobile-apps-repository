@@ -29,9 +29,36 @@ export function AuthProvider({ children }) {
                         // Set up snapshot listener for real-time profile updates
                         const unsubProfile = onSnapshot(userDocRef, (docSnap) => {
                             if (docSnap.exists()) {
+                                const profileData = docSnap.data();
+                                
+                                // Calculate Trial/Subscription status
+                                const createdAt = profileData.createdAt ? new Date(profileData.createdAt) : new Date();
+                                const trialDays = 7;
+                                const msInDay = 1000 * 60 * 60 * 24;
+                                const daysElapsed = (new Date() - createdAt) / msInDay;
+                                const trialDaysLeft = Math.max(0, Math.ceil(trialDays - daysElapsed));
+                                const isTrialActive = trialDaysLeft > 0;
+                                
+                                // Founding Member Bypass (You)
+                                const isFoundingMember = ['kinnymadd0218@gmail.com', 'kinnymaddy0218@gmail.com'].includes(firebaseUser.email);
+                                
+                                // Admin Simulation Support (Testing all states)
+                                const simulationState = isFoundingMember && typeof window !== 'undefined' ? localStorage.getItem('MF_RESEARCH_SIM_STATE') : null;
+                                
+                                let isPremium = isFoundingMember || profileData.subscriptionTier === 'Premium' || simulationState === 'premium';
+                                let isTrialActive = (trialDaysLeft > 0) && simulationState !== 'expired';
+                                if (simulationState === 'expired') isTrialActive = false;
+                                if (simulationState === 'trial') isTrialActive = true;
+                                
                                 setUser({
                                     ...firebaseUser,
-                                    profile: docSnap.data()
+                                    profile: {
+                                        ...profileData,
+                                        isPremium,
+                                        isTrialActive,
+                                        trialDaysLeft,
+                                        isFoundingMember
+                                    }
                                 });
                             } else {
                                 // Initialize profile if it doesn't exist
@@ -45,7 +72,13 @@ export function AuthProvider({ children }) {
                                 setDoc(userDocRef, initialProfile);
                                 setUser({
                                     ...firebaseUser,
-                                    profile: initialProfile
+                                    profile: {
+                                        ...initialProfile,
+                                        isPremium: ['kinnymadd0218@gmail.com', 'kinnymaddy0218@gmail.com'].includes(firebaseUser.email),
+                                        isTrialActive: true,
+                                        trialDaysLeft: 7,
+                                        isFoundingMember: ['kinnymadd0218@gmail.com', 'kinnymaddy0218@gmail.com'].includes(firebaseUser.email)
+                                    }
                                 });
                             }
                             setLoading(false);

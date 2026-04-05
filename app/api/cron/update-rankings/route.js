@@ -69,6 +69,11 @@ async function processCategory(categoryDef, allFunds, now) {
     const limit = pLimit(15);
     const fetchPromises = categoryFunds.map(fund =>
         limit(async () => {
+            // Vercel Hobby Limit Safeguard: Stop processing if approaching 10s limit
+            if (Date.now() - now > 8000) {
+                console.warn(`[Cron] Approaching timeout. Skipping ${fund.schemeName}`);
+                return null;
+            }
             try {
                 const navs = await fetchFundNavs(fund.schemeCode);
                 if (!navs || navs.length < 2) return null;
@@ -156,53 +161,72 @@ export async function GET(request) {
     const startTime = Date.now();
     const { searchParams } = new URL(request.url);
     const forceCategory = searchParams.get('category');
+    const authHeader = request.headers.get('authorization');
+
+    // Security check: Only allow authorized requests or Vercel's automated crons
+    if (process.env.CRON_SECRET) {
+        if (authHeader !== `Bearer ${process.env.CRON_SECRET}` && searchParams.get('secret') !== process.env.CRON_SECRET) {
+            return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+        }
+    }
 
     try {
+        console.log('[Rankings Cron] Starting master list fetch...');
         const allFundsRes = await fetch(`${MFAPI_BASE}/mf`);
         const allFunds = await allFundsRes.json();
-        if (!Array.isArray(allFunds)) throw new Error('Failed to fetch master list');
+        if (!Array.isArray(allFunds)) {
+            console.error('[Rankings Cron] Master list format invalid:', allFunds);
+            throw new Error('Failed to fetch master list: Format invalid');
+        }
+        console.log(`[Rankings Cron] Master list secured. Found ${allFunds.length} total schemes.`);
 
         const updatedCategories = [];
 
         if (forceCategory) {
             const catDef = CATEGORIES.find(c => c.key === forceCategory);
             if (catDef) {
+                console.log(`Forcing refresh of category: ${catDef.label}`);
                 const res = await processCategory(catDef, allFunds, startTime);
                 updatedCategories.push(res);
             }
         } else {
             // Sort categories by staleness
+            console.log('Fetching existing rankings to determine staleness...');
             const categoriesWithTime = await Promise.all(CATEGORIES.map(async (cat) => {
-                const data = await getCategoryRankings(cat.key);
-                const updatedTime = data?.lastUpdated?.toMillis ? data.lastUpdated.toMillis() : (data?.lastUpdated ? new Date(data.lastUpdated).getTime() : 0);
-                return { cat, updatedTime };
+                try {
+                    const data = await getCategoryRankings(cat.key);
+                    const updatedTime = data?.lastUpdated?.toMillis ? data.lastUpdated.toMillis() : (data?.lastUpdated ? new Date(data.lastUpdated).getTime() : 0);
+                    return { cat, updatedTime };
+                } catch (e) {
+                    return { cat, updatedTime: 0 };
+                }
             }));
 
             const sortedCategories = categoriesWithTime.sort((a, b) => a.updatedTime - b.updatedTime);
-
-            for (const { cat } of sortedCategories) {
-                // If we've already spent more than 10 seconds, stop to avoid Vercel timeout
-                if (Date.now() - startTime > 10000) {
-                    console.log(`Stopping cron due to time limit. Processed ${updatedCategories.length} categories.`);
-                    break;
-                }
-
-                console.log(`Processing category: ${cat.label}`);
-                const res = await processCategory(cat, allFunds, startTime);
+            
+            // On Hobby Plan (10s limit), we process ONLY ONE category per run to ensure reliability.
+            // With a 2-hour schedule, all 18 categories will be refreshed every 36 hours.
+            const stalest = sortedCategories[0];
+            if (stalest) {
+                console.log(`Stalest category identified: ${stalest.cat.label} (Last updated: ${new Date(stalest.updatedTime).toLocaleString()})`);
+                const res = await processCategory(stalest.cat, allFunds, startTime);
                 updatedCategories.push(res);
             }
         }
 
         const summary = updatedCategories.map(c => `${c.category} (${c.count} funds)`).join(', ');
 
-        // Send a single summary email
-        const { sendRefreshNotification } = await import('@/lib/notifications');
-        await sendRefreshNotification({
-            category: updatedCategories.length === 1 ? updatedCategories[0].category : "Multiple Categories",
-            fundsProcessed: updatedCategories.reduce((sum, c) => sum + c.count, 0),
-            success: true,
-            message: `Updated: ${summary}`
-        });
+        // Send a summary email even if we only did one category
+        if (updatedCategories.length > 0) {
+            const { sendRefreshNotification } = await import('@/lib/notifications');
+            await sendRefreshNotification({
+                type: 'rankings',
+                category: updatedCategories.length === 1 ? updatedCategories[0].category : "Multiple Categories",
+                fundsProcessed: updatedCategories.reduce((sum, c) => sum + c.count, 0),
+                success: true,
+                message: `Cron Success. ${summary}`
+            });
+        }
 
         return NextResponse.json({
             success: true,
@@ -212,6 +236,19 @@ export async function GET(request) {
 
     } catch (error) {
         console.error('Cron job error:', error);
+        
+        // Notify of failure
+        try {
+            const { sendRefreshNotification } = await import('@/lib/notifications');
+            await sendRefreshNotification({
+                category: forceCategory || "Automated Refresh",
+                success: false,
+                error: error.message
+            });
+        } catch (emailErr) {
+            console.error('Failed to send failure notification:', emailErr);
+        }
+
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }

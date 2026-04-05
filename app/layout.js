@@ -3,6 +3,7 @@ import { AuthProvider } from '@/context/AuthContext';
 import { ThemeProvider } from '@/context/ThemeContext';
 import Sidebar from '@/components/Sidebar/Sidebar';
 import ScrollLockRecovery from '@/components/ScrollLockRecovery';
+import TrialBanner from '@/components/Premium/TrialBanner';
 
 export const metadata = {
     title: 'MF Research — Indian Mutual Fund Research & Education',
@@ -28,9 +29,12 @@ export default function RootLayout({ children }) {
                 <ThemeProvider>
                     <AuthProvider>
                         <ScrollLockRecovery />
-                        <div className="app-layout">
-                            <Sidebar />
-                            <main className="main-content">{children}</main>
+                        <div className="flex flex-col h-screen overflow-hidden">
+                            <TrialBanner />
+                            <div className="app-layout flex-1 overflow-hidden">
+                                <Sidebar />
+                                <main className="main-content">{children}</main>
+                            </div>
                         </div>
                     </AuthProvider>
                 </ThemeProvider>
