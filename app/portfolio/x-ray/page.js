@@ -573,53 +573,113 @@ export default function PortfolioArchitectPage() {
                       </div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                  <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
                     <div className="lg:col-span-2 space-y-6">
-                      <div className="flex h-44 w-full rounded-[2rem] overflow-hidden border-4 border-[var(--bg-tertiary)] bg-[var(--bg-tertiary)]">
-                        <div className="h-full bg-gradient-to-br from-indigo-500 to-indigo-700 flex flex-col items-center justify-center relative transition-all duration-700 hover:brightness-110" style={{ width: `${Math.max(results.mixtureStats.large, 4)}%` }}>
-                          <span className="text-3xl font-black text-white tracking-tighter">{results.mixtureStats.large.toFixed(0)}%</span>
+                      <div className="flex h-32 w-full rounded-3xl overflow-hidden border-4 border-[var(--bg-tertiary)] bg-[var(--bg-tertiary)] shadow-2xl">
+                        <div className="h-full bg-gradient-to-br from-[#818cf8] to-[#4338ca] flex flex-col items-center justify-center relative transition-all duration-700 hover:brightness-110" style={{ width: `${Math.max(results.mixtureStats.large, 5)}%` }}>
+                          <span className="text-2xl font-black text-white tracking-tighter">{results.mixtureStats.large.toFixed(0)}%</span>
+                          <span className="text-[8px] uppercase font-black text-white/60 tracking-widest">Large</span>
                         </div>
-                        <div className="h-full bg-gradient-to-br from-violet-500 to-violet-700 flex flex-col items-center justify-center border-x-4 border-[var(--bg-tertiary)] relative transition-all duration-700 hover:brightness-110" style={{ width: `${Math.max(results.mixtureStats.mid, 4)}%` }}>
-                          <span className="text-3xl font-black text-white tracking-tighter">{results.mixtureStats.mid.toFixed(0)}%</span>
+                        <div className="h-full bg-gradient-to-br from-[#c084fc] to-[#7e22ce] flex flex-col items-center justify-center border-x-4 border-[var(--bg-tertiary)] relative transition-all duration-700 hover:brightness-110" style={{ width: `${Math.max(results.mixtureStats.mid, 5)}%` }}>
+                          <span className="text-2xl font-black text-white tracking-tighter">{results.mixtureStats.mid.toFixed(0)}%</span>
+                          <span className="text-[8px] uppercase font-black text-white/60 tracking-widest">Mid</span>
                         </div>
-                        <div className="h-full bg-gradient-to-br from-fuchsia-500 to-fuchsia-700 flex flex-col items-center justify-center relative transition-all duration-700 hover:brightness-110" style={{ width: `${Math.max(results.mixtureStats.small, 4)}%` }}>
-                          <span className="text-3xl font-black text-white tracking-tighter">{results.mixtureStats.small.toFixed(0)}%</span>
+                        <div className="h-full bg-gradient-to-br from-[#f472b6] to-[#be185d] flex flex-col items-center justify-center relative transition-all duration-700 hover:brightness-110" style={{ width: `${Math.max(results.mixtureStats.small, 5)}%` }}>
+                          <span className="text-2xl font-black text-white tracking-tighter">{results.mixtureStats.small.toFixed(0)}%</span>
+                          <span className="text-[8px] uppercase font-black text-white/60 tracking-widest">Small</span>
                         </div>
                       </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="p-6 bg-[var(--bg-tertiary)]/40 rounded-3xl border border-[var(--border-primary)] flex flex-col justify-between hover:border-indigo-500/30 transition-colors shadow-sm">
-                        <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-widest">Mixture PE</p>
-                        <p className="text-2xl font-black text-[var(--text-primary)] mt-2">{results.mixtureStats.pe.toFixed(1)}x</p>
+                    <div className="grid grid-cols-2 gap-4 lg:col-span-2">
+                      <div className="p-6 bg-gradient-to-br from-[var(--bg-tertiary)]/60 to-transparent rounded-[2rem] border border-[var(--border-primary)] flex flex-col justify-between hover:border-indigo-500/30 transition-all shadow-lg backdrop-blur-md">
+                        <p className="text-[9px] uppercase font-black text-indigo-400 tracking-[0.2em] mb-1">Mixture PE</p>
+                        <p className="text-2xl font-black text-[var(--text-primary)] tracking-tighter">{results.mixtureStats.pe.toFixed(1)}x</p>
                       </div>
-                      <div className="p-6 bg-[var(--bg-tertiary)]/40 rounded-3xl border border-[var(--border-primary)] flex flex-col justify-between hover:border-violet-500/30 transition-colors shadow-sm">
-                        <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-widest">Mixture PB</p>
-                        <p className="text-2xl font-black text-[var(--text-primary)] mt-2">{results.mixtureStats.pb.toFixed(1)}x</p>
+                      <div className="p-6 bg-gradient-to-br from-[var(--bg-tertiary)]/60 to-transparent rounded-[2rem] border border-[var(--border-primary)] flex flex-col justify-between hover:border-fuchsia-500/30 transition-all shadow-lg backdrop-blur-md">
+                        <p className="text-[9px] uppercase font-black text-fuchsia-400 tracking-[0.2em] mb-1">Mixture PB</p>
+                        <p className="text-2xl font-black text-[var(--text-primary)] tracking-tighter">{results.mixtureStats.pb.toFixed(1)}x</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* SURFACING HOLDINGS & SECTORS */}
+                  <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-3">
+                        <ChevronRight className="text-indigo-400 w-4 h-4" />
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--text-muted)]">Corporate Concentration</h4>
+                      </div>
+                      <div className="space-y-3">
+                        {(results.mixtureStats.holdings || []).slice(0, 8).map((h, i) => (
+                          <div key={i} className="flex items-center justify-between p-4 bg-[var(--bg-tertiary)]/30 rounded-2xl border border-[var(--border-primary)] hover:bg-white/5 transition-colors">
+                            <span className="text-[11px] font-bold text-[var(--text-primary)] tracking-tight">{h.stock}</span>
+                            <div className="flex items-center gap-3">
+                                <div className="w-24 h-1 bg-[var(--bg-tertiary)] rounded-full overflow-hidden">
+                                    <div className="h-full bg-indigo-500" style={{ width: `${(h.percentage / (results.mixtureStats.holdings[0]?.percentage || 1)) * 100}%` }} />
+                                </div>
+                                <span className="text-[11px] font-black font-mono text-indigo-400">{h.percentage.toFixed(2)}%</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-3">
+                        <ChevronRight className="text-fuchsia-400 w-4 h-4" />
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[var(--text-muted)]">Sector Alpha Map</h4>
+                      </div>
+                      <div className="space-y-3">
+                        {(results.mixtureStats.sectors || []).slice(0, 8).map((h, i) => (
+                          <div key={i} className="flex items-center justify-between p-4 bg-[var(--bg-tertiary)]/30 rounded-2xl border border-[var(--border-primary)] hover:bg-white/5 transition-colors">
+                            <span className="text-[11px] font-bold text-[var(--text-primary)] tracking-tight">{h.sector}</span>
+                            <div className="flex items-center gap-3">
+                                <div className="w-24 h-1 bg-[var(--bg-tertiary)] rounded-full overflow-hidden">
+                                    <div className="h-full bg-fuchsia-500" style={{ width: `${(h.percentage / (results.mixtureStats.sectors[0]?.percentage || 1)) * 100}%` }} />
+                                </div>
+                                <span className="text-[11px] font-black font-mono text-fuchsia-400">{h.percentage.toFixed(2)}%</span>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-[var(--bg-card)] border border-[var(--border-primary)] rounded-[3rem] p-10 shadow-2xl">
-                  <div className="flex items-center gap-3 mb-8">
-                    <div className="p-2.5 bg-indigo-500/10 rounded-xl"><ShieldCheck size={20} className="text-indigo-400" /></div>
-                    <h3 className="text-lg font-black text-[var(--text-primary)] tracking-tight uppercase">Strategy Redundancy Matrix</h3>
+                <div className="bg-[var(--bg-card)] border border-[var(--border-primary)] rounded-[3rem] p-10 shadow-2xl relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-red-500/10 transition-colors duration-1000"></div>
+                  <div className="flex items-center justify-between mb-8">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2.5 bg-red-500/10 rounded-xl border border-red-500/20"><ShieldAlert size={20} className="text-red-400" /></div>
+                      <div>
+                        <h3 className="text-lg font-black text-[var(--text-primary)] tracking-tight uppercase">Strategy Redundancy Matrix</h3>
+                        <p className="text-[9px] font-bold text-red-500/60 uppercase tracking-widest mt-1">Stressing Inter-fund Correlation</p>
+                      </div>
+                    </div>
+                    {results.overlapMatrix.some(p => p.overlap > 35) && (
+                        <div className="px-3 py-1 bg-red-500/20 border border-red-500/30 rounded-full text-[10px] font-black text-red-400 animate-pulse">CRITICAL OVERLAP</div>
+                    )}
                   </div>
                   <div className="space-y-4">
                     {results.overlapMatrix.map((pair, idx) => (
-                      <div key={idx} onClick={() => setActiveDetailPair(pair)} className="p-6 bg-[var(--bg-tertiary)]/40 rounded-2xl border border-[var(--border-primary)] hover:border-indigo-500/30 transition-all cursor-pointer group flex items-center justify-between">
+                      <div key={idx} onClick={() => setActiveDetailPair(pair)} className={`p-6 bg-gradient-to-r from-[var(--bg-tertiary)]/60 to-transparent rounded-2xl border transition-all cursor-pointer group flex items-center justify-between shadow-lg backdrop-blur-sm ${pair.overlap > 35 ? "border-red-500/30 hover:border-red-500/50" : "border-[var(--border-primary)] hover:border-indigo-500/30"}`}>
                         <div className="flex-1">
-                          <div className="flex items-center gap-4 mb-2">
-                             <span className="text-sm font-black text-[var(--text-primary)]">{pair.fund1}</span>
-                             <span className="text-[10px] text-[var(--text-muted)]">VS</span>
-                             <span className="text-sm font-black text-[var(--text-primary)]">{pair.fund2}</span>
+                          <div className="flex items-center gap-4 mb-3">
+                             <div className="flex flex-col">
+                                <span className="text-xs font-black text-[var(--text-primary)] group-hover:text-indigo-400 transition-colors tracking-tighter uppercase">{pair.fund1}</span>
+                                <span className="text-[8px] font-black text-[var(--text-muted)] tracking-[0.2em] mt-0.5">STRATEGY ALPHA</span>
+                             </div>
+                             <div className="p-1 px-2 bg-white/5 rounded text-[8px] font-black text-[var(--text-muted)] italic">VS</div>
+                             <div className="flex flex-col">
+                                <span className="text-xs font-black text-[var(--text-primary)] group-hover:text-indigo-400 transition-colors tracking-tighter uppercase">{pair.fund2}</span>
+                                <span className="text-[8px] font-black text-[var(--text-muted)] tracking-[0.2em] mt-0.5">STRATEGY BETA</span>
+                             </div>
                           </div>
-                          <div className="h-1.5 w-full max-w-xs bg-[var(--bg-tertiary)] rounded-full overflow-hidden">
-                            <div className={`h-full transition-all duration-1000 ${pair.overlap > 35 ? "bg-red-500" : "bg-indigo-500"}`} style={{ width: `${pair.overlap}%` }} />
+                          <div className="h-1.5 w-full max-w-sm bg-[var(--bg-tertiary)] rounded-full overflow-hidden border border-white/5">
+                            <div className={`h-full transition-all duration-1000 shadow-[0_0_12px_rgba(239,68,68,0.4)] ${pair.overlap > 35 ? "bg-gradient-to-r from-red-600 to-orange-500" : "bg-gradient-to-r from-indigo-600 to-indigo-400"}`} style={{ width: `${pair.overlap}%` }} />
                           </div>
                         </div>
                         <div className="text-right">
-                          <span className={`text-2xl font-black ${pair.overlap > 35 ? "text-red-500" : "text-indigo-400"}`}>{pair.overlap}%</span>
-                          <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-widest">Overlap</p>
+                          <span className={`text-4xl font-black ${pair.overlap > 35 ? "text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.3)]" : "text-indigo-400"}`}>{pair.overlap}%</span>
+                          <p className="text-[9px] uppercase font-black text-[var(--text-muted)] tracking-[0.4em] mt-1 opacity-60">Intersection</p>
                         </div>
                       </div>
                     ))}

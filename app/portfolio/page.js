@@ -992,18 +992,10 @@ export default function PortfolioPage() {
                         </div>
                     </section>
 
-                    {/* Category Mix - High Fidelity UI */}
-                    <div id="category-mix-card" style={{ maxWidth: '900px', margin: '24px auto', width: '100%' }}>
-                        <section style={{ 
-                            background: 'var(--bg-secondary)', 
-                            borderRadius: '24px', 
-                            border: '1px solid var(--border-primary)', 
-                            padding: '32px',
-                            backdropFilter: 'var(--glass-blur)',
-                            boxShadow: 'var(--shadow-lg)',
-                            position: 'relative',
-                            overflow: 'hidden'
-                        }}>
+                    <div id="category-mix-card" className="max-w-[900px] mx-auto w-full my-6">
+                        <section className="card-glass border-[var(--border-primary)] shadow-2xl p-8 rounded-[2.5rem] bg-[var(--bg-card)] relative overflow-hidden group">
+                           <div className="absolute -top-32 -right-32 w-64 h-64 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-indigo-500/20 transition-colors duration-1000"></div>
+                           <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-fuchsia-500/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-fuchsia-500/20 transition-colors duration-1000"></div>
                             <div style={{ 
                                 position: 'absolute', 
                                 top: '0', 
@@ -1055,7 +1047,7 @@ export default function PortfolioPage() {
                                         letterSpacing: '0.2em', 
                                         marginTop: '4px', 
                                         opacity: '0.8' 
-                                    }}>Asset Allocation Strategy</p>
+                                    }}>Strategic Asset Allocation Manifesto</p>
                                 </div>
 
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
@@ -1142,22 +1134,15 @@ export default function PortfolioPage() {
                                             <ResponsiveContainer width="100%" height="100%">
                                                 <PieChart>
                                                     <defs>
-                                                        <filter id="pieOuterShadow" x="-20%" y="-20%" width="140%" height="140%">
-                                                            <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
-                                                            <feOffset dx="0" dy="6" result="offsetblur" />
-                                                            <feFlood floodColor="#000" floodOpacity="0.5" />
-                                                            <feComposite in2="offsetblur" operator="in" />
-                                                            <feMerge>
-                                                                <feMergeNode />
-                                                                <feMergeNode in="SourceGraphic" />
-                                                            </feMerge>
+                                                        <filter id="glossyEffect" x="-20%" y="-20%" width="140%" height="140%">
+                                                            <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+                                                            <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75" specularExponent="20" lightingColor="#ffffff" result="specOut">
+                                                                <fePointLight x="-50" y="-50" z="200" />
+                                                            </feSpecularLighting>
+                                                            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+                                                            <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litGraphic" />
+                                                            <feDropShadow dx="0" dy="8" stdDeviation="10" floodOpacity="0.4" />
                                                         </filter>
-                                                        {activeChartData.map((_, index) => (
-                                                            <radialGradient key={`grad-${index}`} id={`grad-${index}`} cx="50%" cy="50%" r="50%" fx="30%" fy="30%">
-                                                                <stop offset="0%" stopColor={COLORS[index % COLORS.length]} stopOpacity="1" />
-                                                                <stop offset="100%" stopColor={COLORS[index % COLORS.length]} stopOpacity="0.7" />
-                                                            </radialGradient>
-                                                        ))}
                                                     </defs>
                                                     <Pie
                                                         data={activeChartData}
@@ -1167,32 +1152,44 @@ export default function PortfolioPage() {
                                                         outerRadius="100%"
                                                         paddingAngle={1}
                                                         dataKey="value"
-                                                        stroke="rgba(15, 23, 42, 0.5)"
-                                                        strokeWidth={2}
-                                                        animationDuration={400}
+                                                        stroke="#020617"
+                                                        strokeWidth={3}
+                                                        animationDuration={800}
                                                         animationBegin={0}
-                                                        filter="url(#pieOuterShadow)"
+                                                        filter="url(#glossyEffect)"
                                                         activeIndex={activeHoverIndex}
                                                         activeShape={(props) => {
                                                             const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill } = props;
                                                             const RADIAN = Math.PI / 180;
-                                                            const offset = 10;
+                                                            const offset = 12;
                                                             const sin = Math.sin(-RADIAN * midAngle);
                                                             const cos = Math.cos(-RADIAN * midAngle);
                                                             const nx = cx + offset * cos;
                                                             const ny = cy + offset * sin;
                                                             return (
-                                                                <Sector
-                                                                    cx={nx}
-                                                                    cy={ny}
-                                                                    innerRadius={innerRadius}
-                                                                    outerRadius={outerRadius + 6}
-                                                                    startAngle={startAngle}
-                                                                    endAngle={endAngle}
-                                                                    fill={fill}
-                                                                    stroke="rgba(255,255,255,0.9)"
-                                                                    strokeWidth={2}
-                                                                />
+                                                                <g>
+                                                                    <Sector
+                                                                        cx={nx}
+                                                                        cy={ny}
+                                                                        innerRadius={innerRadius}
+                                                                        outerRadius={outerRadius + 8}
+                                                                        startAngle={startAngle}
+                                                                        endAngle={endAngle}
+                                                                        fill={fill}
+                                                                        stroke="rgba(255,255,255,0.4)"
+                                                                        strokeWidth={2}
+                                                                    />
+                                                                    <Sector
+                                                                        cx={nx}
+                                                                        cy={ny}
+                                                                        startAngle={startAngle}
+                                                                        endAngle={endAngle}
+                                                                        innerRadius={outerRadius + 8}
+                                                                        outerRadius={outerRadius + 11}
+                                                                        fill={fill}
+                                                                        opacity={0.3}
+                                                                    />
+                                                                </g>
                                                             );
                                                         }}
                                                         onMouseEnter={(_, index) => setActiveHoverIndex(index)}
@@ -1201,8 +1198,8 @@ export default function PortfolioPage() {
                                                         {activeChartData.map((entry, index) => (
                                                             <Cell 
                                                                 key={`cell-${index}`} 
-                                                                fill={`url(#grad-${index})`}
-                                                                style={{ cursor: 'pointer', outline: 'none' }}
+                                                                fill={COLORS[index % COLORS.length]}
+                                                                style={{ cursor: 'pointer', outline: 'none', filter: 'drop-shadow(0px 4px 12px rgba(0,0,0,0.2))' }}
                                                             />
                                                         ))}
                                                     </Pie>
@@ -1364,37 +1361,18 @@ export default function PortfolioPage() {
                             </div>
                         </div>
                         <div className="mt-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <InsightCard
-                                type={
-                                    (user.profile?.riskAppetite === 'Aggressive' && weightedBeta < 1.05) || 
-                                    (user.profile?.riskAppetite === 'Conservative' && weightedBeta > 0.7) || 
-                                    (user.profile?.riskAppetite === 'Moderate' && (weightedBeta > 1.1 || weightedBeta < 0.6))
-                                        ? 'risk' : 'success'
-                                }
-                                title={(user.profile?.riskAppetite || 'Moderate') + " Philosophy Alignment"}
+                                type={mixtureBeta > 1.2 ? 'risk' : (weightedAlpha > 1.5 ? 'success' : 'info')}
+                                title="Portfolio Intelligence Manifest"
                                 description={(() => {
-                                    const risk = user.profile?.riskAppetite || 'Moderate';
-                                    const source = portfolio.some(f => f.officialSource === 'AMC') ? 'AMC-Verified' : 'NAV-Calculated';
-                                    
-                                    if (risk === 'Aggressive') {
-                                        return weightedBeta < 1.1
-                                            ? `Engine vs Speed Gap (${source}): You've selected an 'Aggressive' growth mandate, but your current fund selection is too cautious (Beta ${weightedBeta.toFixed(2)}). To maximize returns during market rallies, consider funds with higher sensitivity to catch the full momentum.`
-                                            : `High-Performance DNA (${source}): Your portfolio is perfectly geared for aggressive growth. You have a high-sensitivity engine that captures maximum upside properly aligned with your strategy.`;
-                                    } else if (risk === 'Conservative') {
-                                        return weightedBeta > 0.7
-                                            ? `Overspeed Warning (${source}): You've chosen a 'Conservative' mandate, but your specific funds are driving too fast for your safety zone (Beta ${weightedBeta.toFixed(2)}). Consider shifting some weight to lower-sensitivity assets to reduce market-dip impact.`
-                                            : `Stable Fortress Engine (${source}): Your portfolio is exceptionally well-insulated. Your capital is geared for steady preservation while capturing inflation-beating returns with minimal volatility.`;
+                                    const source = portfolio.some(f => f.officialSource === 'AMC') ? 'Institutional' : 'Projected';
+                                    if (weightedAlpha > 2) {
+                                        return `Elite Alpha Capture (${source}): Your configuration is currently outperforming its benchmark profile by ${weightedAlpha.toFixed(2)}%. The current engine tuning is optimal for wealth acceleration.`;
+                                    } else if (mixtureBeta > 1.2) {
+                                        return `High Sensitivity Alert (${source}): Your portfolio is significantly more volatile than the market (Beta ${mixtureBeta.toFixed(2)}). Ensure your liquidity reserves are sufficient for 20-30% drawdowns.`;
                                     } else {
-                                        // Moderate logic
-                                        if (weightedAlpha > 2 && (weightedBeta >= 0.7 && weightedBeta <= 1.1)) {
-                                            return `Elite Balanced Strategy (${source}): Your 'Moderate' engine is in the sweet spot. You are generating superior returns (Alpha) without over-revving your risk (Beta ${weightedBeta.toFixed(2)}). This is a highly efficient custom strategy.`;
-                                        } else if (weightedBeta > 1.1) {
-                                            return `Aggressive Drift (${source}): Your 'Moderate' engine is currently driving at 'Aggressive' speeds (Beta ${weightedBeta.toFixed(2)}). While great for growth, expect larger fluctuations than a standard Moderate benchmark during dips.`;
-                                        } else if (weightedBeta < 0.7) {
-                                            return `Defensive Drift (${source}): Your 'Moderate' engine is currently idling at 'Conservative' speeds (Beta ${weightedBeta.toFixed(2)}). You are safe, but you might need more growth sensitivity to reach your long-term wealth goals.`;
-                                        } else {
-                                            return `Optimal Moderate Alignment (${source}): Your diversification is solid. Your engine size and driving speed are perfectly matched for balanced wealth creation.`;
-                                        }
+                                        return `Institutional Stability (${source}): Your diversification across categories is solid. The current engine size and driving speed are balanced for consistent long-term creation.`;
                                     }
                                 })()}
                                 actionText="Target Allocation Map"
@@ -1407,8 +1385,51 @@ export default function PortfolioPage() {
                                 }}
                                 isLocked={!user.profile?.isPremium}
                             />
+
+                            {/* [NEW] Top 10 Stock Concentration Dashboard Card */}
+                            <div className="bg-[var(--bg-tertiary)]/40 border border-[var(--border-primary)] rounded-[2rem] p-6 shadow-xl relative overflow-hidden group backdrop-blur-md">
+                                <div className="absolute top-0 right-0 p-4 opacity-[0.05] text-4xl font-black">STOCKS</div>
+                                <h3 className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.3em] mb-4 flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></div>
+                                    Top 10 Holdings
+                                </h3>
+                                <div className="space-y-2">
+                                    {(() => {
+                                        const stocks = {};
+                                        portfolio.forEach(f => {
+                                            const w = (f.weight || 0) / 100;
+                                            (f.holdings || []).forEach(h => {
+                                                stocks[h.stock] = (stocks[h.stock] || 0) + (h.percentage * w);
+                                            });
+                                        });
+                                        return Object.entries(stocks)
+                                            .sort((a,b) => b[1] - a[1])
+                                            .slice(0, 5)
+                                            .map(([name, perc]) => (
+                                                <div key={name} className="flex items-center justify-between group/row p-1 px-2 rounded-lg hover:bg-white/5 transition-colors">
+                                                    <span className="text-[11px] font-bold text-[var(--text-primary)] truncate max-w-[150px]">{name}</span>
+                                                    <div className="flex items-center gap-2">
+                                                        <div className="w-16 h-1 bg-white/5 rounded-full overflow-hidden">
+                                                            <div className="h-full bg-indigo-500/60" style={{ width: `${Math.min(perc * 5, 100)}%` }}></div>
+                                                        </div>
+                                                        <span className="text-[11px] font-black font-mono text-indigo-400">{perc.toFixed(2)}%</span>
+                                                    </div>
+                                                </div>
+                                            ));
+                                    })()}
+                                    <div className="pt-2 text-center">
+                                        <button 
+                                            onClick={() => router.push('/portfolio/x-ray')}
+                                            className="text-[9px] font-black text-[var(--text-muted)] hover:text-indigo-400 uppercase tracking-widest transition-colors flex items-center gap-1 mx-auto"
+                                        >
+                                            View Full Concentration Alpha <ChevronRight size={10} />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
                     {/* Strategic Alignment / Rebalancing Card */}
                     <section className="card card-glass border-[var(--border-primary)] shadow-2xl p-6 rounded-[2rem] bg-[var(--bg-card)] relative overflow-hidden group">
