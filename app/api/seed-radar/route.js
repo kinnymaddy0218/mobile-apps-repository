@@ -1,23 +1,19 @@
 
 export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
-import { db } from '@/lib/firebase';
-import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { adminDb } from '@/lib/firebase-admin';
+import { FieldValue } from 'firebase-admin/firestore';
 
 export async function GET() {
-    if (!db) {
-        return NextResponse.json({ error: 'Database not initialized' }, { status: 500 });
-    }
-
     try {
-        const radarRef = doc(db, 'market_radar', 'small-cap-mock');
-        await setDoc(radarRef, {
+        const radarRef = adminDb.collection('market_radar').doc('small-cap-mock');
+        await radarRef.set({
             categoryName: 'Small Cap',
-            lastUpdated: serverTimestamp(),
+            lastUpdated: FieldValue.serverTimestamp(),
             updates: [
                 {
                     type: 'new_high',
-                    schemeCode: 118778, // Corrected from 120828
+                    schemeCode: 118778,
                     schemeName: 'Nippon India Small Cap Fund',
                     category: 'Small Cap',
                     message: 'is trading near its all-time high!',
@@ -27,7 +23,7 @@ export async function GET() {
                 },
                 {
                     type: 'top_gainer',
-                    schemeCode: 120828, // Corrected mapping
+                    schemeCode: 120828,
                     schemeName: 'Quant Small Cap Fund',
                     category: 'Small Cap',
                     message: 'is showing strong momentum!',
@@ -38,7 +34,7 @@ export async function GET() {
             ]
         });
 
-        return NextResponse.json({ success: true, message: 'Radar data seeded correctly' });
+        return NextResponse.json({ success: true, message: 'Radar data seeded correctly via Admin SDK' });
     } catch (error) {
         console.error('Seeding error:', error);
         return NextResponse.json({ error: error.message }, { status: 500 });

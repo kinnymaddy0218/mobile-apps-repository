@@ -8,31 +8,37 @@ export default function PricingModal({ isOpen, onClose }) {
 
     const plans = [
         {
-            name: 'Free',
+            name: 'Institutional Alpha',
             price: '₹0',
+            subtitle: 'Perfect for beginners',
             features: [
                 'Manual Portfolio Entry',
                 'Basic Asset Allocation',
                 'Mutual Fund Search',
-                'NAV History'
+                'NAV History (Basic)',
+                'Snapshot Analysis'
             ],
             btnText: 'Current Plan',
             disabled: true
         },
         {
-            name: 'Premium',
-            price: '₹499',
+            name: 'Institutional Intelligence',
+            price: '₹599',
             period: '/mo',
+            subtitle: 'Forensic-grade analytics',
             features: [
                 'Unlimited CAS PDF Imports',
-                'Advanced Risk Metrics (Alpha/Beta)',
+                'Forensic Risk Metrics (Alpha/Beta)',
                 'Portfolio Stress Testing',
-                'Smart Allocation Insights',
+                'Stock & Sector Overlap Analysis',
+                'Nightly Intelligence Pulse',
+                'Premium "Magic Search" Suggestions',
                 'Ad-free Experience',
-                'Premium Support'
+                '1-on-1 Founding Member Support'
             ],
-            btnText: 'Upgrade Now ✨',
-            popular: true
+            btnText: 'Start 7-Day Free Trial ✨',
+            popular: true,
+            trial: true
         }
     ];
 
@@ -50,6 +56,7 @@ export default function PricingModal({ isOpen, onClose }) {
                         <div key={plan.name} className={`${styles.planCard} ${plan.popular ? styles.popular : ''}`}>
                             {plan.popular && <span className={styles.popularBadge}>MOST POPULAR</span>}
                             <h3>{plan.name}</h3>
+                            <p className={styles.subtitle}>{plan.subtitle}</p>
                             <div className={styles.price}>
                                 <span className={styles.amount}>{plan.price}</span>
                                 {plan.period && <span className={styles.period}>{plan.period}</span>}

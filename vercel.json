@@ -1,13 +1,20 @@
 {
-  "name": "mf-research",
   "crons": [
     {
-      "path": "/api/cron/update-rankings",
-      "schedule": "0 0 * * *"
+      "path": "/api/admin/refresh-cache",
+      "schedule": "0 1 * * *"
     },
     {
-      "path": "/api/cron/factsheets-refresh",
-      "schedule": "0 0 1 * *"
+      "path": "/api/cron/update-rankings",
+      "schedule": "0 2 * * *"
+    },
+    {
+      "path": "/api/cron/refresh-holdings",
+      "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/cron/discovery",
+      "schedule": "0 4 * * *"
     }
   ]
 }

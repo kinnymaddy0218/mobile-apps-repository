@@ -1,78 +1,150 @@
 import { NextResponse } from 'next/server';
 import scraper from '@/lib/scraper';
-import { calculateOverlaps } from '@/lib/analysis/overlap';
+import { calculateOverlaps, getDetailedInstitutionalVerdict } from '@/lib/analysis/overlap';
 import { backtestMixture } from '@/lib/analysis/backtester';
 import pLimit from 'p-limit';
+import { adminDb as db } from '@/lib/firebase-admin';
 
 /**
  * Portfolio X-Ray API
  * Orchestrates holdings retrieval, overlap analysis, and backtesting.
  */
 export async function POST(req) {
-    // 2 Concurrent requests max to prevent dev-server hang
-    const limit = pLimit(2);
-    const apiTimeout = 15000; // 15s top-level timeout
+    // 5 Concurrent requests for faster parallel processing
+    const limit = pLimit(7);
+    const apiTimeout = 45000; // Increased to handle first-run scrapes gracefully
 
     try {
-        const { funds, weights } = await req.json();
+        let { funds, weights, force = false, omitHoldings = false } = await req.json();
+        
+        // Strict check: Only Boolean 'true' triggers a force refresh. 
+        // Prevents React Event objects from being passed as 'truthy' force flags.
+        if (force !== true) force = false;
 
         if (!funds || funds.length < 2) {
             return NextResponse.json({ error: "Select at least 2 funds for analysis" }, { status: 400 });
         }
 
-        console.log(`[X-Ray API] Analyzing ${funds.length} funds with p-limit...`);
+        console.log(`[X-Ray API] Analyzing ${funds.length} funds (omitHoldings: ${omitHoldings}, force: ${force})...`);
 
-        // Create a timeout promise
+        // 1. Fetch data for all funds
         const timeoutPromise = new Promise((_, reject) => 
             setTimeout(() => reject(new Error("Analysis timed out")), apiTimeout)
         );
 
-        // 1. Fetch data for all funds with concurrency limit
         const fetchAllData = Promise.all(
             funds.map(fund => limit(async () => {
                 const name = typeof fund === 'string' ? fund : fund.name;
                 const schemeCode = fund.schemeCode;
 
                 try {
-                    console.log(`[X-Ray API] Fetching details for: ${name} (${schemeCode || 'No Code'})`);
-                    
-                    // Fetch factsheet (Holdings/Sectors) and NAV data (Historical)
-                    const [factsheet, navData] = await Promise.all([
-                        scraper.getFactsheet(name),
-                        schemeCode ? scraper.fetchNavData(schemeCode) : Promise.resolve([])
-                    ]);
+                    // Stage A: High-Priority Factsheet (Holdings/Sectors)
+                    // CIRCUIT BREAKER: Max 2.5s for live fetch before we fallback to cache.
+                    const circuitBreaker = new Promise((_, reject) => 
+                        setTimeout(() => reject(new Error("Circuit Breaker Triggered")), 2500)
+                    );
 
-                    if (!factsheet) return null;
+                    let factsheet;
+                    try {
+                        // Attempt the primary fetch (Precision Sync)
+                        factsheet = await Promise.race([
+                            scraper.getFactsheet(name, force, omitHoldings, !force, schemeCode),
+                            circuitBreaker
+                        ]);
+                    } catch (err) {
+                        console.warn(`[X-Ray API] Circuit Breaker triggered for ${name}. Falling back to Persistent Sync.`);
+                        // FORCED DOWNSIDE PROTECTION: If live fetch hangs, use ONLY the database.
+                        factsheet = await scraper.getFactsheet(name, false, omitHoldings, true, schemeCode);
+                    }
+                    
+                    if (!factsheet) {
+                        // ZERO-ERROR RESILIENCE: If factsheet missing even in cache, return skeleton.
+                        return { 
+                            name, 
+                            schemeCode, 
+                            unsecured: true, 
+                            holdings: [], 
+                            sectors: [], 
+                            marketCap: { pe: 0, pb: 0, large: 0, mid: 0, small: 0 } 
+                        };
+                    }
+
+                    // Stage B: Secondary Performance (NAV) - Non-blocking fetch
+                    let navData = [];
+                    try {
+                        const navCircuit = new Promise((_, reject) => setTimeout(() => reject(new Error("NAV Timeout")), 1500));
+                        navData = schemeCode ? await Promise.race([scraper.fetchNavData(schemeCode), navCircuit]) : [];
+                    } catch (navErr) {
+                        console.warn(`[X-Ray API] Performance fallback for ${name}: ${navErr.message}`);
+                    }
 
                     return {
                         ...factsheet,
-                        schemeCode: schemeCode, // Crucial for weight lookup
-                        navData: navData // Inject NAV data for backtester
+                        schemeCode: schemeCode,
+                        navData: navData 
                     };
                 } catch (e) {
-                    console.error(`[X-Ray API] Failed to fetch ${name}:`, e.message);
-                    return null;
+                    console.error(`[X-Ray API] Critical failure for ${typeof fund === 'string' ? fund : fund.name}:`, e.message);
+                    return { 
+                        name: typeof fund === 'string' ? fund : fund.name,
+                        schemeCode: fund.schemeCode,
+                        unsecured: true, 
+                        holdings: [], 
+                        sectors: [] 
+                    };
                 }
             }))
         );
 
         // Race against timeout
         const fundDataResults = await Promise.race([fetchAllData, timeoutPromise]);
+        
+        // Filter out absolute dead nulls, but keep 'unsecured' skeletons.
         const fundData = fundDataResults.filter(Boolean);
 
-        if (fundData.length < 2) {
-            return NextResponse.json({ error: "Failed to fetch enough fund data for analysis. The Factsheet Source may be unresponsive." }, { status: 404 });
-        }
-
-        // 2. Perform Overlap Analysis
+        // Perform multi-dimensional analysis on available data segment
         const overlaps = calculateOverlaps(fundData);
         
-        // Enrich overlaps with qualitative verdicts
-        const { getOverlapFeedback } = require('@/lib/analysis/overlap');
-        overlaps.forEach(pair => {
-            const feedback = getOverlapFeedback(pair.overlap);
-            pair.verdict = feedback.comment;
-        });
+        // Enrich overlaps with high-fidelity Institutional Verdicts & Substitution Suggestions
+        for (const pair of overlaps) {
+            const feedback = getDetailedInstitutionalVerdict(pair.overlap, pair.fund1, pair.fund2);
+            pair.verdict = feedback.verdict;
+            pair.institutionalMetrics = feedback;
+            
+            // LOGIC: If overlap is SIGNIFICANT (>35%), suggest an alternative
+            if (pair.overlap > 35) {
+                try {
+                    // 1. Identify Category (Finding the data in fundData)
+                    const f2Data = fundData.find(f => f.fundName === pair.fund2);
+                    const category = f2Data?.category || f2Data?.type;
+
+                    if (category && db) {
+                        // 2. Fetch "Gold Standard" Alternatives in the same category
+                        const snap = await db.collection('rankings')
+                            .where('category', '==', category)
+                            .orderBy('rank', 'asc')
+                            .limit(5)
+                            .get();
+
+                        const topFunds = snap.docs
+                            .map(d => ({ name: d.data().name, schemeCode: d.id, rank: d.data().rank }))
+                            .filter(f => f.name !== pair.fund1 && f.name !== pair.fund2);
+
+                        if (topFunds.length > 0) {
+                            pair.substitutionRecommendation = {
+                                original: pair.fund2,
+                                category: category,
+                                suggestion: topFunds[0].name,
+                                reason: `Trading the duplicate core for highly-ranked ${topFunds[0].name} will significantly reduce correlation while maintaining ${category} exposure.`,
+                                alternatives: topFunds.slice(1, 4)
+                            };
+                        }
+                    }
+                } catch (subErr) {
+                    console.warn(`[X-Ray API] Substitution Engine failed for ${pair.fund2}:`, subErr.message);
+                }
+            }
+        }
 
         // 3. Perform Backtesting (uses the weights provided by user)
         const performance = backtestMixture(fundData, 5, weights);
@@ -101,15 +173,45 @@ export async function POST(req) {
         const combinedHoldings = {};
         const risks = [];
 
+        // Pre-normalize weights for robust matching
+        const normalizedWeights = {};
+        Object.entries(weights).forEach(([key, val]) => {
+            normalizedWeights[scraper.normalizeFundName(key)] = val;
+        });
+
         fundData.forEach(fund => {
             const data = fund;
-            // Legacy Fallback for rvId field
-            if (!data.instId && data.rvId) {
-                data.instId = data.rvId;
+            
+            // Try multiple identifiers to find the allocated weight
+            const possibleKeys = [
+                data.schemeCode?.toString(),
+                data.fundName,
+                data.instId?.toString(),
+                data.schemeName
+            ].filter(Boolean);
+            
+            let weight = 0;
+            for (const key of possibleKeys) {
+                if (weights[key] !== undefined) {
+                    weight = weights[key];
+                    break;
+                }
             }
-            const wKey = data.schemeCode || data.fundName || data.instId;
-            const w = (weights[wKey] || 0) / 100;
-            if (w <= 0) return;
+
+            // Fallback: Normalized Name Match
+            if (weight === 0) {
+                const normName = scraper.normalizeFundName(data.fundName || data.schemeName);
+                if (normalizedWeights[normName] !== undefined) {
+                    weight = normalizedWeights[normName];
+                    console.log(`[X-Ray API] Recovered weight for ${data.fundName} via Normalized Name Match.`);
+                }
+            }
+
+            const w = weight / 100;
+            if (w <= 0) {
+                console.warn(`[X-Ray API] Skipping ${data.fundName || data.schemeName} (ID: ${data.schemeCode}) due to 0% weight. Registered weights:`, Object.keys(weights));
+                return;
+            }
 
             // Market Cap
             if (fund.marketCap) {
@@ -193,7 +295,8 @@ export async function POST(req) {
                     instId: f.instId, 
                     schemeCode: f.schemeCode,
                     marketCap: f.marketCap,
-                    expenseRatio: f.expenseRatio
+                    expenseRatio: f.expenseRatio,
+                    unsecured: f.unsecured || false
                 })),
                 overlapMatrix: overlaps,
                 performance: performance,
@@ -201,7 +304,8 @@ export async function POST(req) {
                     ...mixtureStats,
                     sectors: sortedSectors.slice(0, 10),
                     holdings: sortedHoldings,
-                    risks: risks
+                    risks: risks,
+                    hasUnsecured: fundData.some(f => f.unsecured)
                 }
             }
         });

@@ -8,28 +8,9 @@ import { computeFundMetrics } from '@/lib/calculations';
 const CACHE_TTL = 1 * 60 * 60 * 1000; // 1 hour
 const MFAPI_BASE = 'https://api.mfapi.in';
 
-async function getBenchmarkROI(schemeCode) {
-    if (!schemeCode) return null;
-    const cacheKey = `bench_roi1y:${schemeCode}`;
-    let cached = getCached(cacheKey);
-    if (cached !== null) return cached;
-
-    try {
-        const res = await fetch(`${MFAPI_BASE}/mf/${schemeCode}`);
-        const data = await res.json();
-        if (data && data.data) {
-            const metrics = computeFundMetrics(data.data, data.data);
-            const roi = metrics.cagr['1yr'] || 0;
-            setCache(cacheKey, roi, CACHE_TTL);
-            return roi;
-        }
-    } catch (e) {}
-    return null;
-}
-
 export async function GET(request) {
     try {
-        const cacheKey = 'funds:search_data:v2';
+        const cacheKey = 'funds:search_data:v3';
         let allFunds = getCached(cacheKey);
 
         if (!allFunds) {
@@ -39,22 +20,55 @@ export async function GET(request) {
 
             // Fetch all category rankings
             const snapshot = await getDocs(collection(db, 'category_rankings'));
-            allFunds = [];
-            
-            // Map to store benchmark ROIs to avoid redundant fetches
-            const benchmarkROIStore = {};
 
+            // 1. Collect all unique benchmarks first
+            const benchmarkCodes = new Set();
+            for (const doc of snapshot.docs) {
+                const categoryData = doc.data();
+                const categoryName = categoryData.name || doc.id;
+                const bench = getBenchmarkForCategory(categoryName);
+                if (bench?.schemeCode) {
+                    benchmarkCodes.add(bench.schemeCode);
+                }
+            }
+
+            // 2. Fetch all missing benchmarks in parallel
+            const benchmarkROIStore = {};
+            await Promise.all(Array.from(benchmarkCodes).map(async (code) => {
+                const bCacheKey = `bench_roi1y:${code}`;
+                let cached = getCached(bCacheKey);
+                if (cached !== null) {
+                    benchmarkROIStore[code] = cached;
+                    return;
+                }
+
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 5000);
+                
+                try {
+                    const res = await fetch(`${MFAPI_BASE}/mf/${code}`, { signal: controller.signal });
+                    const data = await res.json();
+                    if (data?.data) {
+                        const metrics = computeFundMetrics(data.data, data.data);
+                        const roi = metrics.cagr['1yr'] || 0;
+                        setCache(bCacheKey, roi, CACHE_TTL);
+                        benchmarkROIStore[code] = roi;
+                    }
+                } catch (e) {
+                    console.warn(`[Search API] Benchmark fetch failed for ${code}:`, e.message);
+                } finally {
+                    clearTimeout(timeout);
+                }
+            }));
+
+            // 3. Construct allFunds list
+            allFunds = [];
             for (const doc of snapshot.docs) {
                 const categoryData = doc.data();
                 const categoryName = categoryData.name || doc.id;
                 const funds = categoryData.funds || [];
-                
-                // Get benchmark for this category
                 const bench = getBenchmarkForCategory(categoryName);
-                if (bench && !benchmarkROIStore[bench.schemeCode]) {
-                    benchmarkROIStore[bench.schemeCode] = await getBenchmarkROI(bench.schemeCode);
-                }
-                const benchROI = benchmarkROIStore[bench.schemeCode];
+                const benchROI = bench ? benchmarkROIStore[bench.schemeCode] : null;
 
                 funds.forEach(fund => {
                     allFunds.push({
@@ -71,7 +85,7 @@ export async function GET(request) {
             // Deduplicate by schemeCode
             const uniqueMap = new Map();
             allFunds.forEach(f => {
-                const code = f.schemeCode || f.code;
+                const code = f.schemeCode;
                 if (code && !uniqueMap.has(code)) {
                     uniqueMap.set(code, f);
                 }
@@ -84,6 +98,6 @@ export async function GET(request) {
         return NextResponse.json(allFunds);
     } catch (error) {
         console.error('Search data api error:', error);
-        return NextResponse.json({ error: 'Failed to fetch enriched search data' }, { status: 500 });
+        return NextResponse.json({ error: 'Failed' }, { status: 500 });
     }
 }

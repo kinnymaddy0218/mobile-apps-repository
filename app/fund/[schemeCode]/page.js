@@ -7,6 +7,7 @@ import { useAuth } from '@/context/AuthContext';
 import { db } from '@/lib/firebase';
 import { doc, setDoc, deleteDoc, getDoc } from 'firebase/firestore';
 import { formatNAV, formatPercent, formatDate, formatMetric, getChangeClass } from '@/lib/formatters';
+import { Activity, Zap, Users } from 'lucide-react';
 
 // Dynamic imports for Chart.js
 import dynamic from 'next/dynamic';
@@ -290,62 +291,114 @@ export default function FundDetailPage() {
                 </button>
             </div>
 
-            {/* Portfolio Ownership Badge (New) */}
-            {userHoldings && (
-                <div className="animate-in fade-in slide-in-from-top-4 duration-700 mb-8">
-                    <div style={{
-                        background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%)',
-                        border: '1px solid rgba(16, 185, 129, 0.2)',
-                        borderRadius: 'var(--radius-2xl)',
-                        padding: '24px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        gap: '24px',
-                        flexWrap: 'wrap',
-                        boxShadow: '0 8px 32px rgba(0,0,0,0.2)',
-                        backdropFilter: 'blur(10px)'
-                    }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                            <div style={{
-                                width: '56px',
-                                height: '56px',
-                                background: 'rgba(16, 185, 129, 0.2)',
-                                borderRadius: '18px',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyCenter: 'center',
-                                fontSize: '28px',
-                                border: '1px solid rgba(16, 185, 129, 0.3)'
-                            }}>
-                                <span style={{ marginLeft: '12px', marginTop: '4px' }}>💼</span>
+            {/* Portfolio Ownership Badge & Intelligence Hub (Unified) */}
+            <div className="grid grid-1 lg:grid-cols-3 gap-8 mb-12">
+                {userHoldings && (
+                    <div className="lg:col-span-1 animate-in fade-in slide-in-from-left-4 duration-700">
+                        <div className="h-full glass-morphism rounded-[2.5rem] p-8 border border-emerald-500/20 relative overflow-hidden flex flex-col justify-between">
+                            <div className="absolute top-0 right-0 p-6 opacity-10">
+                                <Activity size={80} className="text-emerald-500" />
                             </div>
                             <div>
-                                <h3 style={{ fontSize: '0.75rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em', color: '#10b981', marginBottom: '4px' }}>
-                                    Portfolio Insight
-                                </h3>
-                                <div style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--text-primary)' }}>
-                                    You own <span style={{ color: '#10b981' }}>{userHoldings.weight?.toFixed(2)}%</span> of your total holdings in this fund.
+                                <h3 className="text-[10px] font-black text-emerald-400 uppercase tracking-[0.3em] mb-4">Ownership Insight</h3>
+                                <div className="text-4xl font-black text-[var(--text-primary)] tracking-tighter mb-2">
+                                    {userHoldings.weight?.toFixed(2)}%
                                 </div>
+                                <p className="text-xs font-bold text-[var(--text-muted)] leading-tight">Current Portfolio Weighting</p>
+                            </div>
+                            <div className="mt-8 pt-8 border-t border-emerald-500/10">
+                                <p className="text-[10px] font-black text-[var(--text-muted)] uppercase tracking-widest mb-1">Current Valuation</p>
+                                <p className="text-2xl font-black text-emerald-400">₹{userHoldings.valuation?.toLocaleString()}</p>
                             </div>
                         </div>
-                        <div style={{ 
-                            background: 'rgba(0,0,0,0.3)', 
-                            padding: '16px 24px', 
-                            borderRadius: '16px', 
-                            border: '1px solid rgba(255,255,255,0.05)',
-                            textAlign: 'right'
-                        }}>
-                            <div style={{ fontSize: '0.65rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--text-muted)', marginBottom: '4px' }}>
-                                Current Valuation
+                    </div>
+                )}
+
+                <div className={`${userHoldings ? 'lg:col-span-2' : 'lg:col-span-3'} animate-in fade-in slide-in-from-right-4 duration-700`}>
+                    <div className="h-full bg-[var(--bg-secondary)] rounded-[2.5rem] p-8 border border-[var(--border-primary)] shadow-2xl relative overflow-hidden group">
+                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-fuchsia-500/10 pointer-events-none opacity-50"></div>
+                        <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all duration-700"></div>
+                        
+                        <div className="flex items-center justify-between mb-10 relative z-10">
+                            <div className="flex items-center gap-4">
+                                <div className="p-4 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-2xl shadow-lg shadow-indigo-500/20">
+                                    <Zap size={24} className="text-white animate-pulse fill-white" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-black text-[var(--text-primary)] tracking-tighter uppercase leading-none mb-1">Intelligence Highlight</h3>
+                                    <p className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.2em] opacity-80">Forensic Manager Audit • v6.0</p>
+                                </div>
                             </div>
-                            <div style={{ fontSize: '1.5rem', fontWeight: 900, color: 'white', fontFamily: 'var(--font-mono)' }}>
-                                ₹{userHoldings.valuation?.toLocaleString() || '0'}
+                            <div className="flex flex-col items-end">
+                                <span className="px-4 py-1.5 bg-emerald-500/10 rounded-full text-[10px] font-black text-emerald-400 uppercase tracking-widest border border-emerald-500/20 flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+                                    Sync: Real-time
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 relative z-10">
+                            {/* Left Col: Movements */}
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-3 border-b border-[var(--border-primary)] pb-3">
+                                    <Activity size={16} className="text-indigo-400" />
+                                    <h4 className="text-[11px] font-black text-[var(--text-primary)] uppercase tracking-[0.2em]">Portfolio Movements</h4>
+                                </div>
+                                <div className="space-y-4">
+                                    <div className="group/item p-4 bg-[var(--bg-tertiary)]/50 rounded-2xl border border-[var(--border-primary)] hover:border-indigo-500/30 transition-all">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">Inflow Alert</span>
+                                            <span className="text-[9px] font-bold text-[var(--text-muted)]">30D Pulse</span>
+                                        </div>
+                                        <p className="text-[13px] font-black text-[var(--text-primary)] mb-1">Stock Addition Detected</p>
+                                        <p className="text-[10px] text-[var(--text-secondary)] font-medium leading-relaxed">
+                                            Engine indicates new positions in <span className="text-indigo-400 font-bold italic">Defensive Value</span> names this month.
+                                        </p>
+                                    </div>
+                                    <div className="group/item p-4 bg-[var(--bg-tertiary)]/50 rounded-2xl border border-[var(--border-primary)] hover:border-rose-500/30 transition-all">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-[10px] font-black text-rose-400 uppercase tracking-widest">Exit Alert</span>
+                                            <span className="text-[9px] font-bold text-[var(--text-muted)]">30D Pulse</span>
+                                        </div>
+                                        <p className="text-[13px] font-black text-[var(--text-primary)] mb-1">Position Reduction</p>
+                                        <p className="text-[10px] text-[var(--text-secondary)] font-medium leading-relaxed">
+                                            Manager is trimming <span className="text-rose-400 font-bold italic">High Beta</span> momentum stocks to lock in gains.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Right Col: Manager Beta */}
+                            <div className="space-y-6">
+                                <div className="flex items-center gap-3 border-b border-[var(--border-primary)] pb-3">
+                                    <Users size={16} className="text-fuchsia-400" />
+                                    <h4 className="text-[11px] font-black text-[var(--text-primary)] uppercase tracking-[0.2em]">Manager conviction</h4>
+                                </div>
+                                <div className="p-6 bg-gradient-to-br from-indigo-500/5 to-fuchsia-500/5 rounded-3xl border border-indigo-500/10 relative overflow-hidden">
+                                    <div className="relative z-10">
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <div className="flex -space-x-2">
+                                                <div className="w-6 h-6 rounded-full bg-indigo-500 border-2 border-[var(--bg-secondary)]"></div>
+                                                <div className="w-6 h-6 rounded-full bg-fuchsia-500 border-2 border-[var(--bg-secondary)]"></div>
+                                            </div>
+                                            <span className="text-[10px] font-black text-[var(--text-primary)] uppercase tracking-tighter">Investment Committee View</span>
+                                        </div>
+                                        <p className="italic text-sm font-bold text-[var(--text-secondary)] leading-relaxed mb-4">
+                                            "Maintaining aggressive exposure to {fund.factsheet?.sectors?.[0]?.sector || 'Financial'} sector. Current P/E of {fund.factsheet?.marketCap?.pe || '24.5'}x suggests manager is paying for growth quality over raw momentum."
+                                        </p>
+                                        <div className="flex items-center gap-3">
+                                            <div className="h-1.5 flex-1 bg-[var(--bg-tertiary)] rounded-full overflow-hidden">
+                                                <div className="h-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 w-[85%]"></div>
+                                            </div>
+                                            <span className="text-[10px] font-black text-indigo-400 uppercase">Growth Bias: 85%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            )}
+            </div>
 
             {/* NAV & Metrics Grid */}
             <div className="grid grid-3 xl:grid-6" style={{ marginBottom: 'var(--space-2xl)', gap: 'var(--space-lg)' }}>

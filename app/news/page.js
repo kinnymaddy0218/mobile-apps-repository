@@ -73,7 +73,7 @@ export default function NewsPage() {
                     {articles.map((article, i) => (
                         <a
                             key={i}
-                            href={article.link}
+                            href={article.url || '#'}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="card animate-fade-in"
@@ -91,10 +91,10 @@ export default function NewsPage() {
                             </h3>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
                                 <span className="badge badge-info" style={{ fontSize: '0.72rem' }}>
-                                    {article.source}
+                                    {article.source?.name || 'Google News'}
                                 </span>
                                 <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
-                                    {article.pubDate ? formatRelativeTime(article.pubDate) : ''}
+                                    {article.publishedAt ? formatRelativeTime(article.publishedAt) : ''}
                                 </span>
                             </div>
                         </a>

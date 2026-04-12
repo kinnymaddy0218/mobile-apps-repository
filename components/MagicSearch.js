@@ -16,6 +16,14 @@ export default function MagicSearch({ onResultsChange, onSelect, hideDropdown = 
     const router = useRouter();
 
     const handleSelectFund = (f) => {
+        // Persistence Shield: Trigger a silent warmup for the selected fund.
+        // This ensures the factsheet is mirrored in Firestore before the user clicks 'Analyze'.
+        fetch('/api/funds/warmup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: f.schemeName || f.name, schemeCode: f.schemeCode })
+        }).catch(() => {}); // Silent failure (non-blocking)
+
         if (onSelect) {
             onSelect(f);
             setQuery('');
@@ -148,7 +156,7 @@ export default function MagicSearch({ onResultsChange, onSelect, hideDropdown = 
         const finalResults = filtered.slice(0, 10);
         setResults(finalResults);
         
-        // Critical: Only call onResultsChange if something actually changed to avoid parent-child loops
+        // Critical: Update parent with results (ensures Budget/Architect UI reacts)
         if (onResultsChange) {
             onResultsChange(finalResults, q);
         }
@@ -198,11 +206,11 @@ export default function MagicSearch({ onResultsChange, onSelect, hideDropdown = 
                     maxHeight: '480px',
                     overflowY: 'auto',
                     overflowX: 'hidden',
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(99, 102, 241, 0.2)',
-                    background: 'rgba(15, 23, 42, 0.95)',
-                    backdropFilter: 'blur(20px)',
-                    borderRadius: '20px',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: 'var(--shadow-lg), 0 0 0 1px var(--border-primary)',
+                    background: 'var(--bg-card)',
+                    backdropFilter: 'var(--glass-blur)',
+                    borderRadius: 'var(--radius-xl)',
+                    border: '1px solid var(--border-primary)',
                 }}>
                     {loading && results.length === 0 ? (
                         <div style={{ padding: '20px', textAlign: 'center', color: 'var(--text-muted)' }}>
@@ -210,47 +218,36 @@ export default function MagicSearch({ onResultsChange, onSelect, hideDropdown = 
                         </div>
                     ) : results.length > 0 ? (
                         <div>
-                            {results.map(f => (
-                                <div
-                                    key={f.schemeCode}
+                            {results.map((f, idx) => (
+                                <div key={idx} 
                                     onClick={() => handleSelectFund(f)}
-                                    className="magic-result-item"
-                                    style={{
-                                        display: 'grid',
-                                        gridTemplateColumns: '1fr auto',
-                                        alignItems: 'center',
-                                        padding: '14px 20px',
-                                        gap: '20px',
-                                        borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
-                                        transition: 'all 0.2s ease',
-                                        cursor: 'pointer'
-                                    }}
+                                    className="magic-result-item flex items-center justify-between p-5 cursor-pointer transition-all duration-300 hover:bg-indigo-500/10 group border-b border-[var(--border-primary)] last:border-0"
                                 >
-                                    <div style={{ minWidth: 0 }}>
-                                        <div style={{ fontWeight: 600, fontSize: '0.95rem', color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginBottom: '4px' }}>
-                                            {f.schemeName}
-                                        </div>
-                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                            <span style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.5)', background: 'rgba(255,255,255,0.05)', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                                    <div className="flex-1 min-w-0 pr-4">
+                                        <h4 className="text-sm font-black text-[var(--text-primary)] transition-colors group-hover:text-indigo-500 truncate leading-tight">
+                                            {f.schemeName || f.name}
+                                        </h4>
+                                        <div className="flex items-center gap-2 mt-1.5 pl-2 border-l-2 border-indigo-500/20">
+                                            <span className="text-[10px] uppercase font-black text-indigo-400 group-hover:text-indigo-500/80 transition-colors tracking-tighter">
                                                 {f.category}
                                             </span>
-                                            <span style={{ fontSize: '0.7rem', color: 'rgba(99, 102, 241, 0.8)', fontWeight: 600 }}>#{f.schemeCode}</span>
+                                            <span className="text-[9px] font-black text-[var(--text-muted)] opacity-50 uppercase">• {f.fundHouse || 'AMC'}</span>
                                         </div>
                                     </div>
-
-                                    <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-                                        <div style={{ textAlign: 'right', minWidth: '60px' }}>
-                                            <div className={getChangeClass(f.cagr?.['1yr'])} style={{ fontWeight: 700, fontSize: '1rem', lineHeight: 1 }}>
+                                    
+                                    <div className="flex items-center gap-6 shrink-0">
+                                        <div className="text-right">
+                                            <div className={getChangeClass(f.cagr?.['1yr'])} style={{ fontWeight: 900, fontSize: '0.9rem', lineHeight: 1 }}>
                                                 {formatPercent(f.cagr?.['1yr'], 1)}
                                             </div>
-                                            <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', marginTop: '4px' }}>1Y CAGR</div>
+                                            <div style={{ fontSize: '0.6rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 900, marginTop: '2px' }}>1Y CAGR</div>
                                         </div>
-                                        <div style={{ width: '1px', height: '24px', background: 'rgba(255,255,255,0.1)' }}></div>
-                                        <div style={{ textAlign: 'right', minWidth: '40px' }}>
-                                            <div style={{ fontWeight: 600, fontSize: '0.9rem', color: f.alpha > 0 ? '#10b981' : '#fff', opacity: f.alpha > 0 ? 1 : 0.6 }}>
-                                                {f.alpha?.toFixed(1) || '-'}
+                                        <div style={{ width: '1px', height: '28px', background: 'var(--border-primary)' }}></div>
+                                        <div className="text-right min-w-[50px]">
+                                            <div style={{ fontWeight: 900, fontSize: '0.9rem', color: f.alpha > 0 ? 'var(--color-positive)' : 'var(--text-primary)', opacity: f.alpha > 0 ? 1 : 0.6 }}>
+                                                {f.alpha?.toFixed(1) || '0.0'}
                                             </div>
-                                            <div style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase' }}>Alpha</div>
+                                            <div style={{ fontSize: '0.6rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 900, marginTop: '2px' }}>Alpha</div>
                                         </div>
                                     </div>
                                 </div>
@@ -262,9 +259,10 @@ export default function MagicSearch({ onResultsChange, onSelect, hideDropdown = 
                             </div>
                         </div>
                     ) : (
-                        <div style={{ padding: '24px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                        <div style={{ padding: '24px', textAlign: 'center', color: 'var(--text-secondary)' }}>
                             <div style={{ fontSize: '1.5rem', marginBottom: '8px' }}>🔍</div>
-                            <p>No magical results found. Try an AMC name or simpler keywords.</p>
+                            <p className="font-medium">No magical results found.</p>
+                            <p className="text-xs text-muted mt-1">Try an AMC name or simpler keywords.</p>
                         </div>
                     )}
                 </div>

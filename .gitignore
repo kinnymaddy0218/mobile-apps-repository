@@ -56,3 +56,10 @@ temp_*
 *.bak
 .DS_Store
 Thumbs.db
+
+# --- FIREBASE & SENSITIVE ---
+.firebase/
+*-firebase-adminsdk-*.json
+build_log.txt
+build_check_fixed.txt
+

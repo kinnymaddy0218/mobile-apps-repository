@@ -1,14 +1,22 @@
 'use client';
 
 import { useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
+import PricingModal from './PricingModal';
+import { Lock, Eye, EyeOff } from 'lucide-react';
 
 export default function CasImportModal({ isOpen, onClose, onImport }) {
+    const { user } = useAuth();
     const [file, setFile] = useState(null);
     const [password, setPassword] = useState('');
     const [importing, setImporting] = useState(false);
     const [error, setError] = useState('');
+    const [showPricing, setShowPricing] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     if (!isOpen) return null;
+
+    const isPremium = user?.profile?.isPremium;
 
     const handleFileChange = (e) => {
         const selected = e.target.files[0];
@@ -21,6 +29,10 @@ export default function CasImportModal({ isOpen, onClose, onImport }) {
     };
 
     const handleImport = async () => {
+        if (!isPremium) {
+            setShowPricing(true);
+            return;
+        }
         if (!file) {
             setError('Please select a CAS PDF file.');
             return;
@@ -29,13 +41,24 @@ export default function CasImportModal({ isOpen, onClose, onImport }) {
         setError('');
 
         try {
-            const formData = new FormData();
-            formData.append('file', file);
-            formData.append('password', password);
+            // Convert file to Base64 to ensure 100% reliable delivery via JSON
+            const reader = new FileReader();
+            const base64Promise = new Promise((resolve, reject) => {
+                reader.onload = () => resolve(reader.result.split(',')[1]);
+                reader.onerror = reject;
+                reader.readAsDataURL(file);
+            });
+
+            const base64File = await base64Promise;
 
             const response = await fetch('/api/portfolio/import-cas', {
                 method: 'POST',
-                body: formData
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    file: base64File,
+                    fileName: file.name,
+                    password: password.trim()
+                })
             });
 
             const contentType = response.headers.get('content-type');
@@ -78,6 +101,7 @@ export default function CasImportModal({ isOpen, onClose, onImport }) {
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div 
+                data-v="BUILD_REFRESH_0218"
                 onClick={e => e.stopPropagation()}
                 style={{
                     backgroundColor: '#111827',
@@ -199,25 +223,54 @@ export default function CasImportModal({ isOpen, onClose, onImport }) {
                             }}>
                                 PDF Password (if protected)
                             </label>
-                            <input
-                                type="password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder="Your PAN or specific password"
-                                style={{
-                                    width: '100%',
-                                    backgroundColor: '#0a0e1a',
-                                    border: '1px solid rgba(99, 102, 241, 0.3)',
-                                    borderRadius: '10px',
-                                    padding: '12px 16px',
-                                    fontSize: '14px',
-                                    color: '#ffffff',
-                                    outline: 'none',
-                                    boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)'
-                                }}
-                            />
+                            <div style={{ position: 'relative' }}>
+                                <input
+                                    type={showPassword ? "text" : "password"}
+                                    value={password}
+                                    onChange={(e) => {
+                                        const val = e.target.value;
+                                        // Auto-uppercase if it looks like a PAN (starts with letters, length <= 10)
+                                        if (val.length <= 10 && /^[a-zA-Z0-9]*$/.test(val)) {
+                                            setPassword(val.toUpperCase());
+                                        } else {
+                                            setPassword(val);
+                                        }
+                                    }}
+                                    placeholder="Your PAN or specific password"
+                                    style={{
+                                        width: '100%',
+                                        backgroundColor: '#0a0e1a',
+                                        border: '1px solid rgba(99, 102, 241, 0.3)',
+                                        borderRadius: '10px',
+                                        padding: '12px 40px 12px 16px',
+                                        fontSize: '14px',
+                                        color: '#ffffff',
+                                        outline: 'none',
+                                        boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.3)'
+                                    }}
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowPassword(!showPassword)}
+                                    style={{
+                                        position: 'absolute',
+                                        right: '12px',
+                                        top: '50%',
+                                        transform: 'translateY(-50%)',
+                                        background: 'none',
+                                        border: 'none',
+                                        color: '#64748b',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        padding: '4px'
+                                    }}
+                                >
+                                    {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                                </button>
+                            </div>
                             <p style={{ fontSize: '9px', color: '#475569', fontStyle: 'italic', paddingLeft: '4px', margin: 0 }}>
-                                * Your password is never stored or transmitted.
+                                * Your password is never stored or transmitted. (Usually your <b>PAN in UPPERCASE</b>)
                             </p>
                         </div>
                     </div>
@@ -290,6 +343,10 @@ export default function CasImportModal({ isOpen, onClose, onImport }) {
                     </button>
                 </div>
             </div>
+            <PricingModal 
+                isOpen={showPricing} 
+                onClose={() => setShowPricing(false)} 
+            />
             <style jsx>{`
                 @keyframes modalSlideUp {
                     from { opacity: 0; transform: translateY(20px); }

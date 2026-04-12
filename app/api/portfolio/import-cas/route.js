@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/firebase';
 import { collection, getDocs } from 'firebase/firestore';
@@ -141,15 +142,13 @@ export async function GET() {
 
 export async function POST(request) {
     try {
-        console.log('--- CAS IMPORT START ---');
-        const formData = await request.formData();
-        const file = formData.get('file');
-        const password = formData.get('password');
+        console.log('--- CAS IMPORT START (JSON MODE) ---');
+        const { file: base64File, fileName, password } = await request.json();
 
-        if (!file) return NextResponse.json({ error: 'No file uploaded' }, { status: 400 });
+        if (!base64File) return NextResponse.json({ error: 'No file data received' }, { status: 400 });
 
-        console.log('File received:', file.name, 'Size:', file.size);
-        const buffer = Buffer.from(await file.arrayBuffer());
+        console.log('File received via Base64. Name:', fileName || 'unknown');
+        const buffer = Buffer.from(base64File, 'base64');
         
         console.log('Starting PDF extraction...');
         const rows = await extractTextWithPassword(buffer, password);

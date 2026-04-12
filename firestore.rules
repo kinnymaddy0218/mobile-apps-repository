@@ -1,18 +1,130 @@
-rules_version='2'
-
+rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /user_portfolios/{userId} {
-      allow read, write: if request.auth != null && request.auth.uid == userId;
+    
+    // ===============================================================
+    // 1. CORE HELPERS
+    // ===============================================================
+    function isAuth() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuth() && request.auth.uid == userId;
+    }
+
+    function isDocOwner() {
+      return isAuth() && request.auth.uid == resource.data.userId;
+    }
+
+    function isAdmin() {
+      return isAuth() && (
+        request.auth.token.admin == true || 
+        request.auth.token.email == 'kinnymaddy0218@gmail.com' ||
+        request.auth.token.email == 'maddy.essentialsonearth@gmail.com'
+      );
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function isValidDateString(dateStr) {
+      return dateStr is string && (
+        dateStr.matches("^\\d{4}-\\d{2}-\\d{2}$") || 
+        dateStr.matches("^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.*Z?$")
+      );
+    }
+
+    function isValidEmail(email) {
+      return email is string && email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    }
+
+    function isValidUrl(url) {
+      return url is string && (url.matches("^https://.*") || url.matches("^http://.*") || url.matches("^data:.*"));
+    }
+
+    // ===============================================================
+    // 2. FINLENS AI SCHEMA VALIDATORS (Mirroring Google AI Studio)
+    // ===============================================================
+    
+    function isValidReceipt(data) {
+      let categories = ['Groceries', 'Dining', 'Shopping', 'Transport', 'Travel', 'Entertainment', 'Health', 'Education', 'Utilities', 'Insurance', 'Housing', 'Rates', 'Maintenance', 'Professional', 'Subscriptions', 'Other'];
+      return hasRequiredFields(['userId', 'storeName', 'totalAmount', 'date', 'primaryCategory', 'type', 'status', 'createdAt']) &&
+             data.userId == request.auth.uid &&
+             data.primaryCategory in categories &&
+             data.type in ['receipt', 'invoice'] &&
+             data.status in ['paid', 'pending', 'overdue'];
+    }
+
+    function isValidBudget(data) {
+      let categories = ['Groceries', 'Dining', 'Shopping', 'Transport', 'Travel', 'Entertainment', 'Health', 'Education', 'Utilities', 'Insurance', 'Housing', 'Rates', 'Maintenance', 'Professional', 'Subscriptions', 'Other'];
+      return hasRequiredFields(['userId', 'category', 'limit', 'month']) &&
+             data.userId == request.auth.uid &&
+             data.category in categories &&
+             data.limit is number && data.limit >= 0;
+    }
+
+    function isValidUser(data) {
+      return hasRequiredFields(['uid', 'createdAt']) &&
+             data.uid == request.auth.uid;
+    }
+
+    // ===============================================================
+    // 3. SECURED COLLECTIONS (FINLENS + MUTUAL FUND)
+    // ===============================================================
+    
+    match /receipts/{receiptId} {
+      allow read: if isDocOwner() || isAdmin();
+      allow create: if isAuth() && isValidReceipt(request.resource.data);
+      allow update: if (isDocOwner() || isAdmin()) && isValidReceipt(request.resource.data);
+      allow delete: if isDocOwner() || isAdmin();
+    }
+
+    match /budgets/{budgetId} {
+      allow read, write: if isDocOwner() || isAdmin() && isValidBudget(request.resource.data);
+    }
+
+    match /savingsGoals/{goalId} {
+      allow read, write: if isDocOwner() || isAdmin();
+    }
+
+    match /notifications/{notificationId} {
+      allow read, write: if isDocOwner() || isAdmin();
     }
 
     match /market_radar/{document=**} {
       allow read: if true;
-      allow write: if request.auth != null; // Restrict writes to authenticated users (e.g., the refresh script)
+      allow write: if isAdmin();
+    }
+    
+    match /category_rankings/{document=**} {
+      allow read: if true;
+      allow write: if isAdmin();
     }
 
+    match /user_portfolios/{portfolioId} {
+      allow read, write: if isOwner(portfolioId) || isAdmin();
+    }
+
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isOwner(userId) && isValidUser(request.resource.data);
+      allow update: if (isOwner(userId) || isAdmin());
+    }
+
+    // Metadata and Caches
+    match /fund_factsheets/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /fund_factsheets_cache/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /fund_nav_cache/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /metadata/{document=**} { allow read: if true; allow write: if isAdmin(); }
+
     match /{document=**} {
-      allow read, write: if request.time < timestamp.date(2026, 4, 8);
+      allow read, write: if isAdmin();
     }
   }
 }

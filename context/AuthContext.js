@@ -10,10 +10,17 @@ export function AuthProvider({ children }) {
     const [firebaseReady, setFirebaseReady] = useState(false);
 
     useEffect(() => {
+        // Safety net: if Firebase auth never fires within 8s, unblock the app
+        const authTimeout = setTimeout(() => {
+            console.warn('[AuthContext] Firebase auth timed out — forcing loading=false');
+            setLoading(false);
+        }, 8000);
+
         const initAuth = async () => {
             try {
                 const { auth, db } = await import('@/lib/firebase');
                 if (!auth) {
+                    clearTimeout(authTimeout);
                     setLoading(false);
                     return;
                 }
@@ -22,6 +29,7 @@ export function AuthProvider({ children }) {
 
                 setFirebaseReady(true);
                 const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+                    clearTimeout(authTimeout); // Auth responded — cancel the timeout
                     if (firebaseUser) {
                         // User is signed in, sync profile
                         const userDocRef = doc(db, 'users', firebaseUser.uid);
@@ -37,7 +45,7 @@ export function AuthProvider({ children }) {
                                 const msInDay = 1000 * 60 * 60 * 24;
                                 const daysElapsed = (new Date() - createdAt) / msInDay;
                                 const trialDaysLeft = Math.max(0, Math.ceil(trialDays - daysElapsed));
-                                const isTrialActive = trialDaysLeft > 0;
+                                let isTrialActive = trialDaysLeft > 0;
                                 
                                 // Founding Member Bypass (You)
                                 const isFoundingMember = ['kinnymadd0218@gmail.com', 'kinnymaddy0218@gmail.com'].includes(firebaseUser.email);
@@ -46,7 +54,7 @@ export function AuthProvider({ children }) {
                                 const simulationState = isFoundingMember && typeof window !== 'undefined' ? localStorage.getItem('MF_RESEARCH_SIM_STATE') : null;
                                 
                                 let isPremium = isFoundingMember || profileData.subscriptionTier === 'Premium' || simulationState === 'premium';
-                                let isTrialActive = (trialDaysLeft > 0) && simulationState !== 'expired';
+                                isTrialActive = (trialDaysLeft > 0) && simulationState !== 'expired';
                                 if (simulationState === 'expired') isTrialActive = false;
                                 if (simulationState === 'trial') isTrialActive = true;
                                 

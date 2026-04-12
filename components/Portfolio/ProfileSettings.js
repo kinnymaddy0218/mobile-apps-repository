@@ -220,37 +220,19 @@ export default function ProfileSettings({ user, sharedBenchmarks }) {
                     </div>
                 </div>
 
-                <div style={{ paddingTop: '1.5rem', borderTop: '1px solid var(--border-primary)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                    <div className="flex-between card-flat" style={{ padding: '10px 14px', borderRadius: 'var(--radius-md)' }}>
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            <label className="form-label" style={{ margin: 0, fontSize: '0.6rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-                                Tier
-                            </label>
-                            <span style={{ fontSize: '0.75rem', fontWeight: '800', color: 'var(--accent-primary)' }}>ADMIN SIMULATOR</span>
-                        </div>
-                        <button
-                            onClick={() => updateProfile('subscriptionTier', profile.subscriptionTier === 'Pro' ? 'Free' : 'Pro')}
-                            className="btn btn-sm btn-outline"
-                            style={{ padding: '4px 10px', fontSize: '0.65rem' }}
-                        >
-                            {profile.subscriptionTier === 'Pro' ? 'DISABLE PRO' : 'ENABLE PRO'}
-                        </button>
+                <div className="card-flat" style={{ padding: '12px', borderRadius: 'var(--radius-lg)', position: 'relative', border: '1px solid var(--accent-primary-soft)' }}>
+                    <div className="flex items-center gap-sm mb-2">
+                        <div className="animate-pulse" style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-primary)' }}></div>
+                        <span style={{ fontSize: '0.7rem', fontWeight: '800', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>AI STATUS</span>
+                        <span className="badge badge-accent" style={{ marginLeft: 'auto', fontSize: '0.6rem' }}>
+                            {profile.isPremium ? 'Pro' : 'Free'}
+                        </span>
                     </div>
-
-                    <div className="card-flat" style={{ padding: '12px', borderRadius: 'var(--radius-lg)', position: 'relative', border: '1px solid var(--accent-primary-soft)' }}>
-                        <div className="flex items-center gap-sm mb-2">
-                            <div className="animate-pulse" style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-primary)' }}></div>
-                            <span style={{ fontSize: '0.7rem', fontWeight: '800', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>AI STATUS</span>
-                            <span className="badge badge-accent" style={{ marginLeft: 'auto', fontSize: '0.6rem' }}>
-                                {profile.subscriptionTier || 'Free'}
-                            </span>
-                        </div>
-                        <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.5', margin: 0 }}>
-                            {profile.subscriptionTier === 'Pro'
-                                ? "Pro Unlocked! AlphaEngine is now prioritizing high-alpha opportunities and downside protection alerts."
-                                : `Your ${profile.riskAppetite || 'Moderate'} profile is training our AI. Enable Pro to unlock real-time rebalancing alerts.`}
-                        </p>
-                    </div>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', lineHeight: '1.5', margin: 0 }}>
+                        {profile.isPremium
+                            ? "Pro Unlocked! AlphaEngine is now prioritizing high-alpha opportunities and downside protection alerts."
+                            : `Your ${profile.riskAppetite || 'Moderate'} profile is training our AI. Enable Pro to unlock real-time rebalancing alerts.`}
+                    </p>
                 </div>
             </div>
         </div>

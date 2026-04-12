@@ -1,24 +1,37 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
-import { useState, useEffect, useMemo } from 'react';
+
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { db } from '@/lib/firebase';
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { getProposalWeights } from '@/lib/calculations';
 import MagicSearch from '@/components/MagicSearch';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer, Tooltip, Legend, AreaChart, Area } from 'recharts';
+import nextDynamic from 'next/dynamic';
+
+// Heavy Recharts components - Dynamic loading with SSR disabled
+const ResponsiveContainer = nextDynamic(() => import('recharts').then(mod => mod.ResponsiveContainer), { ssr: false });
+const PieChart = nextDynamic(() => import('recharts').then(mod => mod.PieChart), { ssr: false });
+const Pie = nextDynamic(() => import('recharts').then(mod => mod.Pie), { ssr: false });
+const Cell = nextDynamic(() => import('recharts').then(mod => mod.Cell), { ssr: false });
+const Tooltip = nextDynamic(() => import('recharts').then(mod => mod.Tooltip), { ssr: false });
+const Legend = nextDynamic(() => import('recharts').then(mod => mod.Legend), { ssr: false });
+const AreaChart = nextDynamic(() => import('recharts').then(mod => mod.AreaChart), { ssr: false });
+const Area = nextDynamic(() => import('recharts').then(mod => mod.Area), { ssr: false });
+const Sector = nextDynamic(() => import('recharts').then(mod => mod.Sector), { ssr: false });
 
 
 
 import ProfileSettings from '@/components/Portfolio/ProfileSettings';
-import CasImportModal from '@/components/Portfolio/CasImportModal';
+const CasImportModal = nextDynamic(() => import('@/components/Portfolio/CasImportModal'), { ssr: false });
 import { normalizeCategory, cleanSchemeName } from '@/lib/categories';
 import InsightCard from '@/components/Portfolio/InsightCard';
 import PortfolioLockedState from '@/components/Portfolio/PortfolioLockedState';
-import FullReportModal from '@/components/Portfolio/FullReportModal';
+const FullReportModal = nextDynamic(() => import('@/components/Portfolio/FullReportModal'), { ssr: false });
 import PremiumGuard from '@/components/PremiumGuard';
-import PricingModal from '@/components/Portfolio/PricingModal';
+const PricingModal = nextDynamic(() => import('@/components/Portfolio/PricingModal'), { ssr: false });
 
 // Module-level constant — safe to use as useState default
 const SCENARIOS = [
@@ -59,6 +72,7 @@ export default function PortfolioPage() {
     const [inputMode, setInputMode] = useState('weight'); // 'amount' or 'weight'
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
+    const [authTimedOut, setAuthTimedOut] = useState(false);
     const [chartView, setChartView] = useState('category'); // 'category' or 'house'
 
     // Unified Normalization Utilities removed - now imported from @/lib/categories
@@ -83,6 +97,17 @@ export default function PortfolioPage() {
         window.addEventListener('open-pricing-modal', handleOpenPricing);
         return () => window.removeEventListener('open-pricing-modal', handleOpenPricing);
     }, []);
+
+    // Timeout guard: if Firebase auth hangs for > 6s, stop showing the blank loading screen
+    useEffect(() => {
+        if (!authLoading) return;
+        const timer = setTimeout(() => {
+            console.warn('[Portfolio] Auth loading timed out after 6s — forcing resolution.');
+            setAuthTimedOut(true);
+            setLoading(false);
+        }, 6000);
+        return () => clearTimeout(timer);
+    }, [authLoading]);
 
     // Load user portfolio from Firestore
     useEffect(() => {
@@ -434,7 +459,7 @@ export default function PortfolioPage() {
         const hasWeight = portfolio.some(f => (f.weight || 0) > 0 || (f.valuation || 0) > 0);
         
         const reduced = portfolio.reduce((acc, f) => {
-            const cat = f.category || 'Other';
+            const cat = normalizeCategory(f.category, f.schemeName);
             if (hasWeight) {
                 // Defensive check: use weight if available and positive, else fallback to valuation
                 const weightVal = typeof f.weight === 'number' && !isNaN(f.weight) && f.weight > 0 ? f.weight : 0;
@@ -509,8 +534,14 @@ export default function PortfolioPage() {
         }
     };
 
-    if (authLoading || loading) return <div className="p-8 text-primary">Loading...</div>;
-    if (!user) return <PortfolioLockedState />;
+    if ((authLoading && !authTimedOut) || loading) return (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', gap: '16px' }}>
+            <div style={{ width: '36px', height: '36px', border: '3px solid var(--border-primary)', borderTop: '3px solid var(--accent-primary)', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} />
+            <p style={{ color: 'var(--text-secondary)', fontSize: '13px', fontWeight: 600 }}>Loading your portfolio...</p>
+            <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+        </div>
+    );
+    if (!user || authTimedOut) return <PortfolioLockedState />;
 
     return (
         <div className="portfolio-container">
@@ -533,11 +564,35 @@ export default function PortfolioPage() {
                     benchmarks
                 }}
             />
-            <header className="page-header mb-8">
-                <div className="flex flex-col justify-start items-start gap-4">
+            <header className="page-header mb-8 bg-[var(--bg-secondary)]/50 p-6 rounded-[2rem] border border-[var(--border-primary)] shadow-sm">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                     <div className="flex-1 text-left">
-                        <h1 className="text-2xl md:text-3xl font-bold text-primary tracking-tight">My Portfolio Intelligence</h1>
-                        <p className="text-secondary mt-1 max-w-2xl">Analyze and optimize your mutual fund holdings using real-world risk metrics and AI insights.</p>
+                        <div className="flex items-center gap-3 mb-2">
+                            <h1 className="text-2xl md:text-3xl font-black text-[var(--text-primary)] tracking-tighter uppercase italic">Portfolio Intelligence</h1>
+                            {user.profile?.isPremium && (
+                                <div className="flex items-center gap-1.5 px-3 py-1 bg-gradient-to-r from-indigo-500/20 to-violet-500/20 border border-indigo-500/30 rounded-full">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
+                                    <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest">PREMIUM ACTIVE</span>
+                                </div>
+                            )}
+                        </div>
+                        <p className="text-[var(--text-secondary)] text-sm font-medium opacity-70">Analyze and optimize your mutual fund holdings using real-world risk metrics and AI insights.</p>
+                    </div>
+
+                    <div className="flex items-center gap-4 bg-[var(--bg-tertiary)] p-2 rounded-2xl border border-[var(--border-secondary)] shadow-inner">
+                        <div className="flex flex-col items-end px-3">
+                            <span className="text-[10px] font-black text-[var(--text-primary)] uppercase tracking-widest">Cloud Syncing</span>
+                            <span className="text-[9px] font-bold text-emerald-400 uppercase tracking-tight flex items-center gap-1">
+                                <span className="w-1 h-1 bg-emerald-400 rounded-full animate-pulse"></span>
+                                Institutional Node: Active
+                            </span>
+                        </div>
+                        <div className="w-px h-8 bg-[var(--border-secondary)]"></div>
+                        <div className="p-2 bg-indigo-500/10 rounded-xl text-indigo-400">
+                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+                             </svg>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -1343,8 +1398,14 @@ export default function PortfolioPage() {
                                     }
                                 })()}
                                 actionText="Target Allocation Map"
-                                onAction={() => setIsReportModalOpen(true)}
-                                isLocked={user.profile?.subscriptionTier?.toLowerCase() !== 'pro'}
+                                onAction={() => {
+                                    if (!user.profile?.isPremium) {
+                                        setIsPricingModalOpen(true);
+                                        return;
+                                    }
+                                    setIsReportModalOpen(true);
+                                }}
+                                isLocked={!user.profile?.isPremium}
                             />
                         </div>
                     </section>
@@ -1467,10 +1528,12 @@ export default function PortfolioPage() {
                                 </div>
                             </div>
                             
-                            <div className="flex flex-col gap-3 flex-1">
-                                {marketEvents && marketEvents.length > 0 ? (
-                                    marketEvents.slice(0, 3).map((event, idx) => (
-                                        <a href={event.url} target="_blank" rel="noopener noreferrer" key={idx} className="flex gap-4 p-4 rounded-2xl cursor-pointer hover:bg-[var(--accent-primary-soft)] transition-all border border-transparent hover:border-[var(--border-secondary)] group/news hover:scale-[1.01] active:scale-95">
+                            <div className="flex flex-col gap-3 flex-1 overflow-y-auto max-h-[300px] no-scrollbar">
+                                {marketEvents && Array.isArray(marketEvents) && marketEvents.length > 0 ? (
+                                    marketEvents.slice(0, 3).map((event, idx) => {
+                                        if (!event || !event.url) return null;
+                                        return (
+                                            <a href={event.url} target="_blank" rel="noopener noreferrer" key={idx} className="flex gap-4 p-4 rounded-2xl cursor-pointer hover:bg-[var(--accent-primary-soft)] transition-all border border-transparent hover:border-[var(--border-secondary)] group/news hover:scale-[1.01] active:scale-95">
                                             <div className="w-0.5 h-auto self-stretch bg-[var(--accent-primary-soft)] rounded-full group-hover/news:bg-[var(--accent-primary)] transition-colors"></div>
                                             <div className="flex flex-col gap-1.5 text-left flex-1 min-w-0">
                                                 <div className="flex items-center gap-2">
@@ -1485,7 +1548,8 @@ export default function PortfolioPage() {
                                                 </p>
                                             </div>
                                         </a>
-                                    ))
+                                        )
+                                    })
                                 ) : (
                                     <div className="py-12 text-center relative overflow-hidden rounded-2xl border border-dashed border-white/10">
                                         <div className="relative z-10 flex flex-col items-center gap-3">
@@ -1521,7 +1585,9 @@ export default function PortfolioPage() {
                                             Impact <span className="text-indigo-400">Analysis</span>
                                         </h3>
                                         <button 
-                                            onClick={() => setIsImpactModalOpen(true)}
+                                            onClick={() => {
+                                                setIsImpactModalOpen(true);
+                                            }}
                                             style={{ background: 'linear-gradient(90deg, #6366f1 0%, #a855f7 100%)' }}
                                             className="px-4 py-2 rounded-lg transition-all text-[10px] font-black text-white uppercase tracking-widest shadow-lg flex items-center gap-2 group/btn active:scale-95 hover:brightness-110"
                                         >

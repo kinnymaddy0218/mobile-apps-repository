@@ -101,10 +101,35 @@ export default function CategoriesPage() {
                     ))}
                 </div>
             ) : rankedFunds.length === 0 ? (
-                <div className="card empty-state">
-                    <div className="empty-state-icon">📝</div>
-                    <h3>No stored rankings found</h3>
-                    <p>The daily backend cron job has not generated rankings for this category yet.</p>
+                <div className="card empty-state" style={{ 
+                    background: 'radial-gradient(circle at top right, var(--bg-secondary), var(--bg-primary))',
+                    border: '1px solid var(--border-primary)',
+                    borderRadius: '2rem',
+                    padding: '4rem 2rem'
+                }}>
+                    <div className="empty-state-icon" style={{ fontSize: '3rem', marginBottom: '1.5rem', filter: 'drop-shadow(0 0 15px var(--accent-primary))' }}>📊</div>
+                    <h3 style={{ fontSize: '1.5rem', fontWeight: 900, letterSpacing: '-0.02em', marginBottom: '1rem' }}>Intelligence Gap Detected</h3>
+                    <p style={{ color: 'var(--text-muted)', maxWidth: '400px', margin: '0 auto 2rem', lineHeight: 1.6 }}>The institutional pulse for <strong>{activeCategory.label}</strong> is currently cold. Initiate a forensic refresh to compute the top 50 alpha-extractors.</p>
+                    <button 
+                        className="btn btn-primary" 
+                        style={{ 
+                            padding: '1rem 2.5rem', 
+                            borderRadius: '1.5rem', 
+                            fontWeight: 900, 
+                            textTransform: 'uppercase', 
+                            letterSpacing: '0.2em',
+                            fontSize: '0.75rem',
+                            boxShadow: '0 10px 30px rgba(99, 102,241, 0.3)'
+                        }}
+                        onClick={() => {
+                            setLoading(true);
+                            fetch('/api/cron/update-rankings?force=true').finally(() => {
+                                setTimeout(() => window.location.reload(), 3000);
+                            });
+                        }}
+                    >
+                        🚀 Force Institutional Refresh
+                    </button>
                 </div>
             ) : (
                 <div className="card" style={{ padding: 0, overflow: 'hidden' }}>

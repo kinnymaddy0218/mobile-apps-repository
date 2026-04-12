@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useTheme } from '@/context/ThemeContext';
 import styles from './Sidebar.module.css';
-
+import SubscriptionBanner from './SubscriptionBanner';
 const navItems = [
     { href: '/', label: 'Dashboard', icon: '📊' },
     { href: '/portfolio', label: 'My Portfolio', icon: '✨' },
@@ -18,6 +18,8 @@ const navItems = [
     { href: '/compare', label: 'Compare', icon: '⚖️' },
     { href: '/categories', label: 'Categories', icon: '📁' },
     { href: '/news', label: 'MF News', icon: '📰' },
+    { href: '/release-notes', label: 'Release Notes', icon: '📜' },
+    { href: '/about', label: 'About App', icon: 'ℹ️' },
 ];
 
 export default function Sidebar() {
@@ -57,7 +59,7 @@ export default function Sidebar() {
                     <span className={`${styles.hamburgerLine} ${mobileOpen ? styles.open : ''}`} />
                 </button>
                 <span className={styles.mobileLogo}>
-                    <img src="/images/india-flag.png" alt="India Flag" className={styles.flagIcon} /> MF Research
+                    <img src="/images/india-flag.png" alt="India Flag" className={styles.flagIcon} style={{ width: '24px', height: '24px', objectFit: 'cover', borderRadius: '2px' }} /> MF Research
                 </span>
                 <button className={styles.themeToggleMobile} onClick={toggleTheme} aria-label="Toggle theme">
                     {theme === 'dark' ? '☀️' : '🌙'}
@@ -74,7 +76,7 @@ export default function Sidebar() {
                 <div className={styles.sidebarInner}>
                     {/* Logo */}
                     <div className={styles.logo}>
-                        <img src="/images/india-flag.png" alt="India Flag" className={styles.flagIcon} />
+                        <img src="/images/india-flag.png" alt="India Flag" className={styles.flagIcon} style={{ width: '24px', height: '24px', objectFit: 'cover', borderRadius: '2px' }} />
                         <div>
                             <h1 className={styles.logoText}>MF Research</h1>
                             <span className={styles.logoSubtext}>Indian Mutual Funds</span>
@@ -95,6 +97,9 @@ export default function Sidebar() {
                             </Link>
                         ))}
                     </nav>
+
+                    {/* Subscription Banner */}
+                    <SubscriptionBanner />
 
                     {/* Bottom Section */}
                     <div className={styles.bottomSection}>

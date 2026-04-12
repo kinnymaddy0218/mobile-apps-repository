@@ -64,7 +64,8 @@ export async function GET(request) {
         try {
             const { sendRefreshNotification } = await import('@/lib/notifications');
             await sendRefreshNotification({
-                category: "Monthly Factsheet Hub Refresh",
+                type: 'sync',
+                category: "Monthly Factsheet Hub",
                 fundsProcessed: processResults.filter(r => r.status === 'refreshed').length,
                 success: true,
                 message: `Processed ${processResults.length} AMCs. Refreshed: ${processResults.filter(r => r.status === 'refreshed').map(r => r.amc).join(', ')}`

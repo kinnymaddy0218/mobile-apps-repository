@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/firebase';
 import scraper from '@/lib/scraper';
+import { sendRefreshNotification } from '@/lib/notifications';
 
 /**
  * Monthly Sync Cron: /api/cron/sync-holdings
@@ -38,6 +39,14 @@ export async function GET(request) {
                 results.failed++;
             }
         }
+
+        // 3. Send Notification
+        await sendRefreshNotification({
+            type: 'sync',
+            fundsProcessed: results.success,
+            success: results.success > 0,
+            message: `Monthly Holdings Sync: ${results.success} updated, ${results.failed} failed.`
+        });
 
         return NextResponse.json({
             status: 'completed',
