@@ -85,6 +85,11 @@ export default function PortfolioPage() {
     const [marketEvents, setMarketEvents] = useState([]);
     const [activeHoverIndex, setActiveHoverIndex] = useState(null);
     const [benchmarks, setBenchmarks] = useState(null);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const [activeScenario, setActiveScenario] = useState(SCENARIOS[0]);
 
@@ -1131,103 +1136,105 @@ export default function PortfolioPage() {
                                         {/* 3D Pie Chart without central obstruction */}
 
                                         <div style={{ width: '100%', height: '100%', zIndex: 20 }}>
-                                            <ResponsiveContainer width="100%" height="100%">
-                                                <PieChart>
-                                                    <defs>
-                                                        <filter id="glossyEffect" x="-20%" y="-20%" width="140%" height="140%">
-                                                            <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
-                                                            <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75" specularExponent="20" lightingColor="#ffffff" result="specOut">
-                                                                <fePointLight x="-50" y="-50" z="200" />
-                                                            </feSpecularLighting>
-                                                            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
-                                                            <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litGraphic" />
-                                                            <feDropShadow dx="0" dy="8" stdDeviation="10" floodOpacity="0.4" />
-                                                        </filter>
-                                                    </defs>
-                                                    <Pie
-                                                        data={activeChartData}
-                                                        cx="50%"
-                                                        cy="50%"
-                                                        innerRadius={0}
-                                                        outerRadius="100%"
-                                                        paddingAngle={1}
-                                                        dataKey="value"
-                                                        stroke="#020617"
-                                                        strokeWidth={3}
-                                                        animationDuration={800}
-                                                        animationBegin={0}
-                                                        filter="url(#glossyEffect)"
-                                                        activeIndex={activeHoverIndex}
-                                                        activeShape={(props) => {
-                                                            const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill } = props;
-                                                            const RADIAN = Math.PI / 180;
-                                                            const offset = 12;
-                                                            const sin = Math.sin(-RADIAN * midAngle);
-                                                            const cos = Math.cos(-RADIAN * midAngle);
-                                                            const nx = cx + offset * cos;
-                                                            const ny = cy + offset * sin;
-                                                            return (
-                                                                <g>
-                                                                    <Sector
-                                                                        cx={nx}
-                                                                        cy={ny}
-                                                                        innerRadius={innerRadius}
-                                                                        outerRadius={outerRadius + 8}
-                                                                        startAngle={startAngle}
-                                                                        endAngle={endAngle}
-                                                                        fill={fill}
-                                                                        stroke="rgba(255,255,255,0.4)"
-                                                                        strokeWidth={2}
-                                                                    />
-                                                                    <Sector
-                                                                        cx={nx}
-                                                                        cy={ny}
-                                                                        startAngle={startAngle}
-                                                                        endAngle={endAngle}
-                                                                        innerRadius={outerRadius + 8}
-                                                                        outerRadius={outerRadius + 11}
-                                                                        fill={fill}
-                                                                        opacity={0.3}
-                                                                    />
-                                                                </g>
-                                                            );
-                                                        }}
-                                                        onMouseEnter={(_, index) => setActiveHoverIndex(index)}
-                                                        onMouseLeave={() => setActiveHoverIndex(null)}
-                                                    >
-                                                        {activeChartData.map((entry, index) => (
-                                                            <Cell 
-                                                                key={`cell-${index}`} 
-                                                                fill={COLORS[index % COLORS.length]}
-                                                                style={{ cursor: 'pointer', outline: 'none', filter: 'drop-shadow(0px 4px 12px rgba(0,0,0,0.2))' }}
-                                                            />
-                                                        ))}
-                                                    </Pie>
-                                                    <Tooltip
-                                                        content={({ active, payload }) => {
-                                                            if (active && payload && payload.length) {
+                                            {isClient && (
+                                                <ResponsiveContainer width="100%" height="100%">
+                                                    <PieChart>
+                                                        <defs>
+                                                            <filter id="glossyEffect" x="-20%" y="-20%" width="140%" height="140%">
+                                                                <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+                                                                <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75" specularExponent="20" lightingColor="#ffffff" result="specOut">
+                                                                    <fePointLight x="-50" y="-50" z="200" />
+                                                                </feSpecularLighting>
+                                                                <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+                                                                <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litGraphic" />
+                                                                <feDropShadow dx="0" dy="8" stdDeviation="10" floodOpacity="0.4" />
+                                                            </filter>
+                                                        </defs>
+                                                        <Pie
+                                                            data={activeChartData}
+                                                            cx="50%"
+                                                            cy="50%"
+                                                            innerRadius={0}
+                                                            outerRadius="100%"
+                                                            paddingAngle={1}
+                                                            dataKey="value"
+                                                            stroke="#020617"
+                                                            strokeWidth={3}
+                                                            animationDuration={800}
+                                                            animationBegin={0}
+                                                            filter="url(#glossyEffect)"
+                                                            activeIndex={activeHoverIndex}
+                                                            activeShape={(props) => {
+                                                                const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill } = props;
+                                                                const RADIAN = Math.PI / 180;
+                                                                const offset = 12;
+                                                                const sin = Math.sin(-RADIAN * midAngle);
+                                                                const cos = Math.cos(-RADIAN * midAngle);
+                                                                const nx = cx + offset * cos;
+                                                                const ny = cy + offset * sin;
                                                                 return (
-                                                                    <div style={{ 
-                                                                        background: 'var(--bg-secondary)', 
-                                                                        backdropFilter: 'var(--glass-blur)', 
-                                                                        border: '1px solid var(--border-primary)', 
-                                                                        padding: '16px', 
-                                                                        borderRadius: '12px', 
-                                                                        boxShadow: 'var(--shadow-lg)'
-                                                                    }}>
-                                                                        <p style={{ fontSize: '10px', fontWeight: '900', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '8px' }}>{payload[0].name}</p>
-                                                                        <div style={{ height: '2px', width: '24px', backgroundColor: 'var(--accent-primary)', marginBottom: '12px' }}></div>
-                                                                        <p style={{ fontSize: '20px', fontWeight: '900', color: 'var(--text-primary)' }}>
-                                                                            {totalWeight > 0 ? ((payload[0].value * 100 / totalWeight).toFixed(1)) : payload[0].value.toFixed(1)}%
-                                                                        </p>
-                                                                    </div>
+                                                                    <g>
+                                                                        <Sector
+                                                                            cx={nx}
+                                                                            cy={ny}
+                                                                            innerRadius={innerRadius}
+                                                                            outerRadius={outerRadius + 8}
+                                                                            startAngle={startAngle}
+                                                                            endAngle={endAngle}
+                                                                            fill={fill}
+                                                                            stroke="rgba(255,255,255,0.4)"
+                                                                            strokeWidth={2}
+                                                                        />
+                                                                        <Sector
+                                                                            cx={nx}
+                                                                            cy={ny}
+                                                                            startAngle={startAngle}
+                                                                            endAngle={endAngle}
+                                                                            innerRadius={outerRadius + 8}
+                                                                            outerRadius={outerRadius + 11}
+                                                                            fill={fill}
+                                                                            opacity={0.3}
+                                                                        />
+                                                                    </g>
                                                                 );
-                                                            }
-                                                            return null;
-                                                        }}
-                                                    />
-                                                </PieChart>
-                                            </ResponsiveContainer>
+                                                            }}
+                                                            onMouseEnter={(_, index) => setActiveHoverIndex(index)}
+                                                            onMouseLeave={() => setActiveHoverIndex(null)}
+                                                        >
+                                                            {activeChartData.map((entry, index) => (
+                                                                <Cell 
+                                                                    key={`cell-${index}`} 
+                                                                    fill={COLORS[index % COLORS.length]}
+                                                                    style={{ cursor: 'pointer', outline: 'none', filter: 'drop-shadow(0px 4px 12px rgba(0,0,0,0.2))' }}
+                                                                />
+                                                            ))}
+                                                        </Pie>
+                                                        <Tooltip
+                                                            content={({ active, payload }) => {
+                                                                if (active && payload && payload.length) {
+                                                                    return (
+                                                                        <div style={{ 
+                                                                            background: 'var(--bg-secondary)', 
+                                                                            backdropFilter: 'var(--glass-blur)', 
+                                                                            border: '1px solid var(--border-primary)', 
+                                                                            padding: '16px', 
+                                                                            borderRadius: '12px', 
+                                                                            boxShadow: 'var(--shadow-lg)'
+                                                                        }}>
+                                                                            <p style={{ fontSize: '10px', fontWeight: '900', color: 'var(--accent-primary)', textTransform: 'uppercase', letterSpacing: '0.2em', marginBottom: '8px' }}>{payload[0].name}</p>
+                                                                            <div style={{ height: '2px', width: '24px', backgroundColor: 'var(--accent-primary)', marginBottom: '12px' }}></div>
+                                                                            <p style={{ fontSize: '20px', fontWeight: '900', color: 'var(--text-primary)' }}>
+                                                                                {totalWeight > 0 ? ((payload[0].value * 100 / totalWeight).toFixed(1)) : payload[0].value.toFixed(1)}%
+                                                                            </p>
+                                                                        </div>
+                                                                    );
+                                                                }
+                                                                return null;
+                                                            }}
+                                                        />
+                                                    </PieChart>
+                                                </ResponsiveContainer>
+                                            )}
                                         </div>
                                     </div>
 
@@ -1819,6 +1826,11 @@ export default function PortfolioPage() {
                 <p className="text-xs text-muted max-w-2xl mx-auto leading-relaxed uppercase tracking-widest font-medium opacity-60">
                     DISCLAIMER: We are not SEBI registered investment advisors. All data, metrics (Alpha/Beta), and AI-generated insights are for educational & research purposes only. Mutual fund investments are subject to market risks. Please consult a certified professional before making any financial decisions.
                 </p>
+                <div className="mt-4 flex items-center justify-center gap-2 opacity-30 group hover:opacity-100 transition-opacity">
+                    <span className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span className="text-[8px] font-mono tracking-tighter text-slate-500 uppercase">Institutional Sync ID: v2.0-HYDRATION-FIX-PULSE</span>
+                    <span className="text-[8px] font-mono tracking-tighter text-slate-500">©{new Date().getUTCFullYear()} RADAR-CORE</span>
+                </div>
             </footer>
             <PricingModal 
                 isOpen={isPricingModalOpen} 
